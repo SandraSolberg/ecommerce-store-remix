@@ -1,14 +1,30 @@
 {
   "foods": [
     {
-      "foodName": "Brunost",
-      "latinName": "",
-      "image": "",
+      "searchKeywords": [
+        "brown cheese",
+        "whey cheese",
+        "norwegian",
+        "brunost",
+        "vegetarian",
+        "Tine SA"
+      ],
+      "foodName": "Brunost, TINE Gudbrandsdalen",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": true,
+        "isFrozen": false
+      },
+      "description": "A well-known and beloved brunost (brown cheese) with long-standing traditions and the most popular of our brunosts. Made from a unique blend of the finest Norwegian cow’s and goat’s milk as well as cow’s cream, it has a rich caramel taste with a slight hint of sharpness. TINE Gudbrandsdalen is well suited for use on bread, crispbread and waffles. It is also perfect in cooking, for example, in an apple pie, muffins, cookies or in an ice cream sauce.",
+      "image": "https://www.tinebrunost.com/products/_/image/a8288595-213e-4a66-97fa-7c99da4d27b0:c9ade615fd02ba1c73afe5ea53fbe80643a2f45b/block-256-256/800x800_0001_tine-gudbrandsdalsost-500-b.png?quality=60",
       "foodGroupId": "1.4.5",
       "foodId": 101,
       "price": 50,
       "currency": "NOK",
-      "searchKeywords": ["brown cheese", "whey cheese"],
+      "quantity": {
+        "amount": 500,
+        "unit": "g"
+      },
       "calories": {
         "quantity": 450,
         "unit": "kcal"
@@ -17,17 +33,37 @@
         "quantity": 1883,
         "unit": "kJ"
       },
-      "nutrients": ["fat", "protein", "calcium"]
+      "nutrients": ["fat", "protein", "calcium"],
+      "allergens": ["milk"],
+      "storage": "Store at 0 °C - 4 °C. Best sliced when cool.",
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "supplier": "Tine SA"
     },
     {
-      "foodName": "Jarlsberg",
-      "latinName": "",
-      "image": "",
+      "searchKeywords": [
+        "hard cheese",
+        "norwegian cheese",
+        "norwegian",
+        "vegetarian",
+        "Tine SA"
+      ],
+      "foodName": "Jarlsberg Cheese, Original",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": true,
+        "isFrozen": false
+      },
+      "description": "A mild, semi-soft, part skim cheese made from cow’s milk. Jarlsberg® is famous around the world for its characteristic mild, sweet and nutty taste and its large round holes. Jarlsberg® is such a wonderfully versatile cheese - whether you buy it as a regular staple for sandwiches, a complement for salads, a tasty addition to your cheese board or as an irresistible snack! It is available with or without its distinctive rind, either cut to suit your needs (wedges, slices, chunks), as a grab-and-go cheese (cheese snacks and cheese crisps) or as a mighty 10kg (22 lb) wheel. Jarlsberg® is the #1 speciality cheese brand in the USA. Jarlsberg® is naturally lactose-free and suitable for vegetarians.",
+      "image": "https://www.jarlsberg.com/us/products/_/image/31e8e482-9a2d-447f-8fa3-58f88247e592:29099976f65b0b43d2fbf88acb29ac52f01b0c05/block-256-256/TINE000004_PS.png?quality=60",
       "foodGroupId": "1.4.7",
       "foodId": 102,
       "price": 90,
       "currency": "NOK",
-      "searchKeywords": ["hard cheese", "norwegian cheese"],
+      "quantity": {
+        "amount": 500,
+        "unit": "g"
+      },
       "calories": {
         "quantity": 350,
         "unit": "kcal"
@@ -36,17 +72,30 @@
         "quantity": 1464,
         "unit": "kJ"
       },
-      "nutrients": ["fat", "protein", "calcium"]
+      "nutrients": ["fat", "protein", "calcium"],
+      "allergens": ["milk", "cream", "goat milk", "whey"],
+      "storage": "Store at 0 °C - 4 °C. Best sliced when cool.",
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "supplier": "Tine SA"
     },
     {
-      "foodName": "Rømmegrøt",
-      "latinName": "",
-      "image": "",
+      "searchKeywords": [
+        "sour cream porridge",
+        "traditional dish",
+        "norwegian"
+      ],
+      "foodName": "Rømmegrøt, 1 serving",
+      "description": "A truly delicious Norwegian sour cream porridge. Rømmegrøt is often called 'the porridge for special occasions.' Fjordland's rømmegrøt is made in the traditional way with cultured cream and whole milk. This creates a rich and flavorful porridge that is perfect for both everyday enjoyment and special occasions. The porridge is easy and quick to prepare, allowing you to enjoy a tasty meal even on a busy day.",
+      "image": "https://www.fjordland.no/grot/rommegrot-350-g/_/image/bd00949b-6a6b-4415-ad5e-bb6f95609a72:c1a5474f2d768fe3a9f580ccc7f6d3b6aafb0e3b/width-1920/Fjordland_R%C3%B8mmegr%C3%B8t_350g_sesong_nettside.png?quality=80",
       "foodGroupId": "3.7",
       "foodId": 201,
       "price": 60,
       "currency": "NOK",
-      "searchKeywords": ["sour cream porridge", "traditional dish"],
+      "quantity": {
+        "amount": 350,
+        "unit": "g"
+      },
       "calories": {
         "quantity": 250,
         "unit": "kcal"
@@ -55,17 +104,21 @@
         "quantity": 1046,
         "unit": "kJ"
       },
-      "nutrients": ["fat", "protein", "carbohydrates"]
+      "nutrients": ["fat", "protein", "carbohydrates"],
+      "allergens": ["cultured cream", "milk", "cultured milk", "wheat flour"],
+      "storage": "Store at 0 °C - 4 °C. Best sliced when cool.",
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "supplier": "Fjordland AS"
     },
     {
+      "searchKeywords": ["dried lamb ribs", "traditional dish"],
       "foodName": "Pinnekjøtt",
-      "latinName": "",
       "image": "",
       "foodGroupId": "3.2",
       "foodId": 202,
       "price": 200,
       "currency": "NOK",
-      "searchKeywords": ["dried lamb ribs", "traditional dish"],
       "calories": {
         "quantity": 300,
         "unit": "kcal"
@@ -77,14 +130,23 @@
       "nutrients": ["fat", "protein", "salt"]
     },
     {
-      "foodName": "Rakfisk",
-      "latinName": "",
-      "image": "",
+      "searchKeywords": ["fish", "mackerel", "Lerøy seafood"],
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": false,
+        "isFrozen": true
+      },
+      "foodName": "Mackerel",
+      "description": "Mackerel is a sure sign of spring when the schools arrive at the Norwegian coast in May. Mackerel is a fatty fish, high in healthy omega-3. It is also an excellent source of vitamin D and B12. Mackerel has a firm texture, and its light meat is especially flavorful and slightly sweet. Bring the meat to room temperature before placing it in the frying pan or on the grill. Make a few cuts in the skin to prevent the mackerel from curling. Plan for about 400–500 grams of whole fish per person, approximately 300-400 grams of fish pieces with bones, and about 200-250 grams of fillet per person.",
+      "image": "https://www.instacart.com/image-server/699x699/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/product-image/file/large_1e182c4a-1074-403a-9d6d-f80d2c52f803.jpg",
       "foodGroupId": "4.1",
-      "foodId": 301,
-      "price": 150,
+      "foodId": 300,
+      "price": 58.05,
       "currency": "NOK",
-      "searchKeywords": ["fermented fish", "traditional dish"],
+      "quantity": {
+        "amount": 430,
+        "unit": "g"
+      },
       "calories": {
         "quantity": 200,
         "unit": "kcal"
@@ -93,36 +155,62 @@
         "quantity": 837,
         "unit": "kJ"
       },
-      "nutrients": ["protein", "omega-3 fatty acids", "vitamin D"]
+      "nutrients": ["protein", "omega-3 fatty acids", "vitamin D"],
+      "allergens": ["fish"],
+      "storage": "Must be stored between -23 and -18 °C.",
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "supplier": "Lerøy seafood"
     },
     {
-      "foodName": "Gravlaks",
-      "latinName": "",
-      "image": "",
+      "searchKeywords": [
+        "fresh salmon",
+        "fish",
+        "salmon",
+        "smoked salmon",
+        "salmon fillet"
+      ],
+      "foodName": "Laks Røkt",
+      "tag": ["refrigerated product"],
+      "description": "Troll Salmon's smoked salmon has been awarded the Specialty mark for its unique flavor, characterized by a distinctive, mild, and lightly salted taste. Cold smoking with beech wood chips imparts a subtle smoky flavor. This product is perfect for classic brunch dishes, sandwiches, or as a topping in salads and pasta dishes.",
+      "image": "https://troll-salmon.com/wp-content/uploads/2017/05/rokt-laks-1.jpg",
       "foodGroupId": "4.1.1",
-      "foodId": 302,
-      "price": 120,
+      "foodId": 301,
+      "price": 131.1,
       "currency": "NOK",
-      "searchKeywords": ["cured salmon", "traditional dish"],
+      "quantity": {
+        "amount": 250,
+        "unit": "g"
+      },
       "calories": {
-        "quantity": 180,
+        "quantity": 200,
         "unit": "kcal"
       },
       "energy": {
-        "quantity": 753,
+        "quantity": 837,
         "unit": "kJ"
       },
-      "nutrients": ["protein", "omega-3 fatty acids", "vitamin D"]
+      "nutrients": ["protein", "omega-3 fatty acids", "vitamin D"],
+      "allergens": ["fish"],
+      "storage": "Store at 0 °C - 4 °C. Best sliced when cool.",
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "label": "Troll",
+      "supplier": "Troll salmon as"
     },
     {
-      "foodName": "Knekkebrød",
-      "latinName": "",
-      "image": "",
+      "searchKeywords": ["crispbread", "whole grain", "wasa", "knekkebrød"],
+      "foodName": "Knekkebrød Husman",
+      "description": "The full-bodied flavor of four perfectly blended, wholesome grains (rye, wheat, oats and barley) is in every bite of our Multi Grain crispbreads. The oat flakes and rye bran topping add delicious complexity to each extra-crunchy thick slice.",
+      "image": "https://bilder.kolonial.no/local_products/a7eed78b-e8a2-44b6-90a3-ba0315ae7e34.jpg?auto=format&fit=max&w=1000&s=647c351e9bbabead3334b1a11f1ff269",
       "foodGroupId": "5.7",
       "foodId": 401,
-      "price": 30,
+      "price": 17.2,
       "currency": "NOK",
-      "searchKeywords": ["crispbread", "whole grain"],
+      "quantity": {
+        "amount": 260,
+        "unit": "g"
+      },
       "calories": {
         "quantity": 350,
         "unit": "kcal"
@@ -131,17 +219,23 @@
         "quantity": 1464,
         "unit": "kJ"
       },
-      "nutrients": ["fiber", "protein", "carbohydrates"]
+      "nutrients": ["whole grain rye flour", "rye sourdough", "rye bran."],
+      "allergens": ["fish"],
+      "storage": "Store at 20 °C to 25 °C ",
+      "origin": "Finland",
+      "countryOfProduction": "Finland",
+      "label": "WASA",
+      "supplier": "Barilla norge as"
     },
     {
       "foodName": "Lefse",
-      "latinName": "",
-      "image": "",
+      "description": "",
+      "image": "https://buer-as.no/wp-content/uploads/2023/02/Lefser-Buer-300x207.png",
       "foodGroupId": "5.10",
       "foodId": 402,
       "price": 40,
       "currency": "NOK",
-      "searchKeywords": ["flatbread", "sweet bread"],
+      "searchKeywords": ["flatbread", "sweet bread", "buer", "lefse"],
       "calories": {
         "quantity": 250,
         "unit": "kcal"
@@ -150,11 +244,17 @@
         "quantity": 1046,
         "unit": "kJ"
       },
-      "nutrients": ["carbohydrates", "fiber", "sugar"]
+      "nutrients": ["carbohydrates", "fiber", "sugar"],
+      "allergens": ["gluten"],
+      "storage": "Store at 20 °C to 25 °C ",
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "label": "BUER",
+      "supplier": "BUER AS"
     },
     {
       "foodName": "Kålrotstappe",
-      "latinName": "",
+      "description": "",
       "image": "",
       "foodGroupId": "6.2",
       "foodId": 501,
@@ -173,7 +273,7 @@
     },
     {
       "foodName": "Rødkål",
-      "latinName": "",
+      "description": "",
       "image": "",
       "foodGroupId": "6.2",
       "foodId": 502,
@@ -192,7 +292,7 @@
     },
     {
       "foodName": "Solo",
-      "latinName": "",
+      "description": "",
       "image": "",
       "foodGroupId": "9.4",
       "foodId": 601,
@@ -211,7 +311,7 @@
     },
     {
       "foodName": "Solbærsaft",
-      "latinName": "",
+      "description": "",
       "image": "",
       "foodGroupId": "9.2",
       "foodId": 602,
@@ -230,7 +330,7 @@
     },
     {
       "foodName": "Fårikål",
-      "latinName": "",
+      "description": "",
       "image": "",
       "foodGroupId": "10.9.4",
       "foodId": 702,
@@ -249,7 +349,7 @@
     },
     {
       "foodName": "Bruschetta, with tomato and basil",
-      "latinName": "",
+      "description": "",
       "image": "",
       "foodGroupId": "10.9.1",
       "foodId": 504,
@@ -268,7 +368,7 @@
     },
     {
       "foodName": "Wok mix, Thai style",
-      "latinName": "",
+      "description": "",
       "image": "",
       "foodGroupId": "6.6",
       "foodId": 676,
@@ -296,7 +396,7 @@
         "unit": "kJ"
       },
       "foodName": "Pizza, industrially made, Grandiosa Original",
-      "latinName": "",
+      "description": "",
       "foodGroupId": "10.9.2",
       "foodId": 687,
       "price": 50,
@@ -305,7 +405,7 @@
     },
     {
       "foodName": "Cheese, hard, Jarlsberg",
-      "latinName": "",
+      "description": "",
       "image": "",
       "foodGroupId": "1.4.7",
       "foodId": 1035,
@@ -324,7 +424,7 @@
     },
     {
       "foodName": "Cheese, hard, Norvegia",
-      "latinName": "",
+      "description": "",
       "image": "",
       "foodGroupId": "1.4.7",
       "foodId": 1039,
@@ -343,7 +443,7 @@
     },
     {
       "foodName": "Cheese, hard, Parmesan",
-      "latinName": "",
+      "description": "",
       "image": "",
       "foodGroupId": "1.4.4",
       "foodId": 1200,
@@ -362,7 +462,7 @@
     },
     {
       "foodName": "Chilli nuts, Polly",
-      "latinName": "",
+      "description": "",
       "image": "",
       "foodGroupId": "10.5",
       "foodId": 13090,
@@ -381,7 +481,7 @@
     },
     {
       "foodName": "Apple juice",
-      "latinName": "Malus domestica Borkh.",
+      "description": "Malus domestica Borkh.",
       "image": "",
       "foodGroupId": "9.2",
       "foodId": 6571,
@@ -400,7 +500,7 @@
     },
     {
       "foodName": "Fruit drink, orange, concentrated",
-      "latinName": "Citrus sinensis (L.) Osbeck",
+      "description": "Citrus sinensis (L.) Osbeck",
       "image": "",
       "foodGroupId": "9.2",
       "foodId": 6569,
@@ -418,50 +518,91 @@
       "nutrients": ["sugar", "vitamin C", "fiber"]
     },
     {
-      "searchKeywords": ["taco sauce", "medium sauce", "Santa Maria"],
+      "searchKeywords": ["taco sauce", "medium sauce", "Santa Maria", "taco"],
+      "foodName": "Taco sauce, medium, Santa Maria",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": false,
+        "isFrozen": false
+      },
+      "description": "",
+      "image": "https://bilder.kolonial.no/local_products/b6f624af-3d64-4322-af10-b2ccc04d24dd.jpeg?auto=format&fit=max&w=173&s=5df483ca0c73eb76c94e2e41f3f3e309",
+      "foodGroupId": "10.11",
+      "foodId": "06.141",
+      "price": 19.9,
+      "currency": "NOK",
+      "quantity": {
+        "amount": 230,
+        "unit": "g"
+      },
       "calories": {
-        "quantity": 28,
+        "quantity": 34,
         "unit": "kcal"
       },
       "energy": {
-        "quantity": 117,
+        "quantity": 144,
         "unit": "kJ"
       },
-      "foodName": "Taco sauce, medium, Santa Maria",
-      "latinName": "",
-      "uri": "https://www.matvaretabellen.no/en/taco-sauce-medium-santa-maria/",
-      "foodGroupId": "10.11",
-      "foodId": "06.141",
-      "price": 51.63,
-      "currency": "NOK",
-      "nutrients": ["tomatoes", "spices", "salt"]
+
+      "nutrients": ["tomatoes", "spices", "salt"],
+      "allergens": [],
+      "origin": "Sweden",
+      "countryOfProduction": "Sweden",
+      "label": "Santa Maria",
+      "supplier": "Santa Maria Norge AS",
+      "storage": null,
+      "link": "https://www.matvaretabellen.no/en/taco-sauce-medium-santa-maria/"
     },
     {
       "searchKeywords": [
         "corn flour taco shells",
         "Santa Maria",
-        "taco shells"
+        "taco shells",
+        "taco"
       ],
+      "foodName": "Taco shells, corn flour, Santa Maria",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": false,
+        "isFrozen": false
+      },
+      "description": "A shell shaped like a bowl. Baked with cornmeal and fried. Taco Tubs taste like taco shells, but due to their shape, they are very convenient to fill with lots of delicious fillings. They might also be easier to eat than traditional shells! Fill Taco Tubs with taco ground meat and vegetables, or perhaps fish!",
+      "image": "https://bilder.ngdata.no/7311312008268/meny/medium.jpg",
       "calories": {
         "quantity": 447,
         "unit": "kcal"
       },
       "energy": {
-        "sourceId": "MI0114",
         "quantity": 1872.74,
         "unit": "kJ"
       },
-      "foodName": "Taco shells, corn flour, Santa Maria",
-      "latinName": "",
-      "uri": "https://www.matvaretabellen.no/en/taco-shells-corn-flour-santa-maria/",
       "foodGroupId": "5.7",
       "foodId": "05.369",
       "price": 93.14,
       "currency": "NOK",
-      "nutrients": ["corn flour", "salt", "oil"]
+      "nutrients": ["corn flour", "salt", "oil"],
+      "allergens": [],
+      "origin": "Sweden",
+      "countryOfProduction": "Sweden",
+      "label": "Santa Maria",
+      "supplier": "Santa Maria Norge AS",
+      "storage": null,
+      "link": "https://www.matvaretabellen.no/en/taco-shells-corn-flour-santa-maria/"
     },
     {
       "searchKeywords": ["taco spice mix", "spice mix", "taco seasoning"],
+      "foodName": "Taco spice mix",
+      "description": "",
+      "image": "https://bilder.ngdata.no/7311310031015/meny/medium.jpg",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": false,
+        "isFrozen": false
+      },
+      "quantity": {
+        "amount": 28,
+        "unit": "g"
+      },
       "calories": {
         "quantity": 226,
         "unit": "kcal"
@@ -470,108 +611,39 @@
         "quantity": 951,
         "unit": "kJ"
       },
-      "foodName": "Taco spice mix",
-      "latinName": "",
-      "uri": "https://www.matvaretabellen.no/en/taco-spice-mix/",
+
       "foodGroupId": "10.11",
       "foodId": "10.134",
       "price": 13.72,
       "currency": "NOK",
-      "nutrients": ["spices", "salt", "sugar"]
+      "nutrients": ["spices", "salt", "sugar"],
+      "storage": null,
+      "allergens": [],
+      "origin": "Sweden",
+      "countryOfProduction": "Sweden",
+      "label": "Santa Maria",
+      "supplier": "Santa Maria Norge AS",
+      "link": "https://www.matvaretabellen.no/en/taco-spice-mix/"
     },
     {
-      "searchKeywords": [
-        "Old El Paso spice mix",
-        "taco seasoning",
-        "spice mix"
-      ],
-      "calories": {
-        "quantity": 215,
-        "unit": "kcal"
+      "searchKeywords": ["sweetcorn", "vegetable", "vegetarian", "vegan"],
+      "foodName": "Corn, 2 pcs",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": false,
+        "isFrozen": false
       },
-      "energy": {
-        "quantity": 902,
-        "unit": "kJ"
-      },
-      "foodName": "Taco spice mix, Old El Paso",
-      "latinName": "",
-      "uri": "https://www.matvaretabellen.no/en/taco-spice-mix-old-el-paso/",
-      "foodGroupId": "10.11",
-      "foodId": "12.113",
-      "price": 80.83,
-      "currency": "NOK",
-      "nutrients": ["spices", "salt", "sugar"]
-    },
-    {
-      "searchKeywords": [
-        "Santa Maria spice mix",
-        "taco seasoning",
-        "spice mix"
-      ],
-      "calories": {
-        "quantity": 238,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 1000.29,
-        "unit": "kJ"
-      },
-      "foodName": "Taco spice mix, Santa Maria",
-      "latinName": "",
-      "uri": "https://www.matvaretabellen.no/en/taco-spice-mix-santa-maria/",
-      "foodGroupId": "10.11",
-      "foodId": "12.112",
-      "price": 73.05,
-      "currency": "NOK",
-      "nutrients": ["spices", "salt", "sugar"]
-    },
-    {
-      "searchKeywords": ["soda", "soft drink", "Cola"],
-      "calories": {
-        "quantity": 44,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 184,
-        "unit": "kJ"
-      },
-      "foodName": "Cola",
-      "latinName": "",
-      "uri": "https://www.matvaretabellen.no/en/cola/",
-      "foodGroupId": "9.4",
-      "foodId": "12.123",
-      "price": 12.5,
-      "currency": "NOK",
-      "nutrients": ["sugar", "carbonated water", "flavoring"]
-    },
-    {
-      "searchKeywords": ["soda", "soft drink", "Pepsi Max"],
-      "calories": {
-        "quantity": 1,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 4,
-        "unit": "kJ"
-      },
-      "foodName": "Pepsi Max",
-      "latinName": "",
-      "uri": "https://www.matvaretabellen.no/en/pepsi-max/",
-      "foodGroupId": "9.4",
-      "foodId": "12.124",
-      "price": 15.0,
-      "currency": "NOK",
-      "nutrients": ["carbonated water", "artificial sweeteners", "flavoring"]
-    },
-    {
-      "foodName": "Corn",
-      "latinName": "Zea mays",
-      "image": "",
+      "description": "Enjoy the wholesome goodness of corn with this versatile product. Perfect for a variety of dishes, whether it's a simple side, a hearty addition to salads, or a key ingredient in soups and stews. With its sweet and slightly nutty flavor, this corn is sure to enhance any meal. Quick and easy to prepare, it's a staple that fits seamlessly into everyday cooking.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F547263%2Fpexels-photo-547263.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-mali-maeder-547263.jpg%26fm%3Djpg&f=1&nofb=1&ipt=c00195119564789d628243820d01aa90b12393dfc6406f152d21c98adba9b04a&ipo=images",
       "foodGroupId": "5.7",
       "foodId": 702,
       "price": 15.0,
+      "quantity": {
+        "amount": "500",
+        "unit": "g"
+      },
       "currency": "NOK",
-      "searchKeywords": ["sweetcorn", "vegetable"],
+
       "calories": {
         "quantity": 96,
         "unit": "kcal"
@@ -580,17 +652,37 @@
         "quantity": 403,
         "unit": "kJ"
       },
-      "nutrients": ["carbohydrates", "fiber", "vitamin C"]
+      "nutrients": ["carbohydrates", "fiber", "vitamin C"],
+      "allergens": [],
+      "label": "Corn",
+      "supplier": "Corn Suppliser AS",
+      "storage": "Store at 18 °C to 25 °C ",
+      "link": null
     },
     {
+      "searchKeywords": [
+        "mixed greens",
+        "vegetable",
+        "vegan",
+        "vegetarian",
+        "norwegian"
+      ],
       "foodName": "Salad",
-      "latinName": "",
-      "image": "",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": true,
+        "isFrozen": false
+      },
+      "description": "Fresh and crisp salad leaves, perfect for a light and healthy addition to any meal. These greens offer a refreshing crunch and vibrant color, ideal for salads, sandwiches, or as a garnish. Enjoy the natural flavors and nutrients of these high-quality leaves, grown to deliver freshness and taste in every bite.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.sfFqaLl8v_a7NZ8biXzjLgHaE8%26pid%3DApi&f=1&ipt=9bb1132b2cc38939ca9259bdfce9a91b33e890eb424972a4808e99122e57ee3a&ipo=images",
       "foodGroupId": "5.7",
       "foodId": 703,
       "price": 10.0,
       "currency": "NOK",
-      "searchKeywords": ["mixed greens", "vegetable"],
+      "quantity": {
+        "amount": 1,
+        "unit": "pc"
+      },
       "calories": {
         "quantity": 14,
         "unit": "kcal"
@@ -599,17 +691,33 @@
         "quantity": 59,
         "unit": "kJ"
       },
-      "nutrients": ["fiber", "vitamins", "minerals"]
+      "nutrients": ["fiber", "vitamins", "minerals"],
+      "allergens": [],
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "label": "Fresh Salad",
+      "supplier": "Fresh Salad Supplier AS",
+      "storage": "Must be stored between 4 and 15 °C",
+      "link": null
     },
     {
+      "searchKeywords": ["fruit", "vegetable", "tomato"],
       "foodName": "Tomatoes",
-      "latinName": "Solanum lycopersicum",
-      "image": "",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": true,
+        "isFrozen": false
+      },
+      "description": "Solanum lycopersicum",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi2.wp.com%2Fyourmedguide.com%2Fwp-content%2Fuploads%2F2012%2F09%2Ftomatoes.jpg&f=1&nofb=1&ipt=8bfd5310fad09599bdb6895a2323878222813f520fac8fbf079804c88584a780&ipo=images",
       "foodGroupId": "5.7",
       "foodId": 704,
-      "price": 25.0,
+      "price": 46.9,
       "currency": "NOK",
-      "searchKeywords": ["fruit", "vegetable"],
+      "quantity": {
+        "amount": 1,
+        "unit": "kg"
+      },
       "calories": {
         "quantity": 18,
         "unit": "kcal"
@@ -618,87 +726,18 @@
         "quantity": 76,
         "unit": "kJ"
       },
-      "nutrients": ["vitamin C", "potassium", "fiber"]
-    },
-    {
-      "foodName": "Mince",
-      "latinName": "",
-      "image": "",
-      "foodGroupId": "5.7",
-      "foodId": 705,
-      "price": 90.0,
-      "currency": "NOK",
-      "searchKeywords": ["ground meat", "beef mince"],
-      "calories": {
-        "quantity": 250,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 1046,
-        "unit": "kJ"
-      },
-      "nutrients": ["protein", "fat", "iron"]
-    },
-    {
-      "foodName": "Vegetarian Mince",
-      "latinName": "",
-      "image": "",
-      "foodGroupId": "5.7",
-      "foodId": 706,
-      "price": 85.0,
-      "currency": "NOK",
-      "searchKeywords": ["plant-based mince", "vegetarian"],
-      "calories": {
-        "quantity": 150,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 628,
-        "unit": "kJ"
-      },
-      "nutrients": ["protein", "fiber", "iron"]
-    },
-    {
-      "foodName": "Kidney Beans",
-      "latinName": "Phaseolus vulgaris",
-      "image": "",
-      "foodGroupId": "5.7",
-      "foodId": 707,
-      "price": 35.0,
-      "currency": "NOK",
-      "searchKeywords": ["beans", "legumes"],
-      "calories": {
-        "quantity": 127,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 532,
-        "unit": "kJ"
-      },
-      "nutrients": ["protein", "fiber", "iron"]
-    },
-    {
-      "foodName": "Cucumber",
-      "latinName": "Cucumis sativus",
-      "image": "",
-      "foodGroupId": "5.7",
-      "foodId": 708,
-      "price": 12.0,
-      "currency": "NOK",
-      "searchKeywords": ["vegetable", "gourd"],
-      "calories": {
-        "quantity": 16,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 67,
-        "unit": "kJ"
-      },
-      "nutrients": ["vitamin K", "vitamin C", "fiber"]
+      "nutrients": ["vitamin C", "potassium", "fiber"],
+      "allergens": [],
+      "origin": "Netherlands",
+      "countryOfProduction": "Netherlands",
+      "supplier": "Fresh Salad Supplier AS",
+      "label": "Fresh Salad",
+      "storage": "Must be stored between 4 and 15 °C",
+      "link": null
     },
     {
       "foodName": "Taco Sauce, Medium, Santa Maria",
-      "latinName": "",
+      "description": "",
       "image": "",
       "foodGroupId": "10.11",
       "foodId": 709,
@@ -716,147 +755,101 @@
       "nutrients": ["sugar", "tomato", "spices"]
     },
     {
-      "foodName": "Corn",
-      "latinName": "Zea mays",
-      "image": "",
-      "foodGroupId": "5.7",
-      "foodId": 702,
-      "price": 15.0,
-      "currency": "NOK",
-      "searchKeywords": ["sweetcorn", "vegetable"],
-      "calories": {
-        "quantity": 96,
-        "unit": "kcal"
+      "searchKeywords": ["beans", "legumes", "vegan", "vegetarian", "organic"],
+      "foodName": "Black Beans",
+      "tags": {
+        "isOrganic": true,
+        "isRefrigerated": false,
+        "isFrozen": false
       },
-      "energy": {
-        "quantity": 403,
-        "unit": "kJ"
-      },
-      "nutrients": ["carbohydrates", "fiber", "vitamin C"]
-    },
-    {
-      "foodName": "Salad",
-      "latinName": "",
-      "image": "",
-      "foodGroupId": "5.7",
-      "foodId": 703,
-      "price": 10.0,
-      "currency": "NOK",
-      "searchKeywords": ["mixed greens", "vegetable"],
-      "calories": {
-        "quantity": 14,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 59,
-        "unit": "kJ"
-      },
-      "nutrients": ["fiber", "vitamins", "minerals"]
-    },
-    {
-      "foodName": "Tomatoes",
-      "latinName": "Solanum lycopersicum",
-      "image": "",
-      "foodGroupId": "5.7",
-      "foodId": 704,
-      "price": 25.0,
-      "currency": "NOK",
-      "searchKeywords": ["fruit", "vegetable"],
-      "calories": {
-        "quantity": 18,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 76,
-        "unit": "kJ"
-      },
-      "nutrients": ["vitamin C", "potassium", "fiber"]
-    },
-    {
-      "foodName": "Mince",
-      "latinName": "",
-      "image": "",
-      "foodGroupId": "5.7",
-      "foodId": 705,
-      "price": 90.0,
-      "currency": "NOK",
-      "searchKeywords": ["ground meat", "beef mince"],
-      "calories": {
-        "quantity": 250,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 1046,
-        "unit": "kJ"
-      },
-      "nutrients": ["protein", "fat", "iron"]
-    },
-    {
-      "foodName": "Vegetarian Mince",
-      "latinName": "",
-      "image": "",
-      "foodGroupId": "5.7",
-      "foodId": 706,
-      "price": 85.0,
-      "currency": "NOK",
-      "searchKeywords": ["plant-based mince", "vegetarian"],
-      "calories": {
-        "quantity": 150,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 628,
-        "unit": "kJ"
-      },
-      "nutrients": ["protein", "fiber", "iron"]
-    },
-    {
-      "foodName": "Kidney Beans",
-      "latinName": "Phaseolus vulgaris",
-      "image": "",
+      "description": "Black beans are very versatile and can be used for many things, including as a substitute for ground meat in tacos or nachos",
+      "image": "https://optimise2.assets-servd.host/kolonihagen-site/production/Produkter/Bonner-Linser/Sorte-bonner-380-g.png?w=1260&q=80&auto=format&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1691054163&s=26a0684fa1b096bfabe0534cf9d05130",
       "foodGroupId": "5.7",
       "foodId": 707,
       "price": 35.0,
       "currency": "NOK",
-      "searchKeywords": ["beans", "legumes"],
+      "quantity": {
+        "amount": 380,
+        "unit": "g"
+      },
       "calories": {
-        "quantity": 127,
+        "quantity": 106,
         "unit": "kcal"
       },
       "energy": {
-        "quantity": 532,
+        "quantity": 444,
         "unit": "kJ"
       },
-      "nutrients": ["protein", "fiber", "iron"]
+      "nutrients": ["protein", "fiber", "iron"],
+      "allergens": [],
+      "origin": "China",
+      "countryOfProduction": "Italy",
+      "label": "KOLONIHAGEN",
+      "supplier": "REMA 1000 NORGE AS (LEV.)",
+      "link": "https://www.kolonihagen.no/produkt/sorte-bonner"
     },
     {
-      "foodName": "Cucumber",
-      "latinName": "Cucumis sativus",
-      "image": "",
+      "searchKeywords": [
+        "vegetable",
+        "gourd",
+        "vegan",
+        "vegetarian",
+        "cucumber",
+        "norwegian"
+      ],
+      "foodName": "Cucumber, 1 pc",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": false,
+        "isFrozen": false
+      },
+      "description": "Who doesn’t love cucumbers? They adorn any sandwich and taste great in all kinds of salads. Try them as a snack with a dip too. A real winner!",
+      "image": "https://www.bama.no/siteassets/fotoware/2020/10/agurk.jpg?height=210&mode=crop",
       "foodGroupId": "5.7",
       "foodId": 708,
       "price": 12.0,
       "currency": "NOK",
-      "searchKeywords": ["vegetable", "gourd"],
+      "quantity": {
+        "amount": 1,
+        "unit": "pc"
+      },
       "calories": {
-        "quantity": 16,
+        "quantity": 11,
         "unit": "kcal"
       },
       "energy": {
-        "quantity": 67,
+        "quantity": 44,
         "unit": "kJ"
       },
-      "nutrients": ["vitamin K", "vitamin C", "fiber"]
+      "nutrients": ["vitamin K", "vitamin C", "fiber"],
+      "allergens": [],
+      "label": "Bama",
+      "supplier": "Bama dagligvare as"
     },
     {
-      "foodName": "Milk",
-      "latinName": "Mammalia",
-      "image": "",
+      "searchKeywords": [
+        "dairy",
+        "beverage",
+        "milk",
+        "vegetarian",
+        "norwegian"
+      ],
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": true,
+        "isFrozen": false
+      },
+      "foodName": "TINE® Whole Milk 3.5% Fat",
+      "description": "TINE® Whole Milk contains 3.5% fat. The milk from TINE® comes from farms in your local region.",
+      "image": "https://www.tine.no/_/packshot/320x320/6.png",
       "foodGroupId": "1.1",
       "foodId": 1001,
-      "price": 19.5,
+      "price": 22.9,
       "currency": "NOK",
-      "searchKeywords": ["dairy", "beverage"],
+      "quantity": {
+        "amount": 1,
+        "unit": "L"
+      },
       "calories": {
         "quantity": 42,
         "unit": "kcal"
@@ -865,36 +858,73 @@
         "quantity": 176,
         "unit": "kJ"
       },
-      "nutrients": ["calcium", "protein", "vitamin D"]
+      "nutrients": ["calcium", "protein", "vitamin D"],
+      "allergens": ["milk"],
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "label": "Tine",
+      "supplier": "Tine SA",
+      "storage": "Store at 0 °C - 4 °C. Best sliced when cool."
     },
     {
-      "foodName": "Bananas",
-      "latinName": "Musa spp.",
-      "image": "",
+      "searchKeywords": ["fruit", "tropical", "banana", "organic"],
+      "foodName": "Organic Bananas, 4 pcs",
+      "tags": {
+        "isOrganic": true,
+        "isRefrigerated": false,
+        "isFrozen": false
+      },
+      "description": "Bananas have been available in Norway for over 100 years and are a beloved part of the Norwegian diet. They provide quick energy and essential nutrients. This versatile fruit can be used in everything from baking to cooking. Try bananas in a fresh fruit smoothie or add them to your lunchbox",
+      "image": "https://www.bama.no/siteassets/fotoware/2023/9/bendit_bananklase-2_bama.jpg?height=210&mode=crop",
       "foodGroupId": "1.1",
       "foodId": 1002,
-      "price": 14.0,
+      "price": 30.6,
       "currency": "NOK",
-      "searchKeywords": ["fruit", "tropical"],
+      "quantity": {
+        "amount": 930,
+        "unit": "g"
+      },
       "calories": {
-        "quantity": 89,
+        "quantity": 83,
         "unit": "kcal"
       },
       "energy": {
-        "quantity": 371,
+        "quantity": 352,
         "unit": "kJ"
       },
-      "nutrients": ["potassium", "fiber", "vitamin C"]
+      "nutrients": ["potassium", "fiber", "vitamin C"],
+      "allergens": [],
+      "origin": "Ecuador",
+      "countryOfProduction": "Ecuador",
+      "label": "Bama",
+      "supplier": "Bama dagligvare as",
+      "storage": "Store at 18 °C to 25 °C "
     },
     {
-      "foodName": "Apples",
-      "latinName": "Malus domestica",
-      "image": "",
+      "searchKeywords": [
+        "fruit",
+        "fresh",
+        "apple",
+        "pink lady",
+        "vegan",
+        "vegetarian"
+      ],
+      "foodName": "Pink Lady Epler, 6 pcs",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": false,
+        "isFrozen": false
+      },
+      "description": "Many say that Pink Lady apples have a perfect balance between sweetness and acidity. The apples are crispy and absolutely delicious!",
+      "image": "https://www.bama.no/siteassets/fotoware/2020/10/pink-lady_152.jpg?height=210&mode=crop",
       "foodGroupId": "1.1",
       "foodId": 1003,
-      "price": 20.0,
+      "price": 47.3,
       "currency": "NOK",
-      "searchKeywords": ["fruit", "fresh"],
+      "quantity": {
+        "amount": 850,
+        "unit": "g"
+      },
       "calories": {
         "quantity": 52,
         "unit": "kcal"
@@ -903,17 +933,40 @@
         "quantity": 218,
         "unit": "kJ"
       },
-      "nutrients": ["fiber", "vitamin C", "potassium"]
+      "nutrients": ["fiber", "vitamin C", "potassium"],
+      "allergens": [],
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "label": "Bama",
+      "supplier": "Bama dagligvare as",
+      "storage": "Store at 18 °C to 25 °C "
     },
     {
-      "foodName": "Bread",
-      "latinName": "",
-      "image": "",
+      "searchKeywords": [
+        "bakery",
+        "grain",
+        "toast",
+        "bread",
+        "pre-sliced",
+        "vegan",
+        "vegetarian"
+      ],
+      "foodName": "Bread, Toast Kneipp",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": false,
+        "isFrozen": false
+      },
+      "description": "Pre-sliced toast bread. Perfect for toasting or making sandwiches and snacks. Now available in a smaller package",
+      "image": "https://www.handlenor.no/wp-content/uploads/2021/08/3A77D069-970C-4B5F-8FAF-6FB8B995C7FF.png",
       "foodGroupId": "5.1",
       "foodId": 1004,
-      "price": 25.0,
+      "price": 44.1,
       "currency": "NOK",
-      "searchKeywords": ["bakery", "grain"],
+      "quantity": {
+        "amount": 660,
+        "unit": "g"
+      },
       "calories": {
         "quantity": 265,
         "unit": "kcal"
@@ -922,64 +975,114 @@
         "quantity": 1115,
         "unit": "kJ"
       },
-      "nutrients": ["carbohydrates", "fiber", "protein"]
+      "nutrients": ["carbohydrates", "fiber", "protein"],
+      "allergens": ["gluten"],
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "label": "Bakehuset",
+      "supplier": "Bakehuset direkte",
+      "storage": "Store at 18 °C to 25 °C "
     },
     {
-      "foodName": "Eggs",
-      "latinName": "Gallus gallus domesticus",
-      "image": "",
+      "searchKeywords": ["protein", "dairy", "eggs", "organic", "prior"],
+      "foodName": "Organic Eggs, Prior",
+      "tags": {
+        "isOrganic": true,
+        "isRefrigerated": true,
+        "isFrozen": false
+      },
+      "description": "Egg from hens with organic living conditions on Norwegian farms. In addition to meeting organic standards, the hens have access to elements that enhance their well-being.",
+      "image": "https://bilder.kolonial.no/local_products/7dca4236-6ecd-4c67-a484-4004bfa1233e.jpg?auto=format&fit=max&w=1000&s=7cf61fb4c726e563e038777720f26fed",
       "foodGroupId": "1.2",
       "foodId": 1005,
-      "price": 35.0,
-      "currency": "NOK",
-      "searchKeywords": ["protein", "dairy"],
-      "calories": {
-        "quantity": 155,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 649,
-        "unit": "kJ"
-      },
-      "nutrients": ["protein", "vitamin D", "iron"]
-    },
-    {
-      "foodName": "Sour Cream",
-      "latinName": "",
-      "image": "",
-      "foodGroupId": "1.3",
-      "foodId": 1006,
       "price": 27.0,
       "currency": "NOK",
-      "searchKeywords": ["dairy", "cream", "sour"],
+      "quantity": {
+        "amount": 380,
+        "unit": "g"
+      },
       "calories": {
-        "quantity": 193,
+        "quantity": 146,
         "unit": "kcal"
       },
       "energy": {
-        "quantity": 807,
+        "quantity": 606,
         "unit": "kJ"
       },
-      "nutrients": ["fat", "protein", "calcium"]
+      "nutrients": ["protein", "vitamin D", "iron"],
+      "allergens": ["eggs"],
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "label": "Prior",
+      "supplier": "Nortura SA (Prior)",
+      "storage": "Store at 0 °C - 4 °C."
     },
     {
-      "foodName": "Rice",
-      "latinName": "Oryza sativa",
-      "image": "",
+      "searchKeywords": ["dairy", "cream", "sour", "vegetarian"],
+      "foodName": "TINE® Lettrømme 17 %",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": false,
+        "isFrozen": false
+      },
+      "description": "TINE® Lettrømme 17% is a cultured whole milk and cream blend with 17% fat content. It offers a rich, tangy, and fresh flavor, perfect for adding a creamy touch to a variety of dishes.",
+      "image": "https://www.tine.no/_/packshot/240x240/545.png",
+      "foodGroupId": "1.3",
+      "foodId": 1006,
+      "price": 19.9,
+      "currency": "NOK",
+      "quantity": {
+        "amount": 300,
+        "unit": "g"
+      },
+      "calories": {
+        "quantity": 179,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 741,
+        "unit": "kJ"
+      },
+      "nutrients": ["fat", "protein", "calcium"],
+      "allergens": ["milk"],
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "label": "Tine",
+      "supplier": "Tine SA"
+    },
+    {
+      "searchKeywords": ["grain", "cereal", "rice", "Toro", "vegetarian"],
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": false,
+        "isFrozen": false
+      },
+      "foodName": "Jasminris Boil in Bag",
+      "description": "TORO Jasmine Rice is a premium Thai rice grown in the same soil as jasmine plants. It has a mild, clean flavor and a slightly sticky texture. Ideal for all types of dishes, especially spicy Asian recipes. Easy to love, easy to cook.",
+      "image": "https://www.mam.no/stabburet/747X629/105472.png",
       "foodGroupId": "5.1",
       "foodId": 1007,
       "price": 25.0,
       "currency": "NOK",
-      "searchKeywords": ["grain", "cereal", "rice"],
+      "quantity": {
+        "amount": 960,
+        "unit": "g"
+      },
       "calories": {
-        "quantity": 130,
+        "quantity": 123,
         "unit": "kcal"
       },
       "energy": {
-        "quantity": 545,
+        "quantity": 524,
         "unit": "kJ"
       },
-      "nutrients": ["carbohydrates", "protein", "fiber"]
+      "nutrients": ["carbohydrates", "protein", "fiber"],
+      "allergens": [],
+      "storage": "Store at 20 °C to 25 °C ",
+      "origin": "Thailand",
+      "countryOfProduction": "Czech Republic",
+      "label": "TORO",
+      "supplier": "Orkla Foods Norge AS"
     }
   ]
 }

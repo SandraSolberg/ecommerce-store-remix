@@ -1,0 +1,985 @@
+{
+  "foods": [
+    {
+      "foodName": "Brunost",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "1.4.5",
+      "foodId": 101,
+      "price": 50,
+      "currency": "NOK",
+      "searchKeywords": ["brown cheese", "whey cheese"],
+      "calories": {
+        "quantity": 450,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1883,
+        "unit": "kJ"
+      },
+      "nutrients": ["fat", "protein", "calcium"]
+    },
+    {
+      "foodName": "Jarlsberg",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "1.4.7",
+      "foodId": 102,
+      "price": 90,
+      "currency": "NOK",
+      "searchKeywords": ["hard cheese", "norwegian cheese"],
+      "calories": {
+        "quantity": 350,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1464,
+        "unit": "kJ"
+      },
+      "nutrients": ["fat", "protein", "calcium"]
+    },
+    {
+      "foodName": "Rømmegrøt",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "3.7",
+      "foodId": 201,
+      "price": 60,
+      "currency": "NOK",
+      "searchKeywords": ["sour cream porridge", "traditional dish"],
+      "calories": {
+        "quantity": 250,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1046,
+        "unit": "kJ"
+      },
+      "nutrients": ["fat", "protein", "carbohydrates"]
+    },
+    {
+      "foodName": "Pinnekjøtt",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "3.2",
+      "foodId": 202,
+      "price": 200,
+      "currency": "NOK",
+      "searchKeywords": ["dried lamb ribs", "traditional dish"],
+      "calories": {
+        "quantity": 300,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1255,
+        "unit": "kJ"
+      },
+      "nutrients": ["fat", "protein", "salt"]
+    },
+    {
+      "foodName": "Rakfisk",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "4.1",
+      "foodId": 301,
+      "price": 150,
+      "currency": "NOK",
+      "searchKeywords": ["fermented fish", "traditional dish"],
+      "calories": {
+        "quantity": 200,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 837,
+        "unit": "kJ"
+      },
+      "nutrients": ["protein", "omega-3 fatty acids", "vitamin D"]
+    },
+    {
+      "foodName": "Gravlaks",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "4.1.1",
+      "foodId": 302,
+      "price": 120,
+      "currency": "NOK",
+      "searchKeywords": ["cured salmon", "traditional dish"],
+      "calories": {
+        "quantity": 180,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 753,
+        "unit": "kJ"
+      },
+      "nutrients": ["protein", "omega-3 fatty acids", "vitamin D"]
+    },
+    {
+      "foodName": "Knekkebrød",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 401,
+      "price": 30,
+      "currency": "NOK",
+      "searchKeywords": ["crispbread", "whole grain"],
+      "calories": {
+        "quantity": 350,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1464,
+        "unit": "kJ"
+      },
+      "nutrients": ["fiber", "protein", "carbohydrates"]
+    },
+    {
+      "foodName": "Lefse",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "5.10",
+      "foodId": 402,
+      "price": 40,
+      "currency": "NOK",
+      "searchKeywords": ["flatbread", "sweet bread"],
+      "calories": {
+        "quantity": 250,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1046,
+        "unit": "kJ"
+      },
+      "nutrients": ["carbohydrates", "fiber", "sugar"]
+    },
+    {
+      "foodName": "Kålrotstappe",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "6.2",
+      "foodId": 501,
+      "price": 25,
+      "currency": "NOK",
+      "searchKeywords": ["mashed rutabaga", "vegetable dish"],
+      "calories": {
+        "quantity": 60,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 251,
+        "unit": "kJ"
+      },
+      "nutrients": ["fiber", "vitamin C", "potassium"]
+    },
+    {
+      "foodName": "Rødkål",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "6.2",
+      "foodId": 502,
+      "price": 30,
+      "currency": "NOK",
+      "searchKeywords": ["red cabbage", "vegetable dish"],
+      "calories": {
+        "quantity": 50,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 209,
+        "unit": "kJ"
+      },
+      "nutrients": ["fiber", "vitamin C", "antioxidants"]
+    },
+    {
+      "foodName": "Solo",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "9.4",
+      "foodId": 601,
+      "price": 20,
+      "currency": "NOK",
+      "searchKeywords": ["soda", "soft drink", "Solo"],
+      "calories": {
+        "quantity": 40,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 167,
+        "unit": "kJ"
+      },
+      "nutrients": ["sugar", "carbonated water", "flavoring"]
+    },
+    {
+      "foodName": "Solbærsaft",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "9.2",
+      "foodId": 602,
+      "price": 35,
+      "currency": "NOK",
+      "searchKeywords": ["blackcurrant juice", "fruit drink"],
+      "calories": {
+        "quantity": 50,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 209,
+        "unit": "kJ"
+      },
+      "nutrients": ["vitamin C", "sugar", "antioxidants"]
+    },
+    {
+      "foodName": "Fårikål",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "10.9.4",
+      "foodId": 702,
+      "price": 80,
+      "currency": "NOK",
+      "searchKeywords": ["lamb and cabbage stew", "traditional dish"],
+      "calories": {
+        "quantity": 200,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 837,
+        "unit": "kJ"
+      },
+      "nutrients": ["protein", "fat", "fiber"]
+    },
+    {
+      "foodName": "Bruschetta, with tomato and basil",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "10.9.1",
+      "foodId": 504,
+      "price": 35.62,
+      "currency": "NOK",
+      "searchKeywords": ["bruschetta", "tomato", "basil"],
+      "calories": {
+        "quantity": 114,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 479,
+        "unit": "kJ"
+      },
+      "nutrients": ["carbohydrates", "fiber", "vitamin C"]
+    },
+    {
+      "foodName": "Wok mix, Thai style",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "6.6",
+      "foodId": 676,
+      "price": 88.78,
+      "currency": "NOK",
+      "searchKeywords": ["wok", "thai style", "vegetable mix"],
+      "calories": {
+        "quantity": 52,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 219,
+        "unit": "kJ"
+      },
+      "nutrients": ["fiber", "vitamin C", "potassium"]
+    },
+    {
+      "searchKeywords": ["pizza"],
+      "calories": {
+        "quantity": 198,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 833,
+        "unit": "kJ"
+      },
+      "foodName": "Pizza, industrially made, Grandiosa Original",
+      "latinName": "",
+      "foodGroupId": "10.9.2",
+      "foodId": 687,
+      "price": 50,
+      "currency": "NOK",
+      "nutrients": []
+    },
+    {
+      "foodName": "Cheese, hard, Jarlsberg",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "1.4.7",
+      "foodId": 1035,
+      "price": 46.32,
+      "currency": "NOK",
+      "searchKeywords": ["jarlsberg", "hard cheese", "norwegian cheese"],
+      "calories": {
+        "quantity": 351,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1458,
+        "unit": "kJ"
+      },
+      "nutrients": ["fat", "protein", "calcium"]
+    },
+    {
+      "foodName": "Cheese, hard, Norvegia",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "1.4.7",
+      "foodId": 1039,
+      "price": 29.78,
+      "currency": "NOK",
+      "searchKeywords": ["norvegia", "hard cheese", "norwegian cheese"],
+      "calories": {
+        "quantity": 351,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1458,
+        "unit": "kJ"
+      },
+      "nutrients": ["fat", "protein", "calcium"]
+    },
+    {
+      "foodName": "Cheese, hard, Parmesan",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "1.4.4",
+      "foodId": 1200,
+      "price": 30.22,
+      "currency": "NOK",
+      "searchKeywords": ["parmesan", "hard cheese", "italian cheese"],
+      "calories": {
+        "quantity": 416,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1729.6,
+        "unit": "kJ"
+      },
+      "nutrients": ["fat", "protein", "calcium"]
+    },
+    {
+      "foodName": "Chilli nuts, Polly",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "10.5",
+      "foodId": 13090,
+      "price": 76.7,
+      "currency": "NOK",
+      "searchKeywords": ["chilli nuts", "polly", "spicy nuts"],
+      "calories": {
+        "quantity": 505,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 2104.2,
+        "unit": "kJ"
+      },
+      "nutrients": ["fat", "protein", "fiber"]
+    },
+    {
+      "foodName": "Apple juice",
+      "latinName": "Malus domestica Borkh.",
+      "image": "",
+      "foodGroupId": "9.2",
+      "foodId": 6571,
+      "price": 7.64,
+      "currency": "NOK",
+      "searchKeywords": ["apple juice", "juice", "fruit juice"],
+      "calories": {
+        "quantity": 42,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 180,
+        "unit": "kJ"
+      },
+      "nutrients": ["sugar", "vitamin C", "fiber"]
+    },
+    {
+      "foodName": "Fruit drink, orange, concentrated",
+      "latinName": "Citrus sinensis (L.) Osbeck",
+      "image": "",
+      "foodGroupId": "9.2",
+      "foodId": 6569,
+      "price": 80.21,
+      "currency": "NOK",
+      "searchKeywords": ["orange drink", "concentrated orange", "fruit drink"],
+      "calories": {
+        "quantity": 172,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 732,
+        "unit": "kJ"
+      },
+      "nutrients": ["sugar", "vitamin C", "fiber"]
+    },
+    {
+      "searchKeywords": ["taco sauce", "medium sauce", "Santa Maria"],
+      "calories": {
+        "quantity": 28,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 117,
+        "unit": "kJ"
+      },
+      "foodName": "Taco sauce, medium, Santa Maria",
+      "latinName": "",
+      "uri": "https://www.matvaretabellen.no/en/taco-sauce-medium-santa-maria/",
+      "foodGroupId": "10.11",
+      "foodId": "06.141",
+      "price": 51.63,
+      "currency": "NOK",
+      "nutrients": ["tomatoes", "spices", "salt"]
+    },
+    {
+      "searchKeywords": [
+        "corn flour taco shells",
+        "Santa Maria",
+        "taco shells"
+      ],
+      "calories": {
+        "quantity": 447,
+        "unit": "kcal"
+      },
+      "energy": {
+        "sourceId": "MI0114",
+        "quantity": 1872.74,
+        "unit": "kJ"
+      },
+      "foodName": "Taco shells, corn flour, Santa Maria",
+      "latinName": "",
+      "uri": "https://www.matvaretabellen.no/en/taco-shells-corn-flour-santa-maria/",
+      "foodGroupId": "5.7",
+      "foodId": "05.369",
+      "price": 93.14,
+      "currency": "NOK",
+      "nutrients": ["corn flour", "salt", "oil"]
+    },
+    {
+      "searchKeywords": ["taco spice mix", "spice mix", "taco seasoning"],
+      "calories": {
+        "quantity": 226,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 951,
+        "unit": "kJ"
+      },
+      "foodName": "Taco spice mix",
+      "latinName": "",
+      "uri": "https://www.matvaretabellen.no/en/taco-spice-mix/",
+      "foodGroupId": "10.11",
+      "foodId": "10.134",
+      "price": 13.72,
+      "currency": "NOK",
+      "nutrients": ["spices", "salt", "sugar"]
+    },
+    {
+      "searchKeywords": [
+        "Old El Paso spice mix",
+        "taco seasoning",
+        "spice mix"
+      ],
+      "calories": {
+        "quantity": 215,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 902,
+        "unit": "kJ"
+      },
+      "foodName": "Taco spice mix, Old El Paso",
+      "latinName": "",
+      "uri": "https://www.matvaretabellen.no/en/taco-spice-mix-old-el-paso/",
+      "foodGroupId": "10.11",
+      "foodId": "12.113",
+      "price": 80.83,
+      "currency": "NOK",
+      "nutrients": ["spices", "salt", "sugar"]
+    },
+    {
+      "searchKeywords": [
+        "Santa Maria spice mix",
+        "taco seasoning",
+        "spice mix"
+      ],
+      "calories": {
+        "quantity": 238,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1000.29,
+        "unit": "kJ"
+      },
+      "foodName": "Taco spice mix, Santa Maria",
+      "latinName": "",
+      "uri": "https://www.matvaretabellen.no/en/taco-spice-mix-santa-maria/",
+      "foodGroupId": "10.11",
+      "foodId": "12.112",
+      "price": 73.05,
+      "currency": "NOK",
+      "nutrients": ["spices", "salt", "sugar"]
+    },
+    {
+      "searchKeywords": ["soda", "soft drink", "Cola"],
+      "calories": {
+        "quantity": 44,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 184,
+        "unit": "kJ"
+      },
+      "foodName": "Cola",
+      "latinName": "",
+      "uri": "https://www.matvaretabellen.no/en/cola/",
+      "foodGroupId": "9.4",
+      "foodId": "12.123",
+      "price": 12.5,
+      "currency": "NOK",
+      "nutrients": ["sugar", "carbonated water", "flavoring"]
+    },
+    {
+      "searchKeywords": ["soda", "soft drink", "Pepsi Max"],
+      "calories": {
+        "quantity": 1,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 4,
+        "unit": "kJ"
+      },
+      "foodName": "Pepsi Max",
+      "latinName": "",
+      "uri": "https://www.matvaretabellen.no/en/pepsi-max/",
+      "foodGroupId": "9.4",
+      "foodId": "12.124",
+      "price": 15.0,
+      "currency": "NOK",
+      "nutrients": ["carbonated water", "artificial sweeteners", "flavoring"]
+    },
+    {
+      "foodName": "Corn",
+      "latinName": "Zea mays",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 702,
+      "price": 15.0,
+      "currency": "NOK",
+      "searchKeywords": ["sweetcorn", "vegetable"],
+      "calories": {
+        "quantity": 96,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 403,
+        "unit": "kJ"
+      },
+      "nutrients": ["carbohydrates", "fiber", "vitamin C"]
+    },
+    {
+      "foodName": "Salad",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 703,
+      "price": 10.0,
+      "currency": "NOK",
+      "searchKeywords": ["mixed greens", "vegetable"],
+      "calories": {
+        "quantity": 14,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 59,
+        "unit": "kJ"
+      },
+      "nutrients": ["fiber", "vitamins", "minerals"]
+    },
+    {
+      "foodName": "Tomatoes",
+      "latinName": "Solanum lycopersicum",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 704,
+      "price": 25.0,
+      "currency": "NOK",
+      "searchKeywords": ["fruit", "vegetable"],
+      "calories": {
+        "quantity": 18,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 76,
+        "unit": "kJ"
+      },
+      "nutrients": ["vitamin C", "potassium", "fiber"]
+    },
+    {
+      "foodName": "Mince",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 705,
+      "price": 90.0,
+      "currency": "NOK",
+      "searchKeywords": ["ground meat", "beef mince"],
+      "calories": {
+        "quantity": 250,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1046,
+        "unit": "kJ"
+      },
+      "nutrients": ["protein", "fat", "iron"]
+    },
+    {
+      "foodName": "Vegetarian Mince",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 706,
+      "price": 85.0,
+      "currency": "NOK",
+      "searchKeywords": ["plant-based mince", "vegetarian"],
+      "calories": {
+        "quantity": 150,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 628,
+        "unit": "kJ"
+      },
+      "nutrients": ["protein", "fiber", "iron"]
+    },
+    {
+      "foodName": "Kidney Beans",
+      "latinName": "Phaseolus vulgaris",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 707,
+      "price": 35.0,
+      "currency": "NOK",
+      "searchKeywords": ["beans", "legumes"],
+      "calories": {
+        "quantity": 127,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 532,
+        "unit": "kJ"
+      },
+      "nutrients": ["protein", "fiber", "iron"]
+    },
+    {
+      "foodName": "Cucumber",
+      "latinName": "Cucumis sativus",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 708,
+      "price": 12.0,
+      "currency": "NOK",
+      "searchKeywords": ["vegetable", "gourd"],
+      "calories": {
+        "quantity": 16,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 67,
+        "unit": "kJ"
+      },
+      "nutrients": ["vitamin K", "vitamin C", "fiber"]
+    },
+    {
+      "foodName": "Taco Sauce, Medium, Santa Maria",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "10.11",
+      "foodId": 709,
+      "price": 51.63,
+      "currency": "NOK",
+      "searchKeywords": ["taco sauce", "medium heat"],
+      "calories": {
+        "quantity": 28,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 117,
+        "unit": "kJ"
+      },
+      "nutrients": ["sugar", "tomato", "spices"]
+    },
+    {
+      "foodName": "Corn",
+      "latinName": "Zea mays",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 702,
+      "price": 15.0,
+      "currency": "NOK",
+      "searchKeywords": ["sweetcorn", "vegetable"],
+      "calories": {
+        "quantity": 96,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 403,
+        "unit": "kJ"
+      },
+      "nutrients": ["carbohydrates", "fiber", "vitamin C"]
+    },
+    {
+      "foodName": "Salad",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 703,
+      "price": 10.0,
+      "currency": "NOK",
+      "searchKeywords": ["mixed greens", "vegetable"],
+      "calories": {
+        "quantity": 14,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 59,
+        "unit": "kJ"
+      },
+      "nutrients": ["fiber", "vitamins", "minerals"]
+    },
+    {
+      "foodName": "Tomatoes",
+      "latinName": "Solanum lycopersicum",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 704,
+      "price": 25.0,
+      "currency": "NOK",
+      "searchKeywords": ["fruit", "vegetable"],
+      "calories": {
+        "quantity": 18,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 76,
+        "unit": "kJ"
+      },
+      "nutrients": ["vitamin C", "potassium", "fiber"]
+    },
+    {
+      "foodName": "Mince",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 705,
+      "price": 90.0,
+      "currency": "NOK",
+      "searchKeywords": ["ground meat", "beef mince"],
+      "calories": {
+        "quantity": 250,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1046,
+        "unit": "kJ"
+      },
+      "nutrients": ["protein", "fat", "iron"]
+    },
+    {
+      "foodName": "Vegetarian Mince",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 706,
+      "price": 85.0,
+      "currency": "NOK",
+      "searchKeywords": ["plant-based mince", "vegetarian"],
+      "calories": {
+        "quantity": 150,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 628,
+        "unit": "kJ"
+      },
+      "nutrients": ["protein", "fiber", "iron"]
+    },
+    {
+      "foodName": "Kidney Beans",
+      "latinName": "Phaseolus vulgaris",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 707,
+      "price": 35.0,
+      "currency": "NOK",
+      "searchKeywords": ["beans", "legumes"],
+      "calories": {
+        "quantity": 127,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 532,
+        "unit": "kJ"
+      },
+      "nutrients": ["protein", "fiber", "iron"]
+    },
+    {
+      "foodName": "Cucumber",
+      "latinName": "Cucumis sativus",
+      "image": "",
+      "foodGroupId": "5.7",
+      "foodId": 708,
+      "price": 12.0,
+      "currency": "NOK",
+      "searchKeywords": ["vegetable", "gourd"],
+      "calories": {
+        "quantity": 16,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 67,
+        "unit": "kJ"
+      },
+      "nutrients": ["vitamin K", "vitamin C", "fiber"]
+    },
+    {
+      "foodName": "Milk",
+      "latinName": "Mammalia",
+      "image": "",
+      "foodGroupId": "1.1",
+      "foodId": 1001,
+      "price": 19.5,
+      "currency": "NOK",
+      "searchKeywords": ["dairy", "beverage"],
+      "calories": {
+        "quantity": 42,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 176,
+        "unit": "kJ"
+      },
+      "nutrients": ["calcium", "protein", "vitamin D"]
+    },
+    {
+      "foodName": "Bananas",
+      "latinName": "Musa spp.",
+      "image": "",
+      "foodGroupId": "1.1",
+      "foodId": 1002,
+      "price": 14.0,
+      "currency": "NOK",
+      "searchKeywords": ["fruit", "tropical"],
+      "calories": {
+        "quantity": 89,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 371,
+        "unit": "kJ"
+      },
+      "nutrients": ["potassium", "fiber", "vitamin C"]
+    },
+    {
+      "foodName": "Apples",
+      "latinName": "Malus domestica",
+      "image": "",
+      "foodGroupId": "1.1",
+      "foodId": 1003,
+      "price": 20.0,
+      "currency": "NOK",
+      "searchKeywords": ["fruit", "fresh"],
+      "calories": {
+        "quantity": 52,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 218,
+        "unit": "kJ"
+      },
+      "nutrients": ["fiber", "vitamin C", "potassium"]
+    },
+    {
+      "foodName": "Bread",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "5.1",
+      "foodId": 1004,
+      "price": 25.0,
+      "currency": "NOK",
+      "searchKeywords": ["bakery", "grain"],
+      "calories": {
+        "quantity": 265,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1115,
+        "unit": "kJ"
+      },
+      "nutrients": ["carbohydrates", "fiber", "protein"]
+    },
+    {
+      "foodName": "Eggs",
+      "latinName": "Gallus gallus domesticus",
+      "image": "",
+      "foodGroupId": "1.2",
+      "foodId": 1005,
+      "price": 35.0,
+      "currency": "NOK",
+      "searchKeywords": ["protein", "dairy"],
+      "calories": {
+        "quantity": 155,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 649,
+        "unit": "kJ"
+      },
+      "nutrients": ["protein", "vitamin D", "iron"]
+    },
+    {
+      "foodName": "Sour Cream",
+      "latinName": "",
+      "image": "",
+      "foodGroupId": "1.3",
+      "foodId": 1006,
+      "price": 27.0,
+      "currency": "NOK",
+      "searchKeywords": ["dairy", "cream", "sour"],
+      "calories": {
+        "quantity": 193,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 807,
+        "unit": "kJ"
+      },
+      "nutrients": ["fat", "protein", "calcium"]
+    },
+    {
+      "foodName": "Rice",
+      "latinName": "Oryza sativa",
+      "image": "",
+      "foodGroupId": "5.1",
+      "foodId": 1007,
+      "price": 25.0,
+      "currency": "NOK",
+      "searchKeywords": ["grain", "cereal", "rice"],
+      "calories": {
+        "quantity": 130,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 545,
+        "unit": "kJ"
+      },
+      "nutrients": ["carbohydrates", "protein", "fiber"]
+    }
+  ]
+}

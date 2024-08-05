@@ -8,6 +8,9 @@ export default {
         'pure-white': '#FFFF',
         'pale-blue': '#eef5ff',
         'grey-100': '#f5f5f5',
+
+        // Customize it on tailwind.css :root
+        primary: 'var(--color-primary)',
       },
 
       textColor: {},

@@ -1,8 +1,6 @@
-export const baseURL = `https://dummyjson.com`;
-
 const endpoint = {
-  PRODUCTS: '/products',
-  CARTS: '/carts',
+  FOODPRODUCTS: 'app/data/foodProducts.json',
+  FOODS: 'app/data/foods.json',
 };
 
 export default endpoint;

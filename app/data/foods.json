@@ -38,7 +38,8 @@
       "storage": "Store at 0 °C - 4 °C. Best sliced when cool.",
       "origin": "Norway",
       "countryOfProduction": "Norway",
-      "supplier": "Tine SA"
+      "supplier": "Tine SA",
+      "link": "https://www.tinebrunost.com/products#gudbrandsdalen"
     },
     {
       "searchKeywords": [
@@ -77,7 +78,8 @@
       "storage": "Store at 0 °C - 4 °C. Best sliced when cool.",
       "origin": "Norway",
       "countryOfProduction": "Norway",
-      "supplier": "Tine SA"
+      "supplier": "Tine SA",
+      "link": "https://www.jarlsberg.com/products#jarlsberg-original"
     },
     {
       "searchKeywords": [
@@ -109,25 +111,8 @@
       "storage": "Store at 0 °C - 4 °C. Best sliced when cool.",
       "origin": "Norway",
       "countryOfProduction": "Norway",
-      "supplier": "Fjordland AS"
-    },
-    {
-      "searchKeywords": ["dried lamb ribs", "traditional dish"],
-      "foodName": "Pinnekjøtt",
-      "image": "",
-      "foodGroupId": "3.2",
-      "foodId": 202,
-      "price": 200,
-      "currency": "NOK",
-      "calories": {
-        "quantity": 300,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 1255,
-        "unit": "kJ"
-      },
-      "nutrients": ["fat", "protein", "salt"]
+      "supplier": "Fjordland AS",
+      "link": "https://www.fjordland.no/grot/rommegrot-350-g"
     },
     {
       "searchKeywords": ["fish", "mackerel", "Lerøy seafood"],
@@ -160,7 +145,8 @@
       "storage": "Must be stored between -23 and -18 °C.",
       "origin": "Norway",
       "countryOfProduction": "Norway",
-      "supplier": "Lerøy seafood"
+      "supplier": "Lerøy seafood",
+      "link": null
     },
     {
       "searchKeywords": [
@@ -196,7 +182,8 @@
       "origin": "Norway",
       "countryOfProduction": "Norway",
       "label": "Troll",
-      "supplier": "Troll salmon as"
+      "supplier": "Troll salmon as",
+      "link": "https://troll-salmon.com/produkter/rokt-laks/"
     },
     {
       "searchKeywords": ["crispbread", "whole grain", "wasa", "knekkebrød"],
@@ -225,9 +212,11 @@
       "origin": "Finland",
       "countryOfProduction": "Finland",
       "label": "WASA",
-      "supplier": "Barilla norge as"
+      "supplier": "Barilla norge as",
+      "link": null
     },
     {
+      "searchKeywords": ["flatbread", "sweet bread", "buer", "lefse"],
       "foodName": "Lefse",
       "description": "",
       "image": "https://buer-as.no/wp-content/uploads/2023/02/Lefser-Buer-300x207.png",
@@ -235,7 +224,6 @@
       "foodId": 402,
       "price": 40,
       "currency": "NOK",
-      "searchKeywords": ["flatbread", "sweet bread", "buer", "lefse"],
       "calories": {
         "quantity": 250,
         "unit": "kcal"
@@ -250,272 +238,316 @@
       "origin": "Norway",
       "countryOfProduction": "Norway",
       "label": "BUER",
-      "supplier": "BUER AS"
+      "supplier": "BUER AS",
+      "link": "https://buer-as.no/produkter/"
     },
     {
-      "foodName": "Kålrotstappe",
-      "description": "",
-      "image": "",
-      "foodGroupId": "6.2",
-      "foodId": 501,
+      "searchKeywords": [
+        "juice",
+        "apple",
+        "fruit drink",
+        "refreshing",
+        "norwegian"
+      ],
+      "foodName": "Apple Juice",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": true,
+        "isFrozen": false
+      },
+      "description": "A refreshing and naturally sweet juice made from fresh apples.",
+      "image": "https://images.heb.com/is/image/HEBGrocery/prd-small/001470226.jpg",
+      "foodGroupId": "9.2",
+      "foodId": 403,
       "price": 25,
       "currency": "NOK",
-      "searchKeywords": ["mashed rutabaga", "vegetable dish"],
+      "quantity": {
+        "amount": 1,
+        "unit": "L"
+      },
       "calories": {
-        "quantity": 60,
+        "quantity": 46,
         "unit": "kcal"
       },
       "energy": {
-        "quantity": 251,
+        "quantity": 192,
         "unit": "kJ"
       },
-      "nutrients": ["fiber", "vitamin C", "potassium"]
+      "nutrients": ["carbohydrates", "sugar", "vitamin C"],
+      "allergens": [],
+      "storage": "Store at 0 °C to 4 °C",
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "label": "Nature's Best",
+      "supplier": "Fruitful AS",
+      "link": null
     },
     {
-      "foodName": "Rødkål",
-      "description": "",
-      "image": "",
-      "foodGroupId": "6.2",
-      "foodId": 502,
-      "price": 30,
-      "currency": "NOK",
-      "searchKeywords": ["red cabbage", "vegetable dish"],
-      "calories": {
-        "quantity": 50,
-        "unit": "kcal"
+      "searchKeywords": ["soda", "soft drink", "carbonated", "refreshing"],
+      "foodName": "Generic Soda",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": true,
+        "isFrozen": false
       },
-      "energy": {
-        "quantity": 209,
-        "unit": "kJ"
-      },
-      "nutrients": ["fiber", "vitamin C", "antioxidants"]
-    },
-    {
-      "foodName": "Solo",
-      "description": "",
-      "image": "",
+      "description": "A carbonated soft drink with a sweet and refreshing taste.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.skinnytwinkie.com%2Fwp-content%2Fuploads%2F2011%2F12%2FSoda-Can-red1.jpg&f=1&nofb=1&ipt=4169e3910a90faf109267ff533fa70d1104f663953ef29dffee073310748c951&ipo=images",
       "foodGroupId": "9.4",
-      "foodId": 601,
+      "foodId": 404,
       "price": 20,
       "currency": "NOK",
-      "searchKeywords": ["soda", "soft drink", "Solo"],
+      "quantity": {
+        "amount": 500,
+        "unit": "ml"
+      },
       "calories": {
-        "quantity": 40,
+        "quantity": 150,
         "unit": "kcal"
       },
       "energy": {
-        "quantity": 167,
+        "quantity": 628,
         "unit": "kJ"
       },
-      "nutrients": ["sugar", "carbonated water", "flavoring"]
+      "nutrients": ["sugar", "carbonated water", "flavoring"],
+      "allergens": [],
+      "storage": "Store at 5 °C to 25 °C",
+      "origin": "Austria",
+      "countryOfProduction": "Austria",
+      "label": "SodaCo",
+      "supplier": "Beverage Solutions AS",
+      "link": null
     },
     {
+      "searchKeywords": ["juice", "blackcurrant", "fruit drink", "refreshing"],
       "foodName": "Solbærsaft",
-      "description": "",
-      "image": "",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": false,
+        "isFrozen": false
+      },
+      "description": "A rich and flavorful blackcurrant juice, perfect for a refreshing drink.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fres.cloudinary.com%2Fnorgesgruppen%2Fimage%2Fupload%2Fc_pad%2Cb_white%2Cf_auto%2Ch_2400%2Cq_50%2Cw_2400%2Fv1588638618%2FProduct%2F7070841003150.jpg&f=1&nofb=1&ipt=2f26c6d1a2da3b47d9d9df56760d8a96b5ff2296b690591775cd82f9b3c7cf68&ipo=images",
       "foodGroupId": "9.2",
-      "foodId": 602,
+      "foodId": 405,
       "price": 35,
       "currency": "NOK",
-      "searchKeywords": ["blackcurrant juice", "fruit drink"],
+      "quantity": {
+        "amount": 1.5,
+        "unit": "L"
+      },
       "calories": {
-        "quantity": 50,
+        "quantity": 54,
         "unit": "kcal"
       },
       "energy": {
-        "quantity": 209,
+        "quantity": 226,
         "unit": "kJ"
       },
-      "nutrients": ["vitamin C", "sugar", "antioxidants"]
+      "nutrients": ["carbohydrates", "sugar", "vitamin C"],
+      "allergens": [],
+      "storage": "Store at 5 °C to 25 °C",
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "label": "BerryBest",
+      "supplier": "Juice Masters AS",
+      "link": "https://www.lerum.no/saft/solbaersirup-stor"
     },
     {
-      "foodName": "Fårikål",
-      "description": "",
-      "image": "",
-      "foodGroupId": "10.9.4",
-      "foodId": 702,
-      "price": 80,
-      "currency": "NOK",
-      "searchKeywords": ["lamb and cabbage stew", "traditional dish"],
-      "calories": {
-        "quantity": 200,
-        "unit": "kcal"
+      "searchKeywords": [
+        "bruschetta",
+        "tomato",
+        "basil",
+        "appetizer",
+        "convenient",
+        "vegetarian"
+      ],
+      "foodName": "Bruschetta with Tomato and Basil",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": true,
+        "isFrozen": false
       },
-      "energy": {
-        "quantity": 837,
-        "unit": "kJ"
-      },
-      "nutrients": ["protein", "fat", "fiber"]
-    },
-    {
-      "foodName": "Bruschetta, with tomato and basil",
-      "description": "",
-      "image": "",
+      "description": "Toasted bread topped with fresh tomatoes and basil, drizzled with olive oil.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.skinnytaste.com%2Fwp-content%2Fuploads%2F2008%2F04%2FBruschetta-6.jpg&f=1&nofb=1&ipt=172cec17824895b8dbfe57cd4bcb6855fd0573566755ddafd257409231344f53&ipo=images",
       "foodGroupId": "10.9.1",
-      "foodId": 504,
-      "price": 35.62,
-      "currency": "NOK",
-      "searchKeywords": ["bruschetta", "tomato", "basil"],
-      "calories": {
-        "quantity": 114,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 479,
-        "unit": "kJ"
-      },
-      "nutrients": ["carbohydrates", "fiber", "vitamin C"]
-    },
-    {
-      "foodName": "Wok mix, Thai style",
-      "description": "",
-      "image": "",
-      "foodGroupId": "6.6",
-      "foodId": 676,
-      "price": 88.78,
-      "currency": "NOK",
-      "searchKeywords": ["wok", "thai style", "vegetable mix"],
-      "calories": {
-        "quantity": 52,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 219,
-        "unit": "kJ"
-      },
-      "nutrients": ["fiber", "vitamin C", "potassium"]
-    },
-    {
-      "searchKeywords": ["pizza"],
-      "calories": {
-        "quantity": 198,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 833,
-        "unit": "kJ"
-      },
-      "foodName": "Pizza, industrially made, Grandiosa Original",
-      "description": "",
-      "foodGroupId": "10.9.2",
-      "foodId": 687,
+      "foodId": 408,
       "price": 50,
       "currency": "NOK",
-      "nutrients": []
-    },
-    {
-      "foodName": "Cheese, hard, Jarlsberg",
-      "description": "",
-      "image": "",
-      "foodGroupId": "1.4.7",
-      "foodId": 1035,
-      "price": 46.32,
-      "currency": "NOK",
-      "searchKeywords": ["jarlsberg", "hard cheese", "norwegian cheese"],
+
+      "quantity": {
+        "amount": 250,
+        "unit": "g"
+      },
       "calories": {
-        "quantity": 351,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 1458,
-        "unit": "kJ"
-      },
-      "nutrients": ["fat", "protein", "calcium"]
-    },
-    {
-      "foodName": "Cheese, hard, Norvegia",
-      "description": "",
-      "image": "",
-      "foodGroupId": "1.4.7",
-      "foodId": 1039,
-      "price": 29.78,
-      "currency": "NOK",
-      "searchKeywords": ["norvegia", "hard cheese", "norwegian cheese"],
-      "calories": {
-        "quantity": 351,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 1458,
-        "unit": "kJ"
-      },
-      "nutrients": ["fat", "protein", "calcium"]
-    },
-    {
-      "foodName": "Cheese, hard, Parmesan",
-      "description": "",
-      "image": "",
-      "foodGroupId": "1.4.4",
-      "foodId": 1200,
-      "price": 30.22,
-      "currency": "NOK",
-      "searchKeywords": ["parmesan", "hard cheese", "italian cheese"],
-      "calories": {
-        "quantity": 416,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 1729.6,
-        "unit": "kJ"
-      },
-      "nutrients": ["fat", "protein", "calcium"]
-    },
-    {
-      "foodName": "Chilli nuts, Polly",
-      "description": "",
-      "image": "",
-      "foodGroupId": "10.5",
-      "foodId": 13090,
-      "price": 76.7,
-      "currency": "NOK",
-      "searchKeywords": ["chilli nuts", "polly", "spicy nuts"],
-      "calories": {
-        "quantity": 505,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 2104.2,
-        "unit": "kJ"
-      },
-      "nutrients": ["fat", "protein", "fiber"]
-    },
-    {
-      "foodName": "Apple juice",
-      "description": "Malus domestica Borkh.",
-      "image": "",
-      "foodGroupId": "9.2",
-      "foodId": 6571,
-      "price": 7.64,
-      "currency": "NOK",
-      "searchKeywords": ["apple juice", "juice", "fruit juice"],
-      "calories": {
-        "quantity": 42,
-        "unit": "kcal"
-      },
-      "energy": {
         "quantity": 180,
-        "unit": "kJ"
-      },
-      "nutrients": ["sugar", "vitamin C", "fiber"]
-    },
-    {
-      "foodName": "Fruit drink, orange, concentrated",
-      "description": "Citrus sinensis (L.) Osbeck",
-      "image": "",
-      "foodGroupId": "9.2",
-      "foodId": 6569,
-      "price": 80.21,
-      "currency": "NOK",
-      "searchKeywords": ["orange drink", "concentrated orange", "fruit drink"],
-      "calories": {
-        "quantity": 172,
         "unit": "kcal"
       },
       "energy": {
-        "quantity": 732,
+        "quantity": 753,
         "unit": "kJ"
       },
-      "nutrients": ["sugar", "vitamin C", "fiber"]
+      "nutrients": ["carbohydrates", "fiber", "vitamin C"],
+      "allergens": ["gluten"],
+      "storage": "Store at 2 °C to 4 °C",
+      "origin": "Italy",
+      "countryOfProduction": "Italy",
+      "label": "Mediterranean Delights",
+      "supplier": "Italian Foods AS",
+      "link": "https://example.com/bruschetta-tomato-basil"
+    },
+    {
+      "searchKeywords": ["minced meat", "ground beef", "beef", "cooking"],
+      "foodName": "Minced Meat",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": true,
+        "isFrozen": false
+      },
+      "description": "High-quality minced meat, perfect for a variety of dishes.",
+      "image": "https://bilder.kolonial.no/local_products/70797531-38e9-42c9-8dc0-69ad47eb469a.jpg?auto=format&fit=max&w=1000&s=242736921551ac092e8f9c3128c5ac6b",
+      "foodGroupId": "3.8",
+      "foodId": 410,
+      "price": 80,
+      "currency": "NOK",
+
+      "quantity": {
+        "amount": 500,
+        "unit": "g"
+      },
+      "calories": {
+        "quantity": 250,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1046,
+        "unit": "kJ"
+      },
+      "nutrients": ["protein", "fat", "iron", "zinc"],
+      "allergens": [],
+      "storage": "Store at 2 °C to 4 °C",
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "label": "MeatMaster",
+      "supplier": "Quality Meats AS",
+      "link": "https://example.com/minced-meat"
+    },
+    {
+      "foodName": "Frozen Pizza",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": false,
+        "isFrozen": true,
+        "isVegetarian": false
+      },
+      "description": "A delicious and convenient frozen pizza with a crispy crust and flavorful toppings.",
+      "image": "https://bilder.kolonial.no/local_products/de82d0ff-4622-4522-8892-cb26279ce173.jpg?auto=format&fit=max&w=1000&s=be44ecd243f79cd5d10437881247968b",
+      "foodGroupId": "10.9.2",
+      "foodId": 406,
+      "price": 60,
+      "currency": "NOK",
+      "searchKeywords": ["pizza", "frozen", "quick meal", "convenient"],
+      "quantity": {
+        "amount": 400,
+        "unit": "g"
+      },
+      "calories": {
+        "quantity": 800,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 3347,
+        "unit": "kJ"
+      },
+      "nutrients": ["carbohydrates", "protein", "fat", "fiber"],
+      "allergens": ["gluten", "dairy"],
+      "storage": "Store at -18 °C or below",
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "label": "QuickBite",
+      "supplier": "Frozen Foods AS",
+      "link": null
+    },
+    {
+      "foodName": "Chips",
+      "tags": {
+        "isOrganic": false,
+        "isRefrigerated": false,
+        "isFrozen": false
+      },
+      "description": "Crispy and salty potato chips, perfect for snacking.",
+      "image": "https://bilder.kolonial.no/local_products/abaae4f1-7b2e-4a98-a4a8-60895b045de3.jpg?auto=format&fit=max&w=755&s=c2385d184a8df119e6fa7470fcb7129c",
+      "foodGroupId": "10.5",
+      "foodId": 407,
+      "price": 25,
+      "currency": "NOK",
+      "searchKeywords": ["chips", "snack", "crispy", "salty"],
+      "quantity": {
+        "amount": 200,
+        "unit": "g"
+      },
+      "calories": {
+        "quantity": 536,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 2244,
+        "unit": "kJ"
+      },
+      "nutrients": ["carbohydrates", "fat", "sodium"],
+      "allergens": [],
+      "storage": "Store in a cool, dry place",
+      "origin": "Norway",
+      "countryOfProduction": "Norway",
+      "label": "SnackTime",
+      "supplier": "Crunchy Snacks AS",
+      "link": null
+    },
+    {
+      "foodName": "Vegetarian Pasta Primavera",
+      "tags": {
+        "isOrganic": true,
+        "isRefrigerated": false,
+        "isFrozen": true
+      },
+      "description": "A delicious blend of fresh vegetables and pasta in a light, savory sauce.",
+      "image": "https://eatwhatweeat.com/wp-content/uploads/2022/04/italian-vegetarian-pasta-recipes-unique-vegan-italian-pasta-salad-of-italian-vegetarian-pasta-recipes.jpg",
+      "foodGroupId": "10.6",
+      "foodId": 409,
+      "price": 70,
+      "currency": "NOK",
+      "searchKeywords": [
+        "vegetarian",
+        "pasta",
+        "primavera",
+        "healthy",
+        "quick meal"
+      ],
+      "quantity": {
+        "amount": 450,
+        "unit": "g"
+      },
+      "calories": {
+        "quantity": 350,
+        "unit": "kcal"
+      },
+      "energy": {
+        "quantity": 1464,
+        "unit": "kJ"
+      },
+      "nutrients": [
+        "carbohydrates",
+        "fiber",
+        "protein",
+        "vitamin A",
+        "vitamin C"
+      ],
+      "allergens": ["gluten"],
+      "storage": "Store at -18 °C or below",
+      "origin": "Italy",
+      "countryOfProduction": "Norway",
+      "label": "GreenCuisine",
+      "supplier": "Veggie Foods AS",
+      "link": null
     },
     {
       "searchKeywords": ["taco sauce", "medium sauce", "Santa Maria", "taco"],
@@ -526,7 +558,7 @@
         "isFrozen": false
       },
       "description": "",
-      "image": "https://bilder.kolonial.no/local_products/b6f624af-3d64-4322-af10-b2ccc04d24dd.jpeg?auto=format&fit=max&w=173&s=5df483ca0c73eb76c94e2e41f3f3e309",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.DlZhuQ_1iF2DcQ5mxfcafgHaHa%26pid%3DApi&f=1&ipt=07c82cf466efcc1813bafacfe85738b0629e6d9c14028c0ce4f7de44097daf71&ipo=images",
       "foodGroupId": "10.11",
       "foodId": "06.141",
       "price": 19.9,
@@ -736,25 +768,6 @@
       "link": null
     },
     {
-      "foodName": "Taco Sauce, Medium, Santa Maria",
-      "description": "",
-      "image": "",
-      "foodGroupId": "10.11",
-      "foodId": 709,
-      "price": 51.63,
-      "currency": "NOK",
-      "searchKeywords": ["taco sauce", "medium heat"],
-      "calories": {
-        "quantity": 28,
-        "unit": "kcal"
-      },
-      "energy": {
-        "quantity": 117,
-        "unit": "kJ"
-      },
-      "nutrients": ["sugar", "tomato", "spices"]
-    },
-    {
       "searchKeywords": ["beans", "legumes", "vegan", "vegetarian", "organic"],
       "foodName": "Black Beans",
       "tags": {
@@ -834,12 +847,13 @@
         "vegetarian",
         "norwegian"
       ],
+
+      "foodName": "TINE® Whole Milk 3.5% Fat",
       "tags": {
         "isOrganic": false,
         "isRefrigerated": true,
         "isFrozen": false
       },
-      "foodName": "TINE® Whole Milk 3.5% Fat",
       "description": "TINE® Whole Milk contains 3.5% fat. The milk from TINE® comes from farms in your local region.",
       "image": "https://www.tine.no/_/packshot/320x320/6.png",
       "foodGroupId": "1.1",
@@ -1052,12 +1066,12 @@
     },
     {
       "searchKeywords": ["grain", "cereal", "rice", "Toro", "vegetarian"],
+      "foodName": "Jasminris Boil in Bag",
       "tags": {
         "isOrganic": false,
         "isRefrigerated": false,
         "isFrozen": false
       },
-      "foodName": "Jasminris Boil in Bag",
       "description": "TORO Jasmine Rice is a premium Thai rice grown in the same soil as jasmine plants. It has a mild, clean flavor and a slightly sticky texture. Ideal for all types of dishes, especially spicy Asian recipes. Easy to love, easy to cook.",
       "image": "https://www.mam.no/stabburet/747X629/105472.png",
       "foodGroupId": "5.1",

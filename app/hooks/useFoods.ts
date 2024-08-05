@@ -1,32 +1,18 @@
 import { useEffect, useMemo, useState } from 'react';
-import endpoint from '~/data/constants/endpoints';
 import { FoodsType } from '~/types/food';
+import { useGetData } from './useGetData';
+import endpoint from '~/data/constants/endpoints';
 
 export const useFoods = () => {
   const [foods, setFoods] = useState<FoodsType | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+
+  const { data, loading, error } = useGetData(endpoint.FOODS);
 
   useEffect(() => {
-    const fetchDataForPosts = async () => {
-      try {
-        const response = await fetch(endpoint.FOODS);
-        if (!response.ok) {
-          throw new Error(`HTTP error: Status ${response.status}`);
-        }
-        const postsData = await response.json();
-        setFoods(postsData);
-        setError(null);
-      } catch (err) {
-        setError('Unexpected error');
-        setFoods(null);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchDataForPosts();
-  }, []);
+    if (data) {
+      setFoods(data);
+    }
+  }, [data]);
 
   return useMemo(
     () => ({

@@ -1,16 +1,12 @@
-import { useState } from 'react';
 import { toggleSlider } from '~/redux/cartSlice';
 import { useAppDispatch, useAppSelector } from '~/redux/store';
 
 export const CartChip = () => {
-  const [open, setOpen] = useState(false);
-
   const cart = useAppSelector((state) => state.cart);
   const dispatch = useAppDispatch();
 
   const handleOpenSlider = () => {
-    setOpen(!open);
-    dispatch(toggleSlider(!open));
+    dispatch(toggleSlider(!cart.isOpen));
   };
 
   return (

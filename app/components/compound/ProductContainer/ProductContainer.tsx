@@ -1,10 +1,13 @@
 import ProductCard from '~/components/molecule/ProductCard/ProductCard';
 import { useFoods } from '~/hooks/useFoods';
+import { useAppSelector } from '~/redux/store';
 
 const ProductContainer = () => {
-  const { foods, loading, error } = useFoods();
+  const cart = useAppSelector((state) => state.cart.items);
 
-  console.log('isLoading: ', loading);
+  console.log('cart', cart);
+
+  const { foods, loading, error } = useFoods();
 
   return (
     <div>

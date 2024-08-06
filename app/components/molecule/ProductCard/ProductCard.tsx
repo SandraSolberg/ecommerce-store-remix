@@ -1,3 +1,5 @@
+import { addItem } from '~/redux/cartSlice';
+import { useAppDispatch } from '~/redux/store';
 import { FoodType } from '~/types/food';
 
 type ProductCardProps = {
@@ -5,6 +7,7 @@ type ProductCardProps = {
 };
 
 const ProductCard = ({ item }: ProductCardProps) => {
+  const dispatch = useAppDispatch();
   return (
     <a href='/product'>
       <article className='w-48 min-h-[376px]  bg-pure-white m-2 p-2 rounded-2xl shadow-secondary-1 flex flex-col justify-between'>
@@ -27,8 +30,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
-              // Add your add-to-cart logic here
-              console.log('Added to cart');
+              dispatch(addItem({ foodItem: item }));
             }}
           >
             Add

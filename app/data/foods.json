@@ -18,7 +18,7 @@
       "description": "A well-known and beloved brunost (brown cheese) with long-standing traditions and the most popular of our brunosts. Made from a unique blend of the finest Norwegian cow’s and goat’s milk as well as cow’s cream, it has a rich caramel taste with a slight hint of sharpness. TINE Gudbrandsdalen is well suited for use on bread, crispbread and waffles. It is also perfect in cooking, for example, in an apple pie, muffins, cookies or in an ice cream sauce.",
       "image": "https://www.tinebrunost.com/products/_/image/a8288595-213e-4a66-97fa-7c99da4d27b0:c9ade615fd02ba1c73afe5ea53fbe80643a2f45b/block-256-256/800x800_0001_tine-gudbrandsdalsost-500-b.png?quality=60",
       "foodGroupId": "1.4.5",
-      "foodId": 101,
+      "foodId": 1,
       "price": 50,
       "currency": "kr",
       "quantity": {
@@ -58,7 +58,7 @@
       "description": "A mild, semi-soft, part skim cheese made from cow’s milk. Jarlsberg® is famous around the world for its characteristic mild, sweet and nutty taste and its large round holes. Jarlsberg® is such a wonderfully versatile cheese - whether you buy it as a regular staple for sandwiches, a complement for salads, a tasty addition to your cheese board or as an irresistible snack! It is available with or without its distinctive rind, either cut to suit your needs (wedges, slices, chunks), as a grab-and-go cheese (cheese snacks and cheese crisps) or as a mighty 10kg (22 lb) wheel. Jarlsberg® is the #1 speciality cheese brand in the USA. Jarlsberg® is naturally lactose-free and suitable for vegetarians.",
       "image": "https://www.jarlsberg.com/us/products/_/image/31e8e482-9a2d-447f-8fa3-58f88247e592:29099976f65b0b43d2fbf88acb29ac52f01b0c05/block-256-256/TINE000004_PS.png?quality=60",
       "foodGroupId": "1.4.7",
-      "foodId": 102,
+      "foodId": 2,
       "price": 90,
       "currency": "kr",
       "quantity": {
@@ -91,7 +91,7 @@
       "description": "A truly delicious Norwegian sour cream porridge. Rømmegrøt is often called 'the porridge for special occasions.' Fjordland's rømmegrøt is made in the traditional way with cultured cream and whole milk. This creates a rich and flavorful porridge that is perfect for both everyday enjoyment and special occasions. The porridge is easy and quick to prepare, allowing you to enjoy a tasty meal even on a busy day.",
       "image": "https://www.fjordland.no/grot/rommegrot-350-g/_/image/bd00949b-6a6b-4415-ad5e-bb6f95609a72:c1a5474f2d768fe3a9f580ccc7f6d3b6aafb0e3b/width-1920/Fjordland_R%C3%B8mmegr%C3%B8t_350g_sesong_nettside.png?quality=80",
       "foodGroupId": "3.7",
-      "foodId": 201,
+      "foodId": 3,
       "price": 60,
       "currency": "kr",
       "quantity": {
@@ -125,7 +125,7 @@
       "description": "Mackerel is a sure sign of spring when the schools arrive at the Norwegian coast in May. Mackerel is a fatty fish, high in healthy omega-3. It is also an excellent source of vitamin D and B12. Mackerel has a firm texture, and its light meat is especially flavorful and slightly sweet. Bring the meat to room temperature before placing it in the frying pan or on the grill. Make a few cuts in the skin to prevent the mackerel from curling. Plan for about 400–500 grams of whole fish per person, approximately 300-400 grams of fish pieces with bones, and about 200-250 grams of fillet per person.",
       "image": "https://www.instacart.com/image-server/699x699/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/product-image/file/large_1e182c4a-1074-403a-9d6d-f80d2c52f803.jpg",
       "foodGroupId": "4.1",
-      "foodId": 300,
+      "foodId": 4,
       "price": 58.05,
       "currency": "kr",
       "quantity": {
@@ -161,7 +161,7 @@
       "description": "Troll Salmon's smoked salmon has been awarded the Specialty mark for its unique flavor, characterized by a distinctive, mild, and lightly salted taste. Cold smoking with beech wood chips imparts a subtle smoky flavor. This product is perfect for classic brunch dishes, sandwiches, or as a topping in salads and pasta dishes.",
       "image": "https://troll-salmon.com/wp-content/uploads/2017/05/rokt-laks-1.jpg",
       "foodGroupId": "4.1.1",
-      "foodId": 301,
+      "foodId": 5,
       "price": 131.1,
       "currency": "kr",
       "quantity": {
@@ -191,7 +191,7 @@
       "description": "The full-bodied flavor of four perfectly blended, wholesome grains (rye, wheat, oats and barley) is in every bite of our Multi Grain crispbreads. The oat flakes and rye bran topping add delicious complexity to each extra-crunchy thick slice.",
       "image": "https://bilder.kolonial.no/local_products/a7eed78b-e8a2-44b6-90a3-ba0315ae7e34.jpg?auto=format&fit=max&w=1000&s=647c351e9bbabead3334b1a11f1ff269",
       "foodGroupId": "5.7",
-      "foodId": 401,
+      "foodId": 6,
       "price": 17.2,
       "currency": "kr",
       "quantity": {
@@ -221,7 +221,7 @@
       "description": "",
       "image": "https://buer-as.no/wp-content/uploads/2023/02/Lefser-Buer-300x207.png",
       "foodGroupId": "5.10",
-      "foodId": 402,
+      "foodId": 7,
       "price": 40,
       "currency": "kr",
       "quantity": {
@@ -262,7 +262,7 @@
       "description": "A refreshing and naturally sweet juice made from fresh apples.",
       "image": "https://images.heb.com/is/image/HEBGrocery/prd-small/001470226.jpg",
       "foodGroupId": "9.2",
-      "foodId": 403,
+      "foodId": 8,
       "price": 25,
       "currency": "kr",
       "quantity": {
@@ -297,7 +297,7 @@
       "description": "A carbonated soft drink with a sweet and refreshing taste.",
       "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.skinnytwinkie.com%2Fwp-content%2Fuploads%2F2011%2F12%2FSoda-Can-red1.jpg&f=1&nofb=1&ipt=4169e3910a90faf109267ff533fa70d1104f663953ef29dffee073310748c951&ipo=images",
       "foodGroupId": "9.4",
-      "foodId": 404,
+      "foodId": 9,
       "price": 20,
       "currency": "kr",
       "quantity": {
@@ -332,7 +332,7 @@
       "description": "A rich and flavorful blackcurrant juice, perfect for a refreshing drink.",
       "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fres.cloudinary.com%2Fnorgesgruppen%2Fimage%2Fupload%2Fc_pad%2Cb_white%2Cf_auto%2Ch_2400%2Cq_50%2Cw_2400%2Fv1588638618%2FProduct%2F7070841003150.jpg&f=1&nofb=1&ipt=2f26c6d1a2da3b47d9d9df56760d8a96b5ff2296b690591775cd82f9b3c7cf68&ipo=images",
       "foodGroupId": "9.2",
-      "foodId": 405,
+      "foodId": 10,
       "price": 35,
       "currency": "kr",
       "quantity": {
@@ -374,7 +374,7 @@
       "description": "Toasted bread topped with fresh tomatoes and basil, drizzled with olive oil.",
       "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.skinnytaste.com%2Fwp-content%2Fuploads%2F2008%2F04%2FBruschetta-6.jpg&f=1&nofb=1&ipt=172cec17824895b8dbfe57cd4bcb6855fd0573566755ddafd257409231344f53&ipo=images",
       "foodGroupId": "10.9.1",
-      "foodId": 408,
+      "foodId": 11,
       "price": 50,
       "currency": "kr",
 
@@ -410,7 +410,7 @@
       "description": "High-quality minced meat, perfect for a variety of dishes.",
       "image": "https://bilder.kolonial.no/local_products/70797531-38e9-42c9-8dc0-69ad47eb469a.jpg?auto=format&fit=max&w=1000&s=242736921551ac092e8f9c3128c5ac6b",
       "foodGroupId": "3.8",
-      "foodId": 410,
+      "foodId": 12,
       "price": 80,
       "currency": "kr",
 
@@ -446,7 +446,7 @@
       "description": "A delicious and convenient frozen pizza with a crispy crust and flavorful toppings.",
       "image": "https://bilder.kolonial.no/local_products/de82d0ff-4622-4522-8892-cb26279ce173.jpg?auto=format&fit=max&w=1000&s=be44ecd243f79cd5d10437881247968b",
       "foodGroupId": "10.9.2",
-      "foodId": 406,
+      "foodId": 13,
       "price": 60,
       "currency": "kr",
       "searchKeywords": ["pizza", "frozen", "quick meal", "convenient"],
@@ -481,7 +481,7 @@
       "description": "Crispy and salty potato chips, perfect for snacking.",
       "image": "https://bilder.kolonial.no/local_products/abaae4f1-7b2e-4a98-a4a8-60895b045de3.jpg?auto=format&fit=max&w=755&s=c2385d184a8df119e6fa7470fcb7129c",
       "foodGroupId": "10.5",
-      "foodId": 407,
+      "foodId": 14,
       "price": 25,
       "currency": "kr",
       "searchKeywords": ["chips", "snack", "crispy", "salty"],
@@ -516,7 +516,7 @@
       "description": "A delicious blend of fresh vegetables and pasta in a light, savory sauce.",
       "image": "https://eatwhatweeat.com/wp-content/uploads/2022/04/italian-vegetarian-pasta-recipes-unique-vegan-italian-pasta-salad-of-italian-vegetarian-pasta-recipes.jpg",
       "foodGroupId": "10.6",
-      "foodId": 409,
+      "foodId": 15,
       "price": 70,
       "currency": "kr",
       "searchKeywords": [
@@ -564,7 +564,7 @@
       "description": "",
       "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.DlZhuQ_1iF2DcQ5mxfcafgHaHa%26pid%3DApi&f=1&ipt=07c82cf466efcc1813bafacfe85738b0629e6d9c14028c0ce4f7de44097daf71&ipo=images",
       "foodGroupId": "10.11",
-      "foodId": "06.141",
+      "foodId": 16,
       "price": 19.9,
       "currency": "kr",
       "quantity": {
@@ -613,7 +613,7 @@
         "unit": "kJ"
       },
       "foodGroupId": "5.7",
-      "foodId": "05.369",
+      "foodId": 17,
       "price": 93.14,
       "currency": "kr",
       "nutrients": ["corn flour", "salt", "oil"],
@@ -649,7 +649,7 @@
       },
 
       "foodGroupId": "10.11",
-      "foodId": "10.134",
+      "foodId": 18,
       "price": 13.72,
       "currency": "kr",
       "nutrients": ["spices", "salt", "sugar"],
@@ -672,7 +672,7 @@
       "description": "Enjoy the wholesome goodness of corn with this versatile product. Perfect for a variety of dishes, whether it's a simple side, a hearty addition to salads, or a key ingredient in soups and stews. With its sweet and slightly nutty flavor, this corn is sure to enhance any meal. Quick and easy to prepare, it's a staple that fits seamlessly into everyday cooking.",
       "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F547263%2Fpexels-photo-547263.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-mali-maeder-547263.jpg%26fm%3Djpg&f=1&nofb=1&ipt=c00195119564789d628243820d01aa90b12393dfc6406f152d21c98adba9b04a&ipo=images",
       "foodGroupId": "5.7",
-      "foodId": 702,
+      "foodId": 19,
       "price": 15.0,
       "quantity": {
         "amount": "500",
@@ -712,7 +712,7 @@
       "description": "Fresh and crisp salad leaves, perfect for a light and healthy addition to any meal. These greens offer a refreshing crunch and vibrant color, ideal for salads, sandwiches, or as a garnish. Enjoy the natural flavors and nutrients of these high-quality leaves, grown to deliver freshness and taste in every bite.",
       "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.sfFqaLl8v_a7NZ8biXzjLgHaE8%26pid%3DApi&f=1&ipt=9bb1132b2cc38939ca9259bdfce9a91b33e890eb424972a4808e99122e57ee3a&ipo=images",
       "foodGroupId": "10.9.3",
-      "foodId": 703,
+      "foodId": 20,
       "price": 10.0,
       "currency": "kr",
       "quantity": {
@@ -747,7 +747,7 @@
       "description": "Solanum lycopersicum",
       "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi2.wp.com%2Fyourmedguide.com%2Fwp-content%2Fuploads%2F2012%2F09%2Ftomatoes.jpg&f=1&nofb=1&ipt=8bfd5310fad09599bdb6895a2323878222813f520fac8fbf079804c88584a780&ipo=images",
       "foodGroupId": "6.6",
-      "foodId": 704,
+      "foodId": 21,
       "price": 46.9,
       "currency": "kr",
       "quantity": {
@@ -782,7 +782,7 @@
       "description": "Black beans are very versatile and can be used for many things, including as a substitute for ground meat in tacos or nachos",
       "image": "https://optimise2.assets-servd.host/kolonihagen-site/production/Produkter/Bonner-Linser/Sorte-bonner-380-g.png?w=1260&q=80&auto=format&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1691054163&s=26a0684fa1b096bfabe0534cf9d05130",
       "foodGroupId": "5.7",
-      "foodId": 707,
+      "foodId": 22,
       "price": 35.0,
       "currency": "kr",
       "quantity": {
@@ -823,7 +823,7 @@
       "description": "Who doesn’t love cucumbers? They adorn any sandwich and taste great in all kinds of salads. Try them as a snack with a dip too. A real winner!",
       "image": "https://www.bama.no/siteassets/fotoware/2020/10/agurk.jpg?height=210&mode=crop",
       "foodGroupId": "5.7",
-      "foodId": 708,
+      "foodId": 23,
       "price": 12.0,
       "currency": "kr",
       "quantity": {
@@ -861,7 +861,7 @@
       "description": "TINE® Whole Milk contains 3.5% fat. The milk from TINE® comes from farms in your local region.",
       "image": "https://www.tine.no/_/packshot/320x320/6.png",
       "foodGroupId": "1.1",
-      "foodId": 1001,
+      "foodId": 24,
       "price": 22.9,
       "currency": "kr",
       "quantity": {
@@ -895,7 +895,7 @@
       "description": "Bananas have been available in Norway for over 100 years and are a beloved part of the Norwegian diet. They provide quick energy and essential nutrients. This versatile fruit can be used in everything from baking to cooking. Try bananas in a fresh fruit smoothie or add them to your lunchbox",
       "image": "https://www.bama.no/siteassets/fotoware/2023/9/bendit_bananklase-2_bama.jpg?height=210&mode=crop",
       "foodGroupId": "1.1",
-      "foodId": 1002,
+      "foodId": 25,
       "price": 30.6,
       "currency": "kr",
       "quantity": {
@@ -936,7 +936,7 @@
       "description": "Many say that Pink Lady apples have a perfect balance between sweetness and acidity. The apples are crispy and absolutely delicious!",
       "image": "https://www.bama.no/siteassets/fotoware/2020/10/pink-lady_152.jpg?height=210&mode=crop",
       "foodGroupId": "1.1",
-      "foodId": 1003,
+      "foodId": 26,
       "price": 47.3,
       "currency": "kr",
       "quantity": {
@@ -978,7 +978,7 @@
       "description": "Pre-sliced toast bread. Perfect for toasting or making sandwiches and snacks. Now available in a smaller package",
       "image": "https://www.handlenor.no/wp-content/uploads/2021/08/3A77D069-970C-4B5F-8FAF-6FB8B995C7FF.png",
       "foodGroupId": "5.1",
-      "foodId": 1004,
+      "foodId": 27,
       "price": 44.1,
       "currency": "kr",
       "quantity": {
@@ -1012,7 +1012,7 @@
       "description": "Egg from hens with organic living conditions on Norwegian farms. In addition to meeting organic standards, the hens have access to elements that enhance their well-being.",
       "image": "https://bilder.ngdata.no/7039610005887/meny/medium.jpg",
       "foodGroupId": "1.2",
-      "foodId": 1005,
+      "foodId": 28,
       "price": 27.0,
       "currency": "kr",
       "quantity": {
@@ -1046,7 +1046,7 @@
       "description": "TINE® Lettrømme 17% is a cultured whole milk and cream blend with 17% fat content. It offers a rich, tangy, and fresh flavor, perfect for adding a creamy touch to a variety of dishes.",
       "image": "https://www.tine.no/_/packshot/240x240/545.png",
       "foodGroupId": "1.3",
-      "foodId": 1006,
+      "foodId": 29,
       "price": 19.9,
       "currency": "kr",
       "quantity": {
@@ -1079,7 +1079,7 @@
       "description": "TORO Jasmine Rice is a premium Thai rice grown in the same soil as jasmine plants. It has a mild, clean flavor and a slightly sticky texture. Ideal for all types of dishes, especially spicy Asian recipes. Easy to love, easy to cook.",
       "image": "https://www.mam.no/stabburet/747X629/105472.png",
       "foodGroupId": "5.1",
-      "foodId": 1007,
+      "foodId": 30,
       "price": 25.0,
       "currency": "kr",
       "quantity": {

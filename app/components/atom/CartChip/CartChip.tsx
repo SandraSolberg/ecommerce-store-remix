@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useAppSelector } from '~/redux/store';
 
 export const CartChip = () => {
   const [open, setOpen] = useState(false);
+  const total = useAppSelector((state) => state.cart.total);
 
   const handleOpenSlider = () => {
     console.log('todo. Open Slider');
@@ -31,7 +33,7 @@ export const CartChip = () => {
         <circle cx='18' cy='20.5' r='1' />
         <path d='M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1' />
       </svg>
-      <p>kr 0.00</p>
+      <p>kr {total}</p>
       {open ? (
         <svg
           xmlns='http://www.w3.org/2000/svg'

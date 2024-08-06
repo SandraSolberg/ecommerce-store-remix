@@ -11,14 +11,11 @@ const initialState: CartType = {
 
 export const cartSlice = createSlice({
   name: 'cart',
-  // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
     addItem: (state, action: PayloadAction<{ foodItem: FoodType }>) => {
       const { price } = action.payload.foodItem;
-      const newTotal = price
-        ? parseFloat((state.total + price).toFixed(2))
-        : state.total;
+      const newTotal = price ? state.total + price : state.total;
       state.items = [...state.items, action.payload.foodItem];
       state.total = newTotal;
     },

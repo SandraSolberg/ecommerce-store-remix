@@ -1,5 +1,6 @@
 import { toggleSlider } from '~/redux/cartSlice';
 import { useAppDispatch, useAppSelector } from '~/redux/store';
+import numberToFixedString from '~/utils/numberToFixedString';
 
 export const CartChip = () => {
   const cart = useAppSelector((state) => state.cart);
@@ -8,6 +9,8 @@ export const CartChip = () => {
   const handleOpenSlider = () => {
     dispatch(toggleSlider(!cart.isOpen));
   };
+
+  const displayTotalAmount = numberToFixedString(cart.total);
 
   return (
     <div
@@ -32,7 +35,7 @@ export const CartChip = () => {
         <circle cx='18' cy='20.5' r='1' />
         <path d='M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1' />
       </svg>
-      <p>kr {cart.total}</p>
+      <p>kr {displayTotalAmount}</p>
       {cart.isOpen ? (
         <svg
           xmlns='http://www.w3.org/2000/svg'

@@ -5,7 +5,7 @@ export type TagsType = {
 };
 
 export type QuantityType = {
-  quantity: number;
+  amount: number;
   unit: string;
 };
 

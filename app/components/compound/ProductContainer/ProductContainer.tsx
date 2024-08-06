@@ -10,7 +10,7 @@ const ProductContainer = () => {
     <div>
       <h2 className='text-2xl'>Available items: {foods?.foods.length ?? 0}</h2>
       <div className='flex flex-wrap'>
-        {loading && <h3 className='text-xl'>...Loading</h3>}
+        {loading && <p className='text-xl'>...Loading</p>}
         {error && <h3 className='text-xl'>Not able to display any items</h3>}
         {foods &&
           foods.foods.map((item) => (

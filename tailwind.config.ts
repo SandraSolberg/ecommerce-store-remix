@@ -11,6 +11,10 @@ export default {
 
         // Customize it on tailwind.css :root
         primary: 'var(--color-primary)',
+        'blue-025': 'var(--color-blue-025)',
+        'blue-030': 'var(--color-blue-030)',
+        'baby-blue': '#b2cff5',
+        'primary-blue': '#1767ce',
       },
 
       textColor: {},

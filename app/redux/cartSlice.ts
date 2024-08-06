@@ -6,6 +6,7 @@ import { FoodType } from '~/types/food';
 const initialState: CartType = {
   items: [],
   total: 0,
+  isOpen: false,
 };
 
 export const cartSlice = createSlice({
@@ -15,7 +16,9 @@ export const cartSlice = createSlice({
   reducers: {
     addItem: (state, action: PayloadAction<{ foodItem: FoodType }>) => {
       const { price } = action.payload.foodItem;
-      const newTotal = price ? state.total + price : state.total;
+      const newTotal = price
+        ? parseFloat((state.total + price).toFixed(2))
+        : state.total;
       state.items = [...state.items, action.payload.foodItem];
       state.total = newTotal;
     },
@@ -30,9 +33,13 @@ export const cartSlice = createSlice({
       state.items = updateItems;
       state.total = newTotal;
     },
+
+    toggleSlider: (state, action: PayloadAction<boolean>) => {
+      state.isOpen = action.payload;
+    },
   },
 });
 
-export const { addItem, removeItem } = cartSlice.actions;
+export const { addItem, removeItem, toggleSlider } = cartSlice.actions;
 
 export default cartSlice.reducer;

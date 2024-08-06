@@ -26,7 +26,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
           <p className='text-sm text-gray-500'>{`${item.quantity?.amount} ${item.quantity?.unit}`}</p>
 
           <button
-            className='mt-4 w-full bg-blue-500 text-white text-sm font-semibold py-2 rounded-lg hover:bg-blue-600 cursor-default'
+            className='mt-4 w-full bg-blue-500 text-white text-sm font-semibold py-2 rounded-lg hover:bg-blue-600 '
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();

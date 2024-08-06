@@ -20,7 +20,7 @@
       "foodGroupId": "1.4.5",
       "foodId": 101,
       "price": 50,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 500,
         "unit": "g"
@@ -60,7 +60,7 @@
       "foodGroupId": "1.4.7",
       "foodId": 102,
       "price": 90,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 500,
         "unit": "g"
@@ -93,7 +93,7 @@
       "foodGroupId": "3.7",
       "foodId": 201,
       "price": 60,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 350,
         "unit": "g"
@@ -127,7 +127,7 @@
       "foodGroupId": "4.1",
       "foodId": 300,
       "price": 58.05,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 430,
         "unit": "g"
@@ -163,7 +163,7 @@
       "foodGroupId": "4.1.1",
       "foodId": 301,
       "price": 131.1,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 250,
         "unit": "g"
@@ -193,7 +193,7 @@
       "foodGroupId": "5.7",
       "foodId": 401,
       "price": 17.2,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 260,
         "unit": "g"
@@ -223,7 +223,7 @@
       "foodGroupId": "5.10",
       "foodId": 402,
       "price": 40,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 6,
         "unit": "pcs"
@@ -264,7 +264,7 @@
       "foodGroupId": "9.2",
       "foodId": 403,
       "price": 25,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 1,
         "unit": "L"
@@ -299,7 +299,7 @@
       "foodGroupId": "9.4",
       "foodId": 404,
       "price": 20,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 500,
         "unit": "ml"
@@ -334,7 +334,7 @@
       "foodGroupId": "9.2",
       "foodId": 405,
       "price": 35,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 1.5,
         "unit": "L"
@@ -376,7 +376,7 @@
       "foodGroupId": "10.9.1",
       "foodId": 408,
       "price": 50,
-      "currency": "NOK",
+      "currency": "kr",
 
       "quantity": {
         "amount": 250,
@@ -412,7 +412,7 @@
       "foodGroupId": "3.8",
       "foodId": 410,
       "price": 80,
-      "currency": "NOK",
+      "currency": "kr",
 
       "quantity": {
         "amount": 500,
@@ -448,7 +448,7 @@
       "foodGroupId": "10.9.2",
       "foodId": 406,
       "price": 60,
-      "currency": "NOK",
+      "currency": "kr",
       "searchKeywords": ["pizza", "frozen", "quick meal", "convenient"],
       "quantity": {
         "amount": 400,
@@ -483,7 +483,7 @@
       "foodGroupId": "10.5",
       "foodId": 407,
       "price": 25,
-      "currency": "NOK",
+      "currency": "kr",
       "searchKeywords": ["chips", "snack", "crispy", "salty"],
       "quantity": {
         "amount": 200,
@@ -518,7 +518,7 @@
       "foodGroupId": "10.6",
       "foodId": 409,
       "price": 70,
-      "currency": "NOK",
+      "currency": "kr",
       "searchKeywords": [
         "vegetarian",
         "pasta",
@@ -566,7 +566,7 @@
       "foodGroupId": "10.11",
       "foodId": "06.141",
       "price": 19.9,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 230,
         "unit": "g"
@@ -615,7 +615,7 @@
       "foodGroupId": "5.7",
       "foodId": "05.369",
       "price": 93.14,
-      "currency": "NOK",
+      "currency": "kr",
       "nutrients": ["corn flour", "salt", "oil"],
       "allergens": [],
       "origin": "Sweden",
@@ -651,7 +651,7 @@
       "foodGroupId": "10.11",
       "foodId": "10.134",
       "price": 13.72,
-      "currency": "NOK",
+      "currency": "kr",
       "nutrients": ["spices", "salt", "sugar"],
       "storage": null,
       "allergens": [],
@@ -678,7 +678,7 @@
         "amount": "500",
         "unit": "g"
       },
-      "currency": "NOK",
+      "currency": "kr",
 
       "calories": {
         "quantity": 96,
@@ -714,7 +714,7 @@
       "foodGroupId": "10.9.3",
       "foodId": 703,
       "price": 10.0,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 1,
         "unit": "pc"
@@ -749,7 +749,7 @@
       "foodGroupId": "6.6",
       "foodId": 704,
       "price": 46.9,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 1,
         "unit": "kg"
@@ -784,7 +784,7 @@
       "foodGroupId": "5.7",
       "foodId": 707,
       "price": 35.0,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 380,
         "unit": "g"
@@ -825,7 +825,7 @@
       "foodGroupId": "5.7",
       "foodId": 708,
       "price": 12.0,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 1,
         "unit": "pc"
@@ -863,7 +863,7 @@
       "foodGroupId": "1.1",
       "foodId": 1001,
       "price": 22.9,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 1,
         "unit": "L"
@@ -897,7 +897,7 @@
       "foodGroupId": "1.1",
       "foodId": 1002,
       "price": 30.6,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 930,
         "unit": "g"
@@ -938,7 +938,7 @@
       "foodGroupId": "1.1",
       "foodId": 1003,
       "price": 47.3,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 850,
         "unit": "g"
@@ -980,7 +980,7 @@
       "foodGroupId": "5.1",
       "foodId": 1004,
       "price": 44.1,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 660,
         "unit": "g"
@@ -1014,7 +1014,7 @@
       "foodGroupId": "1.2",
       "foodId": 1005,
       "price": 27.0,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 380,
         "unit": "g"
@@ -1048,7 +1048,7 @@
       "foodGroupId": "1.3",
       "foodId": 1006,
       "price": 19.9,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 300,
         "unit": "g"
@@ -1081,7 +1081,7 @@
       "foodGroupId": "5.1",
       "foodId": 1007,
       "price": 25.0,
-      "currency": "NOK",
+      "currency": "kr",
       "quantity": {
         "amount": 960,
         "unit": "g"

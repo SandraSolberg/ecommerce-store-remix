@@ -16,8 +16,6 @@ export default {
         'baby-blue': '#b2cff5',
         'primary-blue': '#1767ce',
       },
-
-      textColor: {},
     },
   },
   plugins: [],

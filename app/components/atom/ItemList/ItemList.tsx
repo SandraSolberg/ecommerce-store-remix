@@ -21,7 +21,7 @@ const ItemList = ({ items, total }: ItemListProps) => {
       {Object.entries(items).map(([key, object]) => (
         <div
           key={key}
-          className='border-b h-28 mb-2 flex flex-row justify-between items-start'
+          className='border-b m-h-28 py-2 flex flex-row justify-between items-start'
         >
           <div className='flex content-center gap-4'>
             <img className='w-14 h-20' alt='' src={object.image ?? undefined} />

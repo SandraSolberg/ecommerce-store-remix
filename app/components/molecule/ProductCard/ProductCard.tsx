@@ -1,9 +1,9 @@
 import { addItem } from '~/redux/cartSlice';
 import { useAppDispatch } from '~/redux/store';
-import { FoodType } from '~/types/food';
+import { IFoodItem } from '~/types/food';
 
 type ProductCardProps = {
-  item: FoodType;
+  item: IFoodItem;
 };
 
 const ProductCard = ({ item }: ProductCardProps) => {

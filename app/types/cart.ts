@@ -1,12 +1,12 @@
-import { FoodType } from './food';
+import { IFoodItem } from './food';
 
 export type CartType = {
-  items: FoodType[];
+  items: IFoodItem[];
   addedItems: CartItem[];
   total: number;
   isOpen: boolean;
 };
 
-export interface CartItem extends FoodType {
+export interface CartItem extends IFoodItem {
   count: number;
 }

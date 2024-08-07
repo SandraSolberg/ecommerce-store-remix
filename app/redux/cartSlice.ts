@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { CartItem, CartType } from '~/types/cart';
-import { FoodType } from '~/types/food';
+import { IFoodItem } from '~/types/food';
 
 const initialState: CartType = {
   items: [],
@@ -14,7 +14,7 @@ export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    addItem: (state, action: PayloadAction<{ foodItem: FoodType }>) => {
+    addItem: (state, action: PayloadAction<{ foodItem: IFoodItem }>) => {
       const { price, foodId } = action.payload.foodItem;
 
       const existingItem = state.addedItems.find(
@@ -49,7 +49,7 @@ export const cartSlice = createSlice({
       const itemToRemove = state.addedItems.find((item) => item.foodId === id);
       const validPrice = itemToRemove?.price ?? 0;
 
-      const updateItems: FoodType[] = state.items.filter(
+      const updateItems: IFoodItem[] = state.items.filter(
         (foodItem) => foodItem.foodId !== id
       );
       const updateAddedItems: CartItem[] = state.addedItems.filter(

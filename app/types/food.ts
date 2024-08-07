@@ -19,7 +19,7 @@ export type EnergyType = {
   unit: string;
 };
 
-export interface FoodType {
+export interface IFoodItem {
   searchKeywords: string[] | null;
   foodName: string | null;
   tags: TagsType | null;
@@ -42,5 +42,5 @@ export interface FoodType {
 }
 
 export type FoodsType = {
-  foods: FoodType[];
+  foods: IFoodItem[];
 };

@@ -30,7 +30,7 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
           <div className='sliderTop'>
             <button
               onClick={handleCloseSlider}
-              className='hover:bg-blue-025 rounded-sm'
+              className='hover:bg-blue-025 rounded-lg'
             >
               Close
               <svg

@@ -21,7 +21,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
             <span className='text-yellow-500'>★★★★★</span>
             <span className='text-gray-500 text-xs ml-1'>(4)</span>
           </div>
-          <p className='font-semibold'>{`${item.currency} ${item.price}`}</p>
+          <p className='font-semibold'>{`${item.price} ${item.currency} `}</p>
           <h4>{item.foodName}</h4>
           <p className='text-sm text-gray-500'>{`${item.quantity?.amount} ${item.quantity?.unit}`}</p>
 

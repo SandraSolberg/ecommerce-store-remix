@@ -1,3 +1,4 @@
+import { Link } from '@remix-run/react';
 import ItemList from '~/components/atom/ItemList/ItemList';
 import { useAppSelector } from '~/redux/store';
 import './miniCartContent.css';
@@ -5,9 +6,11 @@ import './miniCartContent.css';
 const MiniCartContent = () => {
   const cart = useAppSelector((state) => state.cart);
 
+  console.log('cart', cart);
+
   return (
     <>
-      {cart.items.length === 0 ? (
+      {cart.addedItems.length === 0 ? (
         <div className='noContent'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -29,14 +32,14 @@ const MiniCartContent = () => {
         </div>
       ) : (
         <div className='miniCartContainer'>
-          <ItemList items={cart.items} total={cart.total} />
+          <ItemList items={cart.addedItems} total={cart.total} />
 
-          <button
-            className='mt-4 w-full bg-blue-500 text-white text-sm font-semibold py-3 rounded-lg hover:bg-blue-600 '
-            onClick={() => {}}
+          <Link
+            className='mt-4 w-full bg-blue-500 text-white text-sm text-center font-semibold py-3 rounded-lg hover:bg-blue-600 '
+            to='/cart'
           >
             Go to checkout
-          </button>
+          </Link>
         </div>
       )}
     </>

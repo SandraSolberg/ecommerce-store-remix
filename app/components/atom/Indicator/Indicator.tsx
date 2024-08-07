@@ -1,3 +1,7 @@
 export const Indicator = () => {
-  return <div>Indicator</div>;
+  return (
+    <div>
+      <p>You have </p>
+    </div>
+  );
 };

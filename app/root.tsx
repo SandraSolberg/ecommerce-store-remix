@@ -7,8 +7,8 @@ import {
 } from '@remix-run/react';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
-import './tailwind.css';
 import Header from './components/compound/Header/Header';
+import './tailwind.css';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

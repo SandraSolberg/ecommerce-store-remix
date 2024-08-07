@@ -1,10 +1,12 @@
 import { Link } from '@remix-run/react';
 import ItemList from '~/components/atom/ItemList/ItemList';
-import { useAppSelector } from '~/redux/store';
+import { useAppDispatch, useAppSelector } from '~/redux/store';
 import './miniCartContent.css';
+import { toggleSlider } from '~/redux/cartSlice';
 
 const MiniCartContent = () => {
   const cart = useAppSelector((state) => state.cart);
+  const dispatch = useAppDispatch();
 
   console.log('cart', cart);
 
@@ -37,6 +39,7 @@ const MiniCartContent = () => {
           <Link
             className='mt-4 w-full bg-blue-500 text-white text-sm text-center font-semibold py-3 rounded-lg hover:bg-blue-600 '
             to='/cart'
+            onClick={() => dispatch(toggleSlider(false))}
           >
             Go to checkout
           </Link>

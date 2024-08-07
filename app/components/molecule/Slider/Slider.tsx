@@ -1,9 +1,8 @@
 import { toggleSlider } from '~/redux/cartSlice';
 import { useAppDispatch, useAppSelector } from '~/redux/store';
 import './slider.css';
-import MiniCartContent from '../MiniCartContent/MiniCartContent';
 
-const Slider = () => {
+const Slider = ({ children }: { children: React.ReactNode }) => {
   const isOpen = useAppSelector((state) => state.cart.isOpen);
   const dispatch = useAppDispatch();
 
@@ -50,7 +49,7 @@ const Slider = () => {
               </svg>
             </button>
           </div>
-          <MiniCartContent />
+          {children}
         </div>
       </aside>
     </>

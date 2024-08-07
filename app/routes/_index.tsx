@@ -1,9 +1,6 @@
 import type { MetaFunction } from '@remix-run/node';
-import { Provider } from 'react-redux';
-import Header from '~/components/compound/Header/Header';
-import '../styles/layout.css';
-import { store } from '~/redux/store';
 import LandingPage from '~/components/compound/LandingPage/LandingPage';
+import '../styles/layout.css';
 
 export const meta: MetaFunction = () => {
   return [
@@ -13,12 +10,5 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  return (
-    <div>
-      <Provider store={store}>
-        <Header />
-        <LandingPage />
-      </Provider>
-    </div>
-  );
+  return <LandingPage />;
 }

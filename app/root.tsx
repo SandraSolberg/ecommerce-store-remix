@@ -5,7 +5,10 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 import './tailwind.css';
+import Header from './components/compound/Header/Header';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,9 +20,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className='bg-pale-blue'>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+        <Provider store={store}>
+          <Header />
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+        </Provider>
       </body>
     </html>
   );

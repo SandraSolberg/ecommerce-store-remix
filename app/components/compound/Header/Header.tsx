@@ -1,3 +1,4 @@
+import { Link } from '@remix-run/react';
 import { CartChip } from '~/components/atom/CartChip/CartChip';
 import MiniCartContent from '~/components/molecule/MiniCartContent/MiniCartContent';
 import Slider from '~/components/molecule/Slider/Slider';
@@ -13,17 +14,15 @@ const Header = () => {
         </Slider>
       ) : null}
       <div className='flex  justify-between items-center py-2 px-4'>
-        <a href='https://www.sandrasolberg.no/'>
+        <Link to=''>
           <img
             className='w-20 h-20'
             src='/tacoshop.svg'
-            alt={`Visit Sandra's website`}
+            alt={`Go to dashboard`}
           />
-        </a>
+        </Link>
 
-        <div>
-          <CartChip />
-        </div>
+        <CartChip />
       </div>
     </header>
   );

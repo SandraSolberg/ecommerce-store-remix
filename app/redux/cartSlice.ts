@@ -4,7 +4,6 @@ import { CartItem, CartType } from '~/types/cart';
 import { IFoodItem } from '~/types/food';
 
 const initialState: CartType = {
-  items: [],
   addedItems: [],
   total: 0,
   isOpen: false,
@@ -28,7 +27,6 @@ export const cartSlice = createSlice({
         existingItem.price = existingItem.price ?? 0;
         const validPrice = price ?? 0;
         existingItem.price += validPrice;
-        state.items = [...state.items, existingItem];
         state.total = newTotal;
         return;
       }
@@ -39,7 +37,6 @@ export const cartSlice = createSlice({
       };
 
       state.addedItems = [...state.addedItems, addNewItem];
-      state.items = [...state.items, action.payload.foodItem];
       state.total = newTotal;
     },
 
@@ -49,15 +46,12 @@ export const cartSlice = createSlice({
       const itemToRemove = state.addedItems.find((item) => item.foodId === id);
       const validPrice = itemToRemove?.price ?? 0;
 
-      const updateItems: IFoodItem[] = state.items.filter(
-        (foodItem) => foodItem.foodId !== id
-      );
       const updateAddedItems: CartItem[] = state.addedItems.filter(
         (foodItem) => foodItem.foodId !== id
       );
       const newTotal =
         validPrice && state.total > 0 ? state.total - validPrice : state.total;
-      state.items = updateItems;
+
       state.addedItems = updateAddedItems;
       state.total = newTotal;
     },
@@ -67,7 +61,6 @@ export const cartSlice = createSlice({
     },
 
     removeAllItems: (state) => {
-      state.items = [];
       state.addedItems = [];
       state.total = 0;
     },

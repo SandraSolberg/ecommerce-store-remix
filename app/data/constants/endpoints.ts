@@ -1,6 +1,8 @@
+const baseURL = 'http://localhost:5173/';
+
 const endpoint = {
-  FOODPRODUCTS: 'app/data/foodProducts.json',
-  FOODS: 'app/data/foods.json',
+  FOODPRODUCTS: `${baseURL}app/data/foodProducts.json`,
+  FOODS: `${baseURL}app/data/foods.json`,
 };
 
 export default endpoint;

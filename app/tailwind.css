@@ -4,6 +4,7 @@
 
 :root {
   --color-primary: #061629;
+  --color-secondary: #69737e;
   --color-blue-025: #eef5ff;
   --color-blue-030: #bec4cc;
   --color-baby-blue: #b2cff5;
@@ -37,8 +38,13 @@
   }
 
   body,
+  td,
   .p {
     @apply text-primary text-sm md:text-base;
+  }
+
+  td {
+    @apply text-secondary text-sm md:text-base;
   }
   /**======== Typography =========== */
 }

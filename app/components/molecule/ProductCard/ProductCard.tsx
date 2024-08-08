@@ -1,3 +1,4 @@
+import { Link } from '@remix-run/react';
 import { addItem } from '~/redux/cartSlice';
 import { useAppDispatch } from '~/redux/store';
 import { IFoodItem } from '~/types/food';
@@ -9,8 +10,8 @@ type ProductCardProps = {
 const ProductCard = ({ item }: ProductCardProps) => {
   const dispatch = useAppDispatch();
   return (
-    <a href='/product'>
-      <article className='w-48 min-h-[376px]  bg-pure-white m-2 p-2 rounded-2xl shadow-secondary-1 flex flex-col justify-between'>
+    <Link to={`/products/${item.foodId}`}>
+      <article className='w-48 min-h-[376px]  bg-pure-white m-2 p-2 rounded-2xl shadow-secondary-1 flex flex-col justify-between shadow'>
         <img
           className='w-full h-40 object-cover rounded-t-lg '
           alt={item.foodName ?? 'image of item'}
@@ -37,7 +38,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
           </button>
         </div>
       </article>
-    </a>
+    </Link>
   );
 };
 

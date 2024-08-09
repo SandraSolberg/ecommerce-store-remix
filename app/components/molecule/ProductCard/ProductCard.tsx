@@ -1,4 +1,5 @@
 import { Link } from '@remix-run/react';
+import BasicButton from '~/components/atom/BasicButton/BasicButton';
 import { addItem } from '~/redux/cartSlice';
 import { useAppDispatch } from '~/redux/store';
 import { IFoodItem } from '~/types/food';
@@ -9,6 +10,11 @@ type ProductCardProps = {
 
 const ProductCard = ({ item }: ProductCardProps) => {
   const dispatch = useAppDispatch();
+
+  const handleAddProduct = () => {
+    dispatch(addItem({ foodItem: item }));
+  };
+
   return (
     <Link to={`/products/${item.foodId}`}>
       <article className='w-48 min-h-[376px]  bg-pure-white m-2 p-2 rounded-2xl shadow-secondary-1 flex flex-col justify-between shadow'>
@@ -26,16 +32,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
           <h4>{item.foodName}</h4>
           <p className='text-sm text-gray-500'>{`${item.quantity?.amount} ${item.quantity?.unit}`}</p>
 
-          <button
-            className='mt-4 w-full bg-blue-500 text-white text-sm font-semibold py-2 rounded-lg hover:bg-blue-600 '
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              dispatch(addItem({ foodItem: item }));
-            }}
-          >
-            Add
-          </button>
+          <BasicButton onClick={handleAddProduct} />
         </div>
       </article>
     </Link>

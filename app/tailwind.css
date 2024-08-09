@@ -8,6 +8,7 @@
   --color-blue-025: #eef5ff;
   --color-blue-030: #bec4cc;
   --color-baby-blue: #b2cff5;
+  --color-blue-medium: #0059b3;
   --color-blue-primary: #1767ce;
 }
 
@@ -47,4 +48,8 @@
     @apply text-secondary text-sm md:text-base;
   }
   /**======== Typography =========== */
+
+  a {
+    @apply text-blue-500 hover:underline;
+  }
 }

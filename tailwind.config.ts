@@ -15,6 +15,7 @@ export default {
         'blue-025': 'var(--color-blue-025)',
         'blue-030': 'var(--color-blue-030)',
         'baby-blue': '#b2cff5',
+        'blue-medium': 'var(--color-blue-medium)',
         'blue-primary': 'var(--color-blue-primary)',
       },
     },

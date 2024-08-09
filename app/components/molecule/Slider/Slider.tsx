@@ -30,7 +30,7 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
           <div className='sliderTop'>
             <button
               onClick={handleCloseSlider}
-              className='hover:bg-blue-025 rounded-lg'
+              className='hover:bg-blue-100 rounded-lg'
             >
               Close
               <svg
@@ -39,7 +39,7 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
                 height='24'
                 viewBox='0 0 24 24'
                 fill='none'
-                stroke='#061629'
+                stroke='var(--color-primary)'
                 strokeWidth='2'
                 strokeLinecap='round'
                 strokeLinejoin='round'

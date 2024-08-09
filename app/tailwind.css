@@ -6,8 +6,7 @@
   --color-primary: #061629;
   --color-secondary: #69737e;
 
-  --color-border-default: #d8d2cb;
-
+  /**=========== blue color =========== **/
   --color-blue-000: #f4f8fb;
   --color-blue-010: #e9f1f6;
   --color-blue-020: #d0e0ec;
@@ -18,6 +17,10 @@
   --color-blue-070: #1e6597;
   --color-blue-080: #174f76;
   --color-blue-090: #123d5b;
+
+  /**=========== default color =========== **/
+  --color-border-divider: #e2e8f0;
+  --color-gray-border-default: #edf2f7;
 }
 
 @layer base {

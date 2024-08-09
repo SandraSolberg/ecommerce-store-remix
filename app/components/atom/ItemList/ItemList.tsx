@@ -28,7 +28,7 @@ const ItemList = ({ items, total }: ItemListProps) => {
             <div>
               <p className='font-semibold'>{object.foodName}</p>
               <p>{`${object.quantity?.amount}${object.quantity?.unit}`}</p>
-              <p className='font-semibold text-blue-primary'>
+              <p className='font-semibold text-blue-dark'>
                 {numberToFixedString(object.price ?? 0)}
                 {object.currency}
               </p>

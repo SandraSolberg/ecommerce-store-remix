@@ -16,7 +16,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
   };
 
   return (
-    <Link to={`/products/${item.foodId}`}>
+    <Link to={`/products/${item.foodId}`} className='hover:no-underline'>
       <article className='w-48 min-h-[376px]  bg-pure-white m-2 p-2 rounded-2xl shadow-secondary-1 flex flex-col justify-between shadow'>
         <img
           className='w-full h-40 object-cover rounded-t-lg '

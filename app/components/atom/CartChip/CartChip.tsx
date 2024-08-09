@@ -16,7 +16,7 @@ export const CartChip = () => {
     <div
       role='button'
       tabIndex={0}
-      className='flex gap-2 border-solid border rounded-lg border-blue-030 hover:bg-blue-025 p-2'
+      className='flex gap-2 border-solid border rounded-lg border-blue-300 hover:bg-blue-100 p-2'
       onClick={handleOpenSlider}
       onKeyDown={handleOpenSlider}
     >

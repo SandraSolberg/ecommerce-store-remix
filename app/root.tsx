@@ -19,7 +19,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className='bg-pale-blue'>
+      <body className='bg-blue-100'>
         <Provider store={store}>
           <Header />
           {children}

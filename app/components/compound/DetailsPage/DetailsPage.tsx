@@ -79,7 +79,11 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
               </ul>
             </div>
           )}
-          {link && <a href={link}>Read more about the product</a>}
+          {link && (
+            <a href={link} className='hover:underline'>
+              Read more about the product
+            </a>
+          )}
         </div>
       ) : (
         <div>

@@ -3,9 +3,6 @@ import { useFoods } from '~/hooks/useFoods';
 
 const ProductContainer = () => {
   const { foods, loading, error } = useFoods();
-
-  console.log('foods', foods);
-
   return (
     <div className='flex flex-wrap'>
       {loading && <p className='text-xl'>...Loading</p>}

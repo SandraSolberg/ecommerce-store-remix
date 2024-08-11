@@ -28,7 +28,7 @@ const ItemList = ({ items, total }: ItemListProps) => {
             <div>
               <p className='font-semibold'>{object.foodName}</p>
               <p>{`${object.quantity?.amount}${object.quantity?.unit}`}</p>
-              <p className='font-semibold text-blue-dark'>
+              <p className='font-semibold'>
                 {numberToFixedString(object.price ?? 0)}
                 {object.currency}
               </p>
@@ -38,7 +38,7 @@ const ItemList = ({ items, total }: ItemListProps) => {
 
           <button
             onClick={() => handleRemove(object)}
-            className='hover:bg-blue-025 rounded-sm'
+            className='hover:bg-blue-100 rounded-sm'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'

@@ -10,26 +10,28 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
     dispatch(toggleSlider(false));
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (event.key === 'Enter' || event.key === 'Escape') {
+      handleCloseSlider();
+    }
+  };
+
   return (
     <>
       {isOpen && (
         <div
-          role='button'
-          tabIndex={0}
+          role='presentation'
           className='backdrop'
           onClick={handleCloseSlider}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              handleCloseSlider();
-            }
-          }}
         ></div>
       )}
       <aside className='slider'>
         <div className='sliderContent'>
           <div className='sliderTop'>
             <button
+              tabIndex={0}
               onClick={handleCloseSlider}
+              onKeyDown={handleKeyDown}
               className='hover:bg-blue-100 rounded-lg'
             >
               Close

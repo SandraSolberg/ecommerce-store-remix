@@ -30,7 +30,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
           </div>
           <p className='font-semibold'>{`${item.price} ${item.currency} `}</p>
           <h4>{item.foodName}</h4>
-          <p className='text-sm text-gray-500'>{`${item.quantity?.amount} ${item.quantity?.unit}`}</p>
+          <p className='text-sm text-secondary'>{`${item.quantity?.amount} ${item.quantity?.unit}`}</p>
 
           <BasicButton onClick={handleAddProduct} />
         </div>

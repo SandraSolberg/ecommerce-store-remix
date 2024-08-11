@@ -8,8 +8,6 @@ const MiniCartContent = () => {
   const cart = useAppSelector((state) => state.cart);
   const dispatch = useAppDispatch();
 
-  console.log('cart', cart);
-
   return (
     <>
       {cart.addedItems.length === 0 ? (

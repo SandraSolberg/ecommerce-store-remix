@@ -31,28 +31,28 @@
 
   h1,
   .h1 {
-    @apply text-primary text-3xl font-bold md:text-4xl;
+    @apply text-primary text-2xl font-bold md:text-3xl;
   }
 
   h2,
   .h2 {
-    @apply text-primary text-2xl font-bold md:text-3xl;
+    @apply text-primary text-xl font-bold md:text-2xl;
   }
 
   h3,
   .h3 {
-    @apply text-primary text-xl font-bold md:text-2xl;
+    @apply text-primary text-lg font-bold md:text-xl;
   }
 
   h4,
   .h4 {
-    @apply text-primary text-lg font-bold md:text-lg;
+    @apply text-primary text-base font-bold md:text-lg;
   }
 
   body,
   td,
   .p {
-    @apply text-primary text-base md:text-base;
+    @apply text-primary text-base;
   }
 
   span,
@@ -62,6 +62,6 @@
   /**======== Typography =========== */
 
   a {
-    @apply text-blue-800 text-base font-medium;
+    @apply text-blue-800 text-base md:text-lg font-medium;
   }
 }

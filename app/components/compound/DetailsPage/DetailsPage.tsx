@@ -1,42 +1,30 @@
+import { Accordion } from '~/components/atom/Accordion/Accordion';
 import BasicButton from '~/components/atom/BasicButton/BasicButton';
 import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
 import { useFoods } from '~/hooks/useFoods';
 import { addItem } from '~/redux/cartSlice';
 import { useAppDispatch } from '~/redux/store';
+import numberToFixedString from '~/utils/numberToFixedString';
 
 export const DetailsPage = ({ productId }: { productId: number | null }) => {
   const { foods } = useFoods();
   const dispatch = useAppDispatch();
 
-  console.log('productID', productId, foods);
-
   const product = foods?.foods.find((item) => item.foodId === productId);
 
   const {
-    label,
     foodName,
     image,
     quantity,
-    origin,
-    countryOfProduction,
+    price,
+    currency,
     description,
-    allergens,
     link,
+    supplier,
   } = product ?? {};
 
-  const getCountry = () => {
-    if (
-      origin?.toLocaleLowerCase() === countryOfProduction?.toLocaleLowerCase()
-    )
-      return origin;
-    else if (countryOfProduction && !origin) return countryOfProduction;
-    else if (!countryOfProduction && origin) return origin;
-    else if (!countryOfProduction && !origin) return null;
-
-    return `${origin}/${countryOfProduction}`;
-  };
-
-  const country = getCountry();
+  const displayPrice =
+    price && currency ? `${currency} ${numberToFixedString(price)} ` : '';
 
   const handleAddProduct = () => {
     if (product) {
@@ -47,47 +35,69 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
   return (
     <PageWrapper>
       {product ? (
-        <div className='flex flex-col'>
+        <div className='flex flex-col gap-5'>
           <div className='flex'>
             <img
-              className='max-w-lg max-h-lg object-contain'
+              className='max-w-lg max-h-lg object-contain p-4'
               alt=''
               src={image ?? ''}
-            />{' '}
+            />
             <div>
-              <p>{label}</p>
-              <h1>{foodName}</h1>
-              {country && <p>{country}</p>}
-              <p>
-                {quantity?.amount} {quantity?.unit}
-              </p>
-              <BasicButton title='Add to cart' onClick={handleAddProduct} />
+              <div className='pb-8'>
+                <h1 className='pb-2'>{foodName}</h1>
+                <p className='flex flex-row text-secondary text-xl md:text-2xl'>
+                  {quantity?.amount} {quantity?.unit}, {supplier}
+                </p>
+              </div>
+
+              <span className='text-3xl md:text-4xl font-bold'>
+                {displayPrice}
+              </span>
+              <BasicButton
+                className='py-3 px-5'
+                title='Add to cart'
+                onClick={handleAddProduct}
+              />
             </div>
           </div>
 
           <div>
-            <h2>About the product</h2>
-            <p>{description}</p>
+            <Accordion title='Description'>
+              <p>{description}</p>
+            </Accordion>
+
+            <Accordion title='Content' noBorderTop>
+              <p>test</p>
+            </Accordion>
           </div>
-          {allergens && allergens.length >= 0 && (
-            <div>
-              <h2>Allergens</h2>
-              <ul>
-                {allergens.map((a) => (
-                  <li key={a}>{a}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {link && (
-            <a href={link} className='hover:underline'>
-              Read more about the product
-            </a>
-          )}
+
+          <div className='flex justify-center'>
+            {link && (
+              <a
+                href={link}
+                className='flex items-center gap-1 hover:underline'
+              >
+                Read more about the product
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='20'
+                  height='20'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke={'var(--color-blue-080)'}
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                >
+                  <path d='M5 12h13M12 5l7 7-7 7' />
+                </svg>
+              </a>
+            )}
+          </div>
         </div>
       ) : (
         <div>
-          <p>No product found</p>
+          <h1>No product found</h1>
         </div>
       )}
     </PageWrapper>

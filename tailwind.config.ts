@@ -8,6 +8,7 @@ export default {
         'pure-white': '#FFFF',
 
         // Customize it on tailwind.css :root
+        'border-divider': 'var(--color-border-divider)',
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
 

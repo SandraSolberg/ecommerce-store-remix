@@ -2,6 +2,7 @@ import { Accordion } from '~/components/atom/Accordion/Accordion';
 import BasicButton from '~/components/atom/BasicButton/BasicButton';
 import InfoTable from '~/components/atom/InfoTable/InfoTable';
 import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
+import QuantityButtonGroup from '~/components/atom/QuantityButtonGroup/QuantityButtonGroup';
 import { useFoods } from '~/hooks/useFoods';
 import { addItem } from '~/redux/cartSlice';
 import { useAppDispatch } from '~/redux/store';
@@ -61,8 +62,6 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
     { Nutrients: nutrientsJoined },
   ];
 
-  console.log('Allergens', arrayToJoinedString(allergens));
-
   // Related section?
 
   return (
@@ -96,7 +95,6 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
               />
             </div>
           </div>
-
           <div>
             <Accordion title='Description'>
               <p>{description}</p>
@@ -109,7 +107,6 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
               <InfoTable list={nutrientsList} />
             </Accordion>
           </div>
-
           <div className='flex justify-center'>
             {link && (
               <a
@@ -133,6 +130,7 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
               </a>
             )}
           </div>
+          <QuantityButtonGroup />
         </div>
       ) : (
         <div>

@@ -55,8 +55,7 @@
     @apply text-primary text-base;
   }
 
-  span,
-  td {
+  span {
     @apply text-secondary text-sm md:text-base;
   }
   /**======== Typography =========== */

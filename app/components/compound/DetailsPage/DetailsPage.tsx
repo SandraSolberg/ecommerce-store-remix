@@ -1,9 +1,12 @@
 import { Accordion } from '~/components/atom/Accordion/Accordion';
 import BasicButton from '~/components/atom/BasicButton/BasicButton';
+import InfoTable from '~/components/atom/InfoTable/InfoTable';
 import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
 import { useFoods } from '~/hooks/useFoods';
 import { addItem } from '~/redux/cartSlice';
 import { useAppDispatch } from '~/redux/store';
+import { KeyValuePair } from '~/types/types';
+import arrayToJoinedString from '~/utils/arrayToJoinedString';
 import numberToFixedString from '~/utils/numberToFixedString';
 
 export const DetailsPage = ({ productId }: { productId: number | null }) => {
@@ -21,6 +24,14 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
     description,
     link,
     supplier,
+    label,
+    origin,
+    countryOfProduction,
+    allergens,
+    storage,
+    nutrients,
+    calories,
+    energy,
   } = product ?? {};
 
   const displayPrice =
@@ -32,17 +43,42 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
     }
   };
 
+  const allergensJoined = arrayToJoinedString(allergens);
+  const nutrientsJoined = arrayToJoinedString(nutrients);
+
+  const contentList: KeyValuePair[] = [
+    { Supplier: supplier ?? '' },
+    { Label: label ?? '' },
+    { Origin: origin ?? '' },
+    { 'Country of Production': countryOfProduction ?? '' },
+    { Allergens: allergensJoined },
+    { Storage: storage },
+  ];
+
+  const nutrientsList: KeyValuePair[] = [
+    { Energy: energy ? `${energy.quantity} ${energy.unit}` : '' },
+    { Calories: calories ? `${calories.quantity} ${calories.unit}` : '' },
+    { Nutrients: nutrientsJoined },
+  ];
+
+  console.log('Allergens', arrayToJoinedString(allergens));
+
+  // Related section?
+
   return (
     <PageWrapper>
       {product ? (
-        <div className='flex flex-col gap-5'>
-          <div className='flex'>
-            <img
-              className='max-w-lg max-h-lg object-contain p-4'
-              alt=''
-              src={image ?? ''}
-            />
-            <div>
+        <div className='flex gap-5 md:flex flex-col'>
+          <div className='md:flex'>
+            <div className='p-4 flex-1 flex justify-center items-center'>
+              <img
+                className='object-contain md:max-w-96 max-h-96'
+                alt=''
+                src={image ?? ''}
+              />
+            </div>
+
+            <div className='flex-1'>
               <div className='pb-8'>
                 <h1 className='pb-2'>{foodName}</h1>
                 <p className='flex flex-row text-secondary text-xl md:text-2xl'>
@@ -67,7 +103,10 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
             </Accordion>
 
             <Accordion title='Content' noBorderTop>
-              <p>test</p>
+              <InfoTable list={contentList} />
+            </Accordion>
+            <Accordion title='Nutrients' noBorderTop>
+              <InfoTable list={nutrientsList} />
             </Accordion>
           </div>
 
@@ -89,7 +128,7 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
                   strokeLinecap='round'
                   strokeLinejoin='round'
                 >
-                  <path d='M5 12h13M12 5l7 7-7 7' />
+                  <path d='M9 18l6-6-6-6' />
                 </svg>
               </a>
             )}

@@ -15,7 +15,7 @@
         "isRefrigerated": true,
         "isFrozen": false
       },
-      "description": "A well-known and beloved brunost (brown cheese) with long-standing traditions and the most popular of our brunosts. Made from a unique blend of the finest Norwegian cow’s and goat’s milk as well as cow’s cream, it has a rich caramel taste with a slight hint of sharpness. TINE Gudbrandsdalen is well suited for use on bread, crispbread and waffles. It is also perfect in cooking, for example, in an apple pie, muffins, cookies or in an ice cream sauce.",
+      "description": "A well-known and beloved brunost (brown cheese) with long-standing traditions and the most popular of our brunost. Made from a unique blend of the finest Norwegian cow’s and goat’s milk as well as cow’s cream, it has a rich caramel taste with a slight hint of sharpness. TINE Gudbrandsdalen is well suited for use on bread, crispbread and waffles. It is also perfect in cooking, for example, in an apple pie, muffins, cookies or in an ice cream sauce.",
       "image": "https://www.tinebrunost.com/products/_/image/a8288595-213e-4a66-97fa-7c99da4d27b0:c9ade615fd02ba1c73afe5ea53fbe80643a2f45b/block-256-256/800x800_0001_tine-gudbrandsdalsost-500-b.png?quality=60",
       "foodGroupId": "1.4.5",
       "foodId": 1,
@@ -39,6 +39,7 @@
       "origin": "Norway",
       "countryOfProduction": "Norway",
       "supplier": "Tine SA",
+      "label": "Tine",
       "link": "https://www.tinebrunost.com/products#gudbrandsdalen"
     },
     {
@@ -79,6 +80,7 @@
       "origin": "Norway",
       "countryOfProduction": "Norway",
       "supplier": "Tine SA",
+      "label": "Tine",
       "link": "https://www.jarlsberg.com/products#jarlsberg-original"
     },
     {
@@ -691,7 +693,7 @@
       "nutrients": ["carbohydrates", "fiber", "vitamin C"],
       "allergens": [],
       "label": "Corn",
-      "supplier": "Corn Suppliser AS",
+      "supplier": "Corn Supplier AS",
       "storage": "Store at 18 °C to 25 °C ",
       "link": null
     },
@@ -744,7 +746,7 @@
         "isRefrigerated": true,
         "isFrozen": false
       },
-      "description": "Solanum lycopersicum",
+      "description": "Juicy and vibrant, these fresh tomatoes are perfect for adding a burst of flavor to any dish. They are refrigerated to maintain peak freshness and are ideal for salads, sandwiches, or cooking. Enjoy their natural sweetness and rich taste with every bite.",
       "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi2.wp.com%2Fyourmedguide.com%2Fwp-content%2Fuploads%2F2012%2F09%2Ftomatoes.jpg&f=1&nofb=1&ipt=8bfd5310fad09599bdb6895a2323878222813f520fac8fbf079804c88584a780&ipo=images",
       "foodGroupId": "6.6",
       "foodId": 21,

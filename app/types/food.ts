@@ -38,6 +38,7 @@ export interface IFoodItem {
   countryOfProduction: string | null;
   label: string | null;
   supplier: string | null;
+  storage: string | null;
   link: string | null;
 }
 

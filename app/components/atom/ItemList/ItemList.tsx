@@ -38,7 +38,7 @@ const ItemList = ({ items, total }: ItemListProps) => {
 
           <button
             onClick={() => handleRemove(object)}
-            className='hover:bg-blue-100 rounded-sm'
+            className='hover:bg-blue-100 rounded-full'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'

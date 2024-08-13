@@ -3,10 +3,20 @@ import './quantityButtonGroup.css';
 
 type QuantityButtonGroupType = {
   small?: boolean;
+  initValue: string;
+  onIncrement: () => void;
+  onDecrement: (value: string) => void;
+  onInputChange: (value: string) => void;
 };
 
-const QuantityButtonGroup = ({ small }: QuantityButtonGroupType) => {
-  const [value, setValue] = useState('0');
+const QuantityButtonGroup = ({
+  small,
+  initValue,
+  onIncrement,
+  onDecrement,
+  onInputChange,
+}: QuantityButtonGroupType) => {
+  const [value, setValue] = useState(initValue);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value;
@@ -21,6 +31,7 @@ const QuantityButtonGroup = ({ small }: QuantityButtonGroupType) => {
     const newVal = val + 1;
 
     setValue(newVal.toString());
+    onIncrement();
   };
 
   const decrementCount = () => {
@@ -28,6 +39,7 @@ const QuantityButtonGroup = ({ small }: QuantityButtonGroupType) => {
     const newVal = val ? val - 1 : 0;
 
     setValue(newVal.toString());
+    onDecrement(newVal.toString());
   };
 
   return (
@@ -57,6 +69,7 @@ const QuantityButtonGroup = ({ small }: QuantityButtonGroupType) => {
         pattern='[0-100]'
         value={value}
         onChange={handleChange}
+        onBlur={(event) => onInputChange(event.target.value)}
         className={`border border-gray-200 mx-1 rounded-full  text-center ${
           small ? 'w-10 h-10' : 'w-11 h-11'
         } no-arrows`}

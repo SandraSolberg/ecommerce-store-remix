@@ -11,12 +11,8 @@ const BasicButton = ({
 }: BasicButtonType) => {
   return (
     <button
-      className={`mt-4 w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 ${className}`}
-      onClick={(e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        onClick();
-      }}
+      className={` w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 ${className}`}
+      onClick={onClick}
     >
       {title}
     </button>

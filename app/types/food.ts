@@ -27,8 +27,8 @@ export interface IFoodItem {
   image: string | null;
   foodGroupId: string;
   foodId: number;
-  price: number | null;
-  currency: string | null;
+  price: number;
+  currency: string;
   quantity: QuantityType | null;
   calories: CaloriesType | null;
   energy: EnergyType | null;

@@ -9,25 +9,24 @@ const initialState: CartType = {
   isOpen: false,
 };
 
+// todo: lage ts fil og legge inn funksjoner der.
+
 export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
     addItem: (state, action: PayloadAction<{ foodItem: IFoodItem }>) => {
-      const { price, foodId } = action.payload.foodItem;
+      const { foodItem } = action.payload;
+      const { price, foodId } = foodItem;
 
       const existingItem = state.addedItems.find(
         (item) => item.foodId === foodId
       );
 
-      const newTotal = price ? state.total + price : state.total;
-
       if (existingItem) {
         existingItem.count += 1;
-        existingItem.price = existingItem.price ?? 0;
-        const validPrice = price ?? 0;
-        existingItem.price += validPrice;
-        state.total = newTotal;
+        existingItem.price += price;
+        state.total += price;
         return;
       }
 
@@ -35,9 +34,9 @@ export const cartSlice = createSlice({
         count: 1,
         ...action.payload.foodItem,
       };
-
       state.addedItems = [...state.addedItems, addNewItem];
-      state.total = newTotal;
+      state.total += price;
+      return;
     },
 
     removeItem: (state, action: PayloadAction<{ id: number }>) => {
@@ -64,10 +63,75 @@ export const cartSlice = createSlice({
       state.addedItems = [];
       state.total = 0;
     },
+    removeByOne: (
+      state,
+      action: PayloadAction<{ foodItem: IFoodItem; currentNumber: number }>
+    ) => {
+      const { foodItem, currentNumber } = action.payload;
+      const { foodId, price } = foodItem;
+
+      const existingItem = state.addedItems.find(
+        (item) => item.foodId === foodId
+      );
+
+      const updatedItems: CartItem[] = state.addedItems.filter(
+        (foodItem) => foodItem.foodId !== foodId
+      );
+
+      if (existingItem) {
+        if (currentNumber === 0) {
+          state.addedItems = updatedItems;
+          state.total = state.total ? state.total - price : 0;
+          return;
+        } else {
+          existingItem.count -= 1;
+          existingItem.price -= price;
+          state.total -= price;
+          return;
+        }
+      }
+    },
+    changeNumberOfItems: (
+      state,
+      action: PayloadAction<{ foodItem: IFoodItem; currentCount: number }>
+    ) => {
+      const { foodItem, currentCount } = action.payload;
+      const existingItem = state.addedItems.find(
+        (item) => item.foodId === foodItem.foodId
+      );
+
+      const updatedItems: CartItem[] = state.addedItems.filter(
+        (foodItem) => foodItem.foodId !== foodItem.foodId
+      );
+
+      if (existingItem) {
+        if (currentCount <= 0) {
+          state.addedItems = updatedItems;
+          state.total = state.addedItems.reduce(
+            (accumulator, currentValue) => accumulator + currentValue.price,
+            0
+          );
+        } else {
+          existingItem.count = currentCount;
+          existingItem.price = currentCount * foodItem.price;
+          state.total = state.addedItems.reduce(
+            (accumulator, currentValue) => accumulator + currentValue.price,
+            0
+          );
+          return;
+        }
+      }
+    },
   },
 });
 
-export const { addItem, removeItem, toggleSlider, removeAllItems } =
-  cartSlice.actions;
+export const {
+  addItem,
+  removeItem,
+  removeByOne,
+  toggleSlider,
+  removeAllItems,
+  changeNumberOfItems,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

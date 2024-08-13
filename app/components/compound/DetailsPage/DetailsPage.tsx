@@ -2,7 +2,6 @@ import { Accordion } from '~/components/atom/Accordion/Accordion';
 import BasicButton from '~/components/atom/BasicButton/BasicButton';
 import InfoTable from '~/components/atom/InfoTable/InfoTable';
 import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
-import QuantityButtonGroup from '~/components/atom/QuantityButtonGroup/QuantityButtonGroup';
 import { useFoods } from '~/hooks/useFoods';
 import { addItem } from '~/redux/cartSlice';
 import { useAppDispatch } from '~/redux/store';
@@ -89,7 +88,7 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
                 {displayPrice}
               </span>
               <BasicButton
-                className='py-3 px-5'
+                className='mt-4 py-3 px-5'
                 title='Add to cart'
                 onClick={handleAddProduct}
               />
@@ -130,7 +129,6 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
               </a>
             )}
           </div>
-          <QuantityButtonGroup />
         </div>
       ) : (
         <div>

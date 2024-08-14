@@ -1,7 +1,8 @@
-import { removeItem } from '~/redux/cartSlice';
+import { removeAllItems, removeItem } from '~/redux/cartSlice';
 import { useAppDispatch } from '~/redux/store';
 import { CartItem } from '~/types/cart';
 import numberToFixedString from '~/utils/numberToFixedString';
+import { Indicator } from '../Indicator/Indicator';
 
 type ItemListProps = {
   items: CartItem[];
@@ -14,6 +15,15 @@ const ItemList = ({ items, total }: ItemListProps) => {
 
   const handleRemove = (itemToRemove: CartItem) => {
     dispatch(removeItem({ id: itemToRemove.foodId }));
+  };
+
+  const sumItems = items.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.count,
+    0
+  );
+
+  const handleEmptyCart = () => {
+    dispatch(removeAllItems());
   };
 
   return (
@@ -57,9 +67,15 @@ const ItemList = ({ items, total }: ItemListProps) => {
           </button>
         </div>
       ))}
-      <div className='flex justify-between my-2'>
-        <p className='font-semibold'>Estimated total</p>
-        <p className='font-semibold'>{estimatedTotal} kr</p>
+      <div className='flex flex-col justify-between'>
+        <Indicator
+          message={`You have ${sumItems} items in your cart`}
+          onDelete={handleEmptyCart}
+        />
+        <div className='flex flex-row justify-between'>
+          <p className='font-semibold'>Estimated total</p>
+          <p className='font-semibold'>{estimatedTotal} kr</p>
+        </div>
       </div>
     </div>
   );

@@ -20,7 +20,6 @@ const Rating = () => {
           <button
             type='button'
             key={index}
-            className={index <= (hover || rating) ? 'on' : 'off'}
             onClick={() => {
               setRating(index);
               setCount(index);
@@ -34,9 +33,9 @@ const Rating = () => {
                 width='24'
                 height='24'
                 viewBox='0 0 24 24'
-                fill={`${(hover || rating) >= index ? '#eab308' : 'none'} `}
+                fill={`${index <= (hover || rating) ? '#eab308' : 'none'} `}
                 stroke={`${
-                  (hover || rating) >= index ? '#eab308' : '#9ca3af'
+                  index <= (hover || rating) ? '#eab308' : '#9ca3af'
                 } `}
                 strokeWidth='2'
                 strokeLinecap='round'

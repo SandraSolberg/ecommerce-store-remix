@@ -59,7 +59,7 @@ const MiniCartList = ({ items, total }: ItemListProps) => {
 
           <button
             onClick={() => handleRemove(object)}
-            className='hover:hover:bg-gray-200 rounded-full'
+            className='hover:bg-gray-200 rounded-full'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'

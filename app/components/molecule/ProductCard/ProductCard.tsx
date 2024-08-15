@@ -1,6 +1,7 @@
 import { Link } from '@remix-run/react';
 import BasicButton from '~/components/atom/BasicButton/BasicButton';
 import QuantityButtonGroup from '~/components/atom/QuantityButtonGroup/QuantityButtonGroup';
+import Rating from '~/components/atom/Rating/Rating';
 import { addItem, changeNumberOfItems, removeByOne } from '~/redux/cartSlice';
 import { useAppDispatch, useAppSelector } from '~/redux/store';
 import { IFoodItem } from '~/types/food';
@@ -39,10 +40,10 @@ const ProductCard = ({ item }: ProductCardProps) => {
           alt={item.foodName ?? 'image of item'}
           src={item.image ?? undefined}
         />
+
         <div className='p-2'>
           <div className='flex items-center mt-2'>
-            <span className='text-yellow-500'>★★★★★</span>
-            <span className='text-gray-500 text-xs ml-1'>(4)</span>
+            <Rating />
           </div>
           <p className='font-semibold'>{`${item.price} ${item.currency} `}</p>
           <h4>{item.foodName}</h4>

@@ -27,8 +27,8 @@
   --color-emerald-700: #047857;
 
   /** =========== default color =========== **/
-  --color-border-divider: #e2e8f0;
-  --color-gray-border-default: #edf2f7;
+  --color-border-divider: #e5e7eb;
+  --color-gray-border-default: #d1d5db;
 
   /** =========== z-index color =========== **/
   --z-index-backdrop: 999;

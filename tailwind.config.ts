@@ -4,9 +4,12 @@ export default {
   content: ['./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+        heading: ['Roboto', 'sans-serif'],
+      },
       colors: {
         'pure-white': '#FFFF',
-
         // Customize it on tailwind.css :root
         'border-divider': 'var(--color-border-divider)',
         primary: 'var(--color-primary)',

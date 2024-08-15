@@ -18,13 +18,28 @@
   --color-blue-080: #174f76;
   --color-blue-090: #123d5b;
 
-  /**=========== default color =========== **/
+  /**=========== red color =========== **/
+  --color-red-700: #b91c1c;
+  --color-red-800: #991b1b;
+
+  /**=========== emerald color =========== **/
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+
+  /** =========== default color =========== **/
   --color-border-divider: #e2e8f0;
   --color-gray-border-default: #edf2f7;
+
+  /** =========== z-index color =========== **/
+  --z-index-backdrop: 999;
+  --z--index-slider: 1000;
+  --z--index-modal-backdrop: 1100;
+  --z-index-modal: 2000;
 }
 
 @layer base {
   /**=========== Typography =========== */
+
   .h0 {
     @apply text-primary text-4xl font-bold md:text-5xl;
   }

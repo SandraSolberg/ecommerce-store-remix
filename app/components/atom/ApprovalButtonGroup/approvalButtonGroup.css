@@ -1,0 +1,29 @@
+.approvalBtn {
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  min-width: 7rem;
+}
+.neutral {
+  background-color: var(--color-blue-050);
+}
+
+.neutral:hover {
+  background-color: var(--color-blue-060);
+}
+
+.positive {
+  background-color: var(--color-emerald-600);
+}
+
+.positive:hover {
+  background-color: var(--color-emerald-700);
+}
+
+.negative {
+  background-color: var(--color-red-700);
+}
+
+.negative:hover {
+  background-color: var(--color-red-800);
+}

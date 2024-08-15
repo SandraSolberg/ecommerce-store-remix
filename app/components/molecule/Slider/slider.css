@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: var(--z-index-backdrop);
   cursor: pointer;
 }
 
@@ -17,7 +17,7 @@
   width: 18.75rem;
   background: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  z-index: var(--z--index-slider);
   transition: right 0.3s ease;
 }
 
@@ -34,13 +34,6 @@
   height: 2.8rem;
   border-bottom: 1px solid var(--color-border-divider);
   padding: 2rem 1rem;
-
-  > button {
-    height: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-  }
 }
 
 .sliderNoContent {

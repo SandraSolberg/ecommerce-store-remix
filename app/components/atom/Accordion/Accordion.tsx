@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SVGIcon from '../SVGIcon/SVGIcon';
 
 type AccordionType = {
   title: string;
@@ -33,19 +34,9 @@ export const Accordion = ({
     >
       <div className='p-3 flex justify-between items-center hover:bg-gray-200'>
         <h2>{title}</h2>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='24'
-          height='24'
-          viewBox='0 0 24 24'
-          fill='none'
-          stroke='#061629'
-          strokeWidth='2'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        >
+        <SVGIcon>
           <path d={open ? 'M18 15l-6-6-6 6' : 'M6 9l6 6 6-6'} />
-        </svg>
+        </SVGIcon>
       </div>
       {open && <div className='p-3'>{children}</div>}
     </div>

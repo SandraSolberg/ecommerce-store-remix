@@ -1,6 +1,7 @@
 import { toggleSlider } from '~/redux/cartSlice';
 import { useAppDispatch, useAppSelector } from '~/redux/store';
 import numberToFixedString from '~/utils/numberToFixedString';
+import SVGIcon from '../SVGIcon/SVGIcon';
 
 export const CartChip = () => {
   const cart = useAppSelector((state) => state.cart);
@@ -25,36 +26,18 @@ export const CartChip = () => {
       onClick={handleOpenSlider}
       onKeyDown={handleOpenSlider}
     >
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='24'
-        height='24'
-        viewBox='0 0 24 24'
-        fill='none'
-        stroke={hasItems ? 'white' : 'var(--color-primary)'}
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      >
-        <circle cx='10' cy='20.5' r='1' />
-        <circle cx='18' cy='20.5' r='1' />
-        <path d='M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1' />
-      </svg>
+      <SVGIcon stroke={hasItems ? 'white' : 'var(--color-primary)'}>
+        <>
+          <circle cx='10' cy='20.5' r='1' />
+          <circle cx='18' cy='20.5' r='1' />
+          <path d='M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1' />
+        </>
+      </SVGIcon>
       <p>kr {displayTotalAmount}</p>
       {!cart.isOpen ? (
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='24'
-          height='24'
-          viewBox='0 0 24 24'
-          fill='none'
-          stroke={hasItems ? 'white' : 'var(--color-primary)'}
-          strokeWidth='2'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        >
+        <SVGIcon stroke={hasItems ? 'white' : 'var(--color-primary)'}>
           <path d='M15 18l-6-6 6-6' />
-        </svg>
+        </SVGIcon>
       ) : null}
     </div>
   );

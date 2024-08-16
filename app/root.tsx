@@ -8,6 +8,7 @@ import {
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import Header from './components/compound/Header/Header';
+import HorizontalNavbar from './components/compound/HorizontalNavbar/HorizontalNavbar';
 import './tailwind.css';
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -32,6 +33,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className='bg-blue-100'>
         <Provider store={store}>
           <Header />
+          <HorizontalNavbar />
           {children}
           <ScrollRestoration />
           <Scripts />

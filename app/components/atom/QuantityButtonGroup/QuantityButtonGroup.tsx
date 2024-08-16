@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './quantityButtonGroup.css';
+import SVGIcon from '../SVGIcon/SVGIcon';
 
 type QuantityButtonGroupType = {
   small?: boolean;
@@ -48,19 +49,9 @@ const QuantityButtonGroup = ({
         className='bg-gray-200 p-3 rounded-full hover:bg-gray-300'
         onClick={decrementCount}
       >
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width={small ? '16' : '20'}
-          height={small ? '16' : '20'}
-          viewBox='0 0 24 24'
-          fill='none'
-          stroke='var(--color-primary)'
-          strokeWidth='2'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        >
+        <SVGIcon height={small ? '16' : '20'} width={small ? '16' : '20'}>
           <line x1='5' y1='12' x2='19' y2='12'></line>
-        </svg>
+        </SVGIcon>
       </button>
       <input
         type='number'
@@ -79,20 +70,12 @@ const QuantityButtonGroup = ({
         onClick={incrementCount}
         className='bg-gray-200 p-3 rounded-full hover:bg-gray-300'
       >
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width={small ? '16' : '20'}
-          height={small ? '16' : '20'}
-          viewBox='0 0 24 24'
-          fill='none'
-          stroke='var(--color-primary)'
-          strokeWidth='2'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        >
-          <line x1='12' y1='5' x2='12' y2='19'></line>
-          <line x1='5' y1='12' x2='19' y2='12'></line>
-        </svg>
+        <SVGIcon height={small ? '16' : '20'} width={small ? '16' : '20'}>
+          <>
+            <line x1='12' y1='5' x2='12' y2='19'></line>
+            <line x1='5' y1='12' x2='19' y2='12'></line>
+          </>
+        </SVGIcon>
       </button>
     </div>
   );

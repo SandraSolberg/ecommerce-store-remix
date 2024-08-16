@@ -5,6 +5,7 @@ import numberToFixedString from '~/utils/numberToFixedString';
 import { Indicator } from '../../atom/Indicator/Indicator';
 import { ModalActionEnum, ModalStateType } from '~/types/types';
 import { setModal } from '~/redux/uiStateSlice';
+import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
 
 type ItemListProps = {
   items: CartItem[];
@@ -61,20 +62,12 @@ const MiniCartList = ({ items, total }: ItemListProps) => {
             onClick={() => handleRemove(object)}
             className='hover:bg-gray-200 rounded-full'
           >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='20'
-              height='20'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='#061629'
-              strokeWidth='2'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-            >
-              <line x1='18' y1='6' x2='6' y2='18'></line>
-              <line x1='6' y1='6' x2='18' y2='18'></line>
-            </svg>
+            <SVGIcon height='20' width='20'>
+              <>
+                <line x1='18' y1='6' x2='6' y2='18'></line>
+                <line x1='6' y1='6' x2='18' y2='18'></line>
+              </>
+            </SVGIcon>
           </button>
         </div>
       ))}

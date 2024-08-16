@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SVGIcon from '../SVGIcon/SVGIcon';
 
 const Rating = () => {
   const [rating, setRating] = useState(0);
@@ -7,7 +8,7 @@ const Rating = () => {
 
   return (
     <div
-      className='flex items-center mt-2'
+      className='flex items-center my-2'
       role='presentation'
       onClick={(e) => {
         e.preventDefault();
@@ -28,21 +29,14 @@ const Rating = () => {
             onMouseLeave={() => setHover(rating)}
           >
             <span>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='24'
-                height='24'
-                viewBox='0 0 24 24'
+              <SVGIcon
                 fill={`${index <= (hover || rating) ? '#eab308' : 'none'} `}
                 stroke={`${
                   index <= (hover || rating) ? '#eab308' : '#9ca3af'
                 } `}
-                strokeWidth='2'
-                strokeLinecap='round'
-                strokeLinejoin='round'
               >
                 <polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'></polygon>
-              </svg>
+              </SVGIcon>
             </span>
           </button>
         );

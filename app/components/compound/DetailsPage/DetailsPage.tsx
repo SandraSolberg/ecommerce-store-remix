@@ -2,6 +2,7 @@ import { Accordion } from '~/components/atom/Accordion/Accordion';
 import BasicButton from '~/components/atom/BasicButton/BasicButton';
 import InfoTable from '~/components/atom/InfoTable/InfoTable';
 import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
+import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
 import { useFoods } from '~/hooks/useFoods';
 import { addItem } from '~/redux/cartSlice';
 import { useAppDispatch } from '~/redux/store';
@@ -113,19 +114,13 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
                 className='flex items-center gap-1 hover:underline'
               >
                 Read more about the product
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='20'
+                <SVGIcon
                   height='20'
-                  viewBox='0 0 24 24'
-                  fill='none'
+                  width='20'
                   stroke={'var(--color-blue-080)'}
-                  strokeWidth='2'
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
                 >
                   <path d='M9 18l6-6-6-6' />
-                </svg>
+                </SVGIcon>
               </a>
             )}
           </div>

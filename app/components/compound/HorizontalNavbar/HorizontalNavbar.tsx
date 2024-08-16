@@ -3,9 +3,9 @@ import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
 
 const HorizontalNavbar = () => {
   return (
-    <nav>
+    <nav className='flex items-center justify-between bg-white border-t border-border-divider px-8 py-4'>
       <div>
-        <button>
+        <button className='flex items-center font-semibold gap-2'>
           <SVGIcon>
             <>
               <rect x='3' y='3' width='7' height='7'></rect>
@@ -13,6 +13,10 @@ const HorizontalNavbar = () => {
               <rect x='14' y='14' width='7' height='7'></rect>
               <rect x='3' y='14' width='7' height='7'></rect>
             </>
+          </SVGIcon>
+          Categories
+          <SVGIcon>
+            <path d='M6 9l6 6 6-6' />
           </SVGIcon>
         </button>
       </div>

@@ -1,15 +1,11 @@
 .accordionContainer {
-  border-bottom: 1px solid var(--color-border-divider);
-  border-top: 1px solid var(--color-border-divider);
+  &:hover {
+    > h2 {
+      color: var(--color-blue-060);
+    }
 
-  .accordionHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem;
-  }
-
-  .content {
-    padding: 0.75rem;
+    > svg {
+      stroke: var(--color-blue-060);
+    }
   }
 }

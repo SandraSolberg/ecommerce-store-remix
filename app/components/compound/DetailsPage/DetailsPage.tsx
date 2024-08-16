@@ -117,7 +117,7 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
                 <SVGIcon
                   height='20'
                   width='20'
-                  stroke={'var(--color-blue-080)'}
+                  stroke={'var(--color-blue-060)'}
                 >
                   <path d='M9 18l6-6-6-6' />
                 </SVGIcon>

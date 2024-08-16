@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import SVGIcon from '../SVGIcon/SVGIcon';
+import './accordion.css';
 
 type AccordionType = {
   title: string;
@@ -32,7 +33,7 @@ export const Accordion = ({
         }
       }}
     >
-      <div className='p-3 flex justify-between items-center hover:bg-gray-200'>
+      <div className='accordionContainer p-3 flex justify-between items-center'>
         <h2>{title}</h2>
         <SVGIcon>
           <path d={open ? 'M18 15l-6-6-6 6' : 'M6 9l6 6 6-6'} />

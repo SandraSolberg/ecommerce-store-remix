@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.list > * {
+  flex: 1 1 200px;
+  padding: 0.5rem;
+  border-right: 2px solid var(--color-border-divider);
+
+  &:hover {
+    color: var(--color-blue-060);
+
+    > button {
+      text-decoration: underline;
+    }
+  }
+}

@@ -45,3 +45,13 @@ export interface IFoodItem {
 export type FoodsType = {
   foods: IFoodItem[];
 };
+
+export type GroupType = {
+  foodGroupId: string;
+  name: string;
+  parentId?: string;
+};
+
+export type FoodGroupsType = {
+  foodGroups: GroupType[];
+};

@@ -10,6 +10,7 @@ import { store } from './redux/store';
 import Header from './components/compound/Header/Header';
 import HorizontalNavbar from './components/compound/HorizontalNavbar/HorizontalNavbar';
 import './tailwind.css';
+import Modal from './components/molecule/Modal/Modal';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -33,6 +34,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className='bg-blue-100'>
         <Provider store={store}>
           <Header />
+          <Modal />
           <HorizontalNavbar />
           {children}
           <ScrollRestoration />

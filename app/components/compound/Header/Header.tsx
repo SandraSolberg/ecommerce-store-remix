@@ -13,7 +13,7 @@ const Header = () => {
           <MiniCartContent />
         </Slider>
       ) : null}
-      <div className='flex  justify-between items-center py-2 px-4'>
+      <div className='flex justify-between items-center py-2 px-6'>
         <Link to=''>
           <img
             className='w-20 h-20'

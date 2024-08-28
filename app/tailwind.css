@@ -75,6 +75,6 @@
   /**======== Typography =========== */
 
   a {
-    @apply text-blue-600 text-base md:text-lg font-medium;
+    @apply text-blue-600 text-base md:text-lg font-medium hover:underline underline-offset-2;
   }
 }

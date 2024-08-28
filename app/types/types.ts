@@ -15,3 +15,26 @@ export type ModalStateType = {
   open: boolean;
   actionType: ModalActionEnum;
 } | null;
+
+export interface RegisterForm {
+  email: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+}
+
+export type LoginForm = {
+  email: string;
+  password: string;
+};
+
+export type Profile = {
+  firstName: string;
+  lastName: string;
+};
+
+export type User = {
+  id: string;
+  email: string;
+  profile: Profile;
+};

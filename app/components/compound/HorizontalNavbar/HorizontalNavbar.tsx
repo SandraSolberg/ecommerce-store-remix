@@ -1,10 +1,19 @@
-import { Link } from '@remix-run/react';
+import { Form, Link, useLoaderData } from '@remix-run/react';
 import { useState } from 'react';
 import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
 import ContentMenu from '../ContentMenu/ContentMenu';
+import { User } from '~/types/types';
+import LinkButton from '~/components/atom/LinkButton/LinkButton';
+
+type UserData = {
+  user: User | null;
+};
 
 const HorizontalNavbar = () => {
+  const data: UserData = useLoaderData();
+  console.log('user', data?.user);
   const [open, setOpen] = useState(false);
+
   return (
     <>
       <nav className='flex items-center justify-between bg-white border-t border-border-divider px-8 py-4 relative'>
@@ -32,8 +41,22 @@ const HorizontalNavbar = () => {
             </SVGIcon>
           </button>
         </div>
+
         <div>
-          <Link to='login'>Sign in</Link>
+          {data?.user ? (
+            <div className='flex items-center gap-2'>
+              <p className=''>{`${data?.user?.profile?.firstName} ${data?.user?.profile?.lastName} `}</p>
+              <Form action='/logout' method='post'>
+                <LinkButton
+                  title='Sign out'
+                  type='submit'
+                  className='md:text-lg'
+                />
+              </Form>
+            </div>
+          ) : (
+            <Link to='/login'>Sign in</Link>
+          )}
         </div>
       </nav>
       {open && <ContentMenu />}

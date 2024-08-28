@@ -3,7 +3,7 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  min-height: calc(100vh - 8rem);
+  min-height: calc(100vh - 12.5rem);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;

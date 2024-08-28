@@ -25,23 +25,25 @@ const SignInForm = () => {
   };
 
   return (
-    <div className='flex flex-1 flex-col justify-center items-center gap-y-6 rounded bg-blue-100 shadow-xl mx-4 w-auto'>
-      <h1 className='text-3xl text-blue-600'>
-        {action === 'login' ? 'Sign in' : 'Create your account'}
-      </h1>
+    <div className='flex flex-1 flex-col justify-center items-center gap-y-6 rounded bg-blue-100 shadow-xl mx-4 p-4 w-auto'>
+      <div>
+        <h2 className='text-3xl text-blue-600 text-center space-y-2'>
+          {action === 'login' ? 'Sign in' : 'Create your account'}
+        </h2>
 
-      <div className='flex flex-row items-center space-x-2'>
-        <p>
-          {action === 'login'
-            ? `Don't have an account?`
-            : `Already have an account?`}
-        </p>
-        <LinkButton
-          title={action === 'login' ? 'Sign up' : 'Login'}
-          onClick={handleActionClick}
-          className=' underline underline-offset-2
+        <div className='flex flex-row items-center space-x-2'>
+          <p className='text-lg'>
+            {action === 'login'
+              ? `Don't have an account?`
+              : `Already have an account?`}
+          </p>
+          <LinkButton
+            title={action === 'login' ? 'Sign up' : 'Login'}
+            onClick={handleActionClick}
+            className='text-lg underline underline-offset-2
            hover:decoration-2 '
-        />
+          />
+        </div>
       </div>
 
       <Form method='post'>

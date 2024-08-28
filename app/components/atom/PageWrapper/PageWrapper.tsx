@@ -1,4 +1,5 @@
 import React from 'react';
+import '~/styles/layout.css';
 
 const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   return (

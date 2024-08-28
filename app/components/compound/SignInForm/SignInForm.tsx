@@ -25,7 +25,7 @@ const SignInForm = () => {
   };
 
   return (
-    <div className='flex flex-col justify-center items-center gap-y-6 rounded bg-blue-100 shadow-xl p-6 md:max-w-96'>
+    <div className='flex flex-1 flex-col justify-center items-center gap-y-6 rounded bg-blue-100 shadow-xl mx-4 w-auto'>
       <h1 className='text-3xl text-blue-600'>
         {action === 'login' ? 'Sign in' : 'Create your account'}
       </h1>
@@ -39,7 +39,8 @@ const SignInForm = () => {
         <LinkButton
           title={action === 'login' ? 'Sign up' : 'Login'}
           onClick={handleActionClick}
-          className=' underline underline-offset-2 hover:decoration-2 '
+          className=' underline underline-offset-2
+           hover:decoration-2 '
         />
       </div>
 

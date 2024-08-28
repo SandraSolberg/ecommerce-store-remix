@@ -6,6 +6,7 @@ import {
 } from '@remix-run/node';
 import { getUser, login, register } from '~/auth/auth.server';
 import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
+import Welcome from '~/components/atom/Welcome/Welcome';
 import SignInForm from '~/components/compound/SignInForm/SignInForm';
 
 export const loader: LoaderFunction = async ({ request }) => {
@@ -56,7 +57,10 @@ export const action: ActionFunction = async ({ request }) => {
 const Login = () => {
   return (
     <PageWrapper>
-      <SignInForm />
+      <div className='flex flex-row justify-between'>
+        <Welcome />
+        <SignInForm />
+      </div>
     </PageWrapper>
   );
 };

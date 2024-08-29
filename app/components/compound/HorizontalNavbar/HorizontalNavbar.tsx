@@ -11,7 +11,6 @@ type UserData = {
 
 const HorizontalNavbar = () => {
   const data: UserData = useLoaderData();
-  console.log('user', data?.user);
   const [open, setOpen] = useState(false);
 
   return (

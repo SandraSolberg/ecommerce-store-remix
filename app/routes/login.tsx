@@ -8,6 +8,13 @@ import { getUser, login, register } from '~/auth/auth.server';
 import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
 import Welcome from '~/components/atom/Welcome/Welcome';
 import SignInForm from '~/components/compound/SignInForm/SignInForm';
+import { errorMessage } from '~/utils/errorMessages';
+import {
+  validateEmail,
+  validateName,
+  validatePassword,
+  validateRequired,
+} from '~/utils/validation';
 
 export const loader: LoaderFunction = async ({ request }) => {
   // If there's already a user in the session, redirect to the home page
@@ -17,7 +24,6 @@ export const loader: LoaderFunction = async ({ request }) => {
 export const action: ActionFunction = async ({ request }) => {
   const form = await request.formData();
   const action = form.get('_action');
-  console.log('action triggered', action);
   const email = form.get('email');
   const password = form.get('password');
   const firstName = form.get('firstName') as string;
@@ -28,20 +34,48 @@ export const action: ActionFunction = async ({ request }) => {
     typeof email !== 'string' ||
     typeof password !== 'string'
   ) {
-    return json({ error: `Invalid Form Data`, form: action }, { status: 400 });
+    return json(
+      { error: errorMessage.invalidForm, form: action },
+      { status: 400 }
+    );
   }
 
   if (
     action === 'register' &&
     (typeof firstName !== 'string' || typeof lastName !== 'string')
   ) {
-    return json({ error: `Invalid Form Data`, form: action }, { status: 400 });
+    return json(
+      { error: errorMessage.invalidForm, form: action },
+      { status: 400 }
+    );
   }
+
+  const errors = {
+    email:
+      action === 'login' ? validateRequired(email) : validateEmail(email) ?? '',
+    password:
+      action === 'login'
+        ? validateRequired(password)
+        : validatePassword(password) ?? '',
+    ...(action === 'register' && {
+      firstName: validateName((firstName as string) || '') ?? '',
+      lastName: validateName((lastName as string) || '') ?? '',
+    }),
+  };
+
+  if (Object.values(errors).some(Boolean))
+    return json(
+      {
+        errors,
+        fields: { email, password, firstName, lastName },
+        form: action,
+      },
+      { status: 400 }
+    );
 
   switch (action) {
     case 'login': {
       const loginFields = { email, password };
-      console.log('login for', email, password);
       return await login(loginFields);
     }
     case 'register': {

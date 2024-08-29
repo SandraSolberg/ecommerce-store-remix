@@ -1,6 +1,6 @@
 const Welcome = () => {
   return (
-    <div className='flex flex-1 flex-col  justify-center items-center gap-y-6 p-4'>
+    <div className='flex flex-1 flex-col  justify-center items-center gap-y-6 p-6'>
       <img
         className='w-auto h-auto max-w-80 h-w-80'
         src='/images/eco-shopping-rafiki.svg'

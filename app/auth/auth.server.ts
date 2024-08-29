@@ -3,6 +3,7 @@ import { createCookieSessionStorage, json, redirect } from '@remix-run/node';
 import { LoginForm, RegisterForm, User } from '~/types/types';
 import { prisma } from './prisma.server';
 import { createUser } from './user.server';
+import { errorMessage } from '~/utils/errorMessages';
 
 const sessionSecret = process.env.SESSION_SECRET;
 if (!sessionSecret) throw new Error('Secret not specified, it must be set');
@@ -38,17 +39,14 @@ export async function register(user: RegisterForm) {
     });
 
     if (exists) {
-      return json(
-        { error: `User already exists with that email` },
-        { status: 400 }
-      );
+      return json({ error: errorMessage.emailExists }, { status: 400 });
     }
 
     const newUser = await createUser(user);
     if (!newUser) {
       return json(
         {
-          error: `Something went wrong trying to create a new user.`,
+          error: errorMessage.newUser,
           fields: {
             email: user.email,
             password: user.password,
@@ -61,11 +59,8 @@ export async function register(user: RegisterForm) {
     }
     return createUserSession(newUser.id, '/');
   } catch (error) {
-    console.error('Error counting users:', error);
-    return json(
-      { error: 'An error occurred while checking user existence' },
-      { status: 500 }
-    );
+    console.error(errorMessage.register, error);
+    return json({ error: errorMessage.userExistence }, { status: 500 });
   }
 }
 
@@ -76,18 +71,13 @@ export async function login(form: LoginForm) {
       where: { email },
     });
 
-    console.log('user', user);
-
     if (!user || !(await bcrypt.compare(password, user.password))) {
-      return json({ error: `Incorrect login` }, { status: 400 });
+      return json({ error: errorMessage.loginIncorrect }, { status: 400 });
     }
 
     return createUserSession(user.id, '/');
   } catch (error) {
-    json(
-      { error: 'An error occurred while checking user existence' },
-      { status: 500 }
-    );
+    json({ error: errorMessage.userExistence }, { status: 500 });
   }
 }
 

@@ -1,17 +1,19 @@
-import { Form } from '@remix-run/react';
 import { useState } from 'react';
+import { Form, useActionData } from '@remix-run/react';
 import BasicButton from '~/components/atom/BasicButton/BasicButton';
 import FormField from '~/components/atom/FormField/FormField';
 import LinkButton from '~/components/atom/LinkButton/LinkButton';
+import { Errors, FormActionType } from '~/types/types';
+import initForm from '~/utils/initialValues';
 
 const SignInForm = () => {
+  const actionData = useActionData<FormActionType>();
+  console.log('actionData', actionData?.errors);
+  const errors: Errors | undefined = actionData?.errors;
+  const formError: string | undefined = actionData?.error;
+
   const [action, setAction] = useState('login');
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    firstName: '',
-    lastName: '',
-  });
+  const [formData, setFormData] = useState(initForm);
 
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement>,
@@ -24,10 +26,12 @@ const SignInForm = () => {
     setAction(action == 'login' ? 'register' : 'login');
   };
 
+  console.log('formError ', !!formError, 'errors', !!errors);
+
   return (
-    <div className='flex flex-1 flex-col justify-center items-center gap-y-6 rounded bg-blue-100 shadow-xl mx-4 p-4 w-auto'>
-      <div>
-        <h2 className='text-3xl text-blue-600 text-center space-y-2'>
+    <div className='flex flex-1 flex-col justify-center items-center gap-y-6 rounded bg-blue-100 shadow-xl mx-4 p-6 w-auto'>
+      <div className='text-center space-y-1'>
+        <h2 className='text-3xl text-blue-600'>
           {action === 'login' ? 'Sign in' : 'Create your account'}
         </h2>
 
@@ -52,12 +56,14 @@ const SignInForm = () => {
             <FormField
               formId='firstName'
               label='First Name'
+              error={errors?.firstName}
               value={formData.firstName}
               onChange={(e) => handleInputChange(e, 'firstName')}
             />
             <FormField
               formId='lastName'
               label='Last Name'
+              error={errors?.lastName}
               value={formData.lastName}
               onChange={(e) => handleInputChange(e, 'lastName')}
             />
@@ -68,12 +74,14 @@ const SignInForm = () => {
           formId='email'
           label='Email'
           value={formData.email}
+          error={errors?.email}
           onChange={(e) => handleInputChange(e, 'email')}
         />
         <FormField
           type='password'
           formId='password'
           label='Password'
+          error={errors?.password}
           value={formData.password}
           onChange={(e) => handleInputChange(e, 'password')}
         />

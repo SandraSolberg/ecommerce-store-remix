@@ -38,3 +38,17 @@ export type User = {
   email: string;
   profile: Profile;
 };
+
+export interface Errors {
+  email: string;
+  password: string;
+  firstName?: string;
+  lastName?: string;
+}
+
+export type FormActionType = {
+  error?: string;
+  errors?: Errors;
+  fields?: RegisterForm;
+  form?: string;
+};

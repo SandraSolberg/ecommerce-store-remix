@@ -24,8 +24,8 @@ const HorizontalNavbar = () => {
             }  hover:border-blue-600`}
           >
             <SVGIcon
-              stroke={'var(--color-blue-080)'}
-              fill={open ? 'var(--color-blue-080)' : 'none'}
+              stroke={'var(--color-blue-800)'}
+              fill={open ? 'var(--color-blue-800)' : 'none'}
             >
               <>
                 <rect x='3' y='3' width='7' height='7'></rect>
@@ -35,7 +35,7 @@ const HorizontalNavbar = () => {
               </>
             </SVGIcon>
             Categories
-            <SVGIcon stroke={'var(--color-blue-060)'}>
+            <SVGIcon stroke={'var(--color-blue-600)'}>
               {open ? <path d='M18 15l-6-6-6 6' /> : <path d='M6 9l6 6 6-6' />}
             </SVGIcon>
           </button>

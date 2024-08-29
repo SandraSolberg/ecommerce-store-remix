@@ -1,19 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Form, useActionData } from '@remix-run/react';
 import BasicButton from '~/components/atom/BasicButton/BasicButton';
 import FormField from '~/components/atom/FormField/FormField';
 import LinkButton from '~/components/atom/LinkButton/LinkButton';
 import { Errors, FormActionType } from '~/types/types';
 import initForm from '~/utils/initialValues';
+import CustomAlert from '~/components/atom/CustomAlert/CustomAlert';
 
 const SignInForm = () => {
   const actionData = useActionData<FormActionType>();
-  console.log('actionData', actionData?.errors);
   const errors: Errors | undefined = actionData?.errors;
-  const formError: string | undefined = actionData?.error;
+  const error: string | undefined = actionData?.error;
 
   const [action, setAction] = useState('login');
   const [formData, setFormData] = useState(initForm);
+  const [formError, setFormError] = useState('');
+
+  useEffect(() => {
+    if (error) setFormError(error);
+  }, [error]);
 
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement>,
@@ -26,7 +31,9 @@ const SignInForm = () => {
     setAction(action == 'login' ? 'register' : 'login');
   };
 
-  console.log('formError ', !!formError, 'errors', !!errors);
+  const handleReset = () => {
+    setFormError('');
+  };
 
   return (
     <div className='flex flex-1 flex-col justify-center items-center gap-y-6 rounded bg-blue-100 shadow-xl mx-4 p-6 w-auto'>
@@ -50,7 +57,9 @@ const SignInForm = () => {
         </div>
       </div>
 
-      <Form method='post'>
+      {formError && <CustomAlert message={formError} severity='error' />}
+
+      <Form method='post' className='w-full'>
         {action === 'register' && (
           <>
             <FormField
@@ -92,6 +101,7 @@ const SignInForm = () => {
             name='_action'
             value={action}
             title={action === 'login' ? 'Sign in' : 'Sign Up'}
+            onClick={handleReset}
             className='mt-2 rounded-full'
           />
         </div>

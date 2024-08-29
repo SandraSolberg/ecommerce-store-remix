@@ -39,7 +39,7 @@ const FormField = ({
         }`}
         value={value}
       />
-      <span className='max-w-56 text-xs font-semibold text-center tracking-wide text-red-500 w-full'>
+      <span className='max-w-56 text-xs font-semibold tracking-wide text-red-500 w-full'>
         {errorText ?? ''}
       </span>
     </div>

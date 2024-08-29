@@ -52,3 +52,5 @@ export type FormActionType = {
   fields?: RegisterForm;
   form?: string;
 };
+
+export type Severity = 'success' | 'error' | 'info' | 'warning';

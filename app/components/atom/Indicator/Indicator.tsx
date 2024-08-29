@@ -7,7 +7,7 @@ type IndicatorType = {
 
 export const Indicator = ({ message, onDelete }: IndicatorType) => {
   return (
-    <div className='flex justify-between py-4'>
+    <div className='flex items-center justify-between py-4'>
       <p>{message}</p>
       <button className='p-1 hover:bg-red-200 rounded-lg' onClick={onDelete}>
         <SVGIcon stroke='#991b1b'>

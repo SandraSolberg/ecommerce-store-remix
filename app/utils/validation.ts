@@ -43,6 +43,8 @@ export const validatePassword = (password: string): string | undefined => {
 export const validateName = (name: string): string | undefined => {
   const regex = /^(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>]).*$/;
   const hasNumberSpecialCharacter = regex.test(name);
-  if (name.length === 0 || hasNumberSpecialCharacter)
-    return errorMessage.invalidName;
+
+  if (name.length === 0) return errorMessage.required;
+
+  if (hasNumberSpecialCharacter) return errorMessage.invalidName;
 };

@@ -1,4 +1,5 @@
 import ProductContainer from '../ProductContainer/ProductContainer';
+import '~/styles/layout.css';
 
 const LandingPage = () => {
   return (

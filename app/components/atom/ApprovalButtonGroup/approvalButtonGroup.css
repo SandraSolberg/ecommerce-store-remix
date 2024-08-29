@@ -5,11 +5,11 @@
   min-width: 7rem;
 }
 .neutral {
-  background-color: var(--color-blue-050);
+  background-color: var(--color-blue-500);
 }
 
 .neutral:hover {
-  background-color: var(--color-blue-060);
+  background-color: var(--color-blue-600);
 }
 
 .positive {

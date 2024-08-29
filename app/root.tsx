@@ -11,6 +11,14 @@ import Header from './components/compound/Header/Header';
 import HorizontalNavbar from './components/compound/HorizontalNavbar/HorizontalNavbar';
 import './tailwind.css';
 import Modal from './components/molecule/Modal/Modal';
+import { json, LoaderFunction } from '@remix-run/node';
+import { getUser } from './auth/auth.server';
+
+export const loader: LoaderFunction = async ({ request }) => {
+  const user = await getUser(request);
+
+  return json({ user });
+};
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

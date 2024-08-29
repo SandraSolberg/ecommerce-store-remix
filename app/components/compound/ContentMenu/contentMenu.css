@@ -9,7 +9,7 @@
   border-right: 2px solid var(--color-border-divider);
 
   &:hover {
-    color: var(--color-blue-060);
+    color: var(--color-blue-600);
 
     > button {
       text-decoration: underline;

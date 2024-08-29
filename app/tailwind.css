@@ -8,26 +8,29 @@
 
   /**=========== blue color =========== **/
   --color-blue-000: #f4f8fb;
-  --color-blue-010: #e9f1f6;
-  --color-blue-020: #d0e0ec;
-  --color-blue-030: #a8c7dc;
-  --color-blue-040: #86b2d0;
-  --color-blue-050: #4d8cb8;
-  --color-blue-060: #216fa6;
-  --color-blue-070: #1e6597;
-  --color-blue-080: #174f76;
-  --color-blue-090: #123d5b;
+  --color-blue-100: #e9f1f6;
+  --color-blue-200: #d0e0ec;
+  --color-blue-300: #a8c7dc;
+  --color-blue-400: #86b2d0;
+  --color-blue-500: #4d8cb8;
+  --color-blue-600: #216fa6;
+  --color-blue-700: #1e6597;
+  --color-blue-800: #174f76;
+  --color-blue-900: #123d5b;
 
-  /**=========== red color =========== **/
+  /**=========== red colors =========== **/
   --color-red-700: #b91c1c;
   --color-red-800: #991b1b;
 
-  /**=========== emerald color =========== **/
+  /**=========== emerald colors =========== **/
   --color-emerald-600: #059669;
   --color-emerald-700: #047857;
 
-  /** =========== default color =========== **/
+  /** =========== yellow colors =========== **/
   --color-border-divider: #e5e7eb;
+
+  /** =========== default color =========== **/
+  --color-yellow-500: #eab308;
 
   /** =========== z-index color =========== **/
   --z-index-backdrop: 999;
@@ -75,6 +78,6 @@
   /**======== Typography =========== */
 
   a {
-    @apply text-blue-600 text-base md:text-lg font-medium;
+    @apply text-blue-600 text-base md:text-lg font-medium hover:underline underline-offset-2;
   }
 }

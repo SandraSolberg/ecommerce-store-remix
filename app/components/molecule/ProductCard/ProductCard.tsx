@@ -65,7 +65,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
                 initValue={existsInCart.count.toString() ?? '0'}
               />
             ) : (
-              <BasicButton onClick={handleAddProduct} />
+              <BasicButton title='Add' onClick={handleAddProduct} />
             )}
           </div>
         </div>

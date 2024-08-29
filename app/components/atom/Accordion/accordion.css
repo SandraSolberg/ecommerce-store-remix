@@ -1,11 +1,11 @@
 .accordionContainer {
   &:hover {
     > h2 {
-      color: var(--color-blue-060);
+      color: var(--color-blue-600);
     }
 
     > svg {
-      stroke: var(--color-blue-060);
+      stroke: var(--color-blue-600);
     }
   }
 }

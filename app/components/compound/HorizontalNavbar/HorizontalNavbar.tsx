@@ -1,10 +1,18 @@
-import { Link } from '@remix-run/react';
+import { Form, Link, useLoaderData } from '@remix-run/react';
 import { useState } from 'react';
 import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
 import ContentMenu from '../ContentMenu/ContentMenu';
+import { User } from '~/types/types';
+import LinkButton from '~/components/atom/LinkButton/LinkButton';
+
+type UserData = {
+  user: User | null;
+};
 
 const HorizontalNavbar = () => {
+  const data: UserData = useLoaderData();
   const [open, setOpen] = useState(false);
+
   return (
     <>
       <nav className='flex items-center justify-between bg-white border-t border-border-divider px-8 py-4 relative'>
@@ -16,8 +24,8 @@ const HorizontalNavbar = () => {
             }  hover:border-blue-600`}
           >
             <SVGIcon
-              stroke={'var(--color-blue-080)'}
-              fill={open ? 'var(--color-blue-080)' : 'none'}
+              stroke={'var(--color-blue-800)'}
+              fill={open ? 'var(--color-blue-800)' : 'none'}
             >
               <>
                 <rect x='3' y='3' width='7' height='7'></rect>
@@ -27,13 +35,27 @@ const HorizontalNavbar = () => {
               </>
             </SVGIcon>
             Categories
-            <SVGIcon stroke={'var(--color-blue-060)'}>
+            <SVGIcon stroke={'var(--color-blue-600)'}>
               {open ? <path d='M18 15l-6-6-6 6' /> : <path d='M6 9l6 6 6-6' />}
             </SVGIcon>
           </button>
         </div>
+
         <div>
-          <Link to='login'>Sign in</Link>
+          {data?.user ? (
+            <div className='flex items-center gap-2'>
+              <p className=''>{`${data?.user?.profile?.firstName} ${data?.user?.profile?.lastName} `}</p>
+              <Form action='/logout' method='post'>
+                <LinkButton
+                  title='Sign out'
+                  type='submit'
+                  className='md:text-lg'
+                />
+              </Form>
+            </div>
+          ) : (
+            <Link to='/login'>Sign in</Link>
+          )}
         </div>
       </nav>
       {open && <ContentMenu />}

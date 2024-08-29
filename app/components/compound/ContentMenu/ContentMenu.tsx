@@ -9,8 +9,6 @@ const ContentMenu = () => {
     ? groups?.foodGroups.filter((obj) => !obj.parentId)
     : null;
 
-  console.log('groups', parentCategories);
-
   return (
     <div className='bg-white absolute w-full border border-y-gray-400 flex flex-col p-6'>
       <ul>

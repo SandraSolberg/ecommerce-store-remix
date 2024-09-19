@@ -33,7 +33,8 @@
   --color-yellow-500: #eab308;
 
   /** =========== z-index color =========== **/
-  --z-index-backdrop: 999;
+  --z--index-dropdown: 900;
+  --z-index-backdrop: 950;
   --z--index-slider: 1000;
   --z--index-modal-backdrop: 1100;
   --z-index-modal: 2000;

@@ -1,5 +1,6 @@
 import ProductCard from '~/components/modules/Product/ProductCard/ProductCard';
 import { useFoods } from '~/hooks/useFoods';
+import SkeletonContainer from './SkeletonContainer';
 
 const ProductContainer = ({ foodGroupId }: { foodGroupId?: string }) => {
   const { foods, isLoading, error } = useFoods();
@@ -16,10 +17,10 @@ const ProductContainer = ({ foodGroupId }: { foodGroupId?: string }) => {
   return (
     <>
       <h2>{numberOfItems} items</h2>
+      {isLoading && <SkeletonContainer />}
       <div className='flex flex-wrap'>
         {isLoading && <p className='text-xl'>...Loading</p>}
         {error && <h3 className='text-xl'>Not able to display any items</h3>}
-
         {foodsToMap?.map((item) => (
           <div key={item.foodId}>
             <ProductCard item={item} />

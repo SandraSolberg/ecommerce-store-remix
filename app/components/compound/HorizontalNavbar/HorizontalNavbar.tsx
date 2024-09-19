@@ -17,19 +17,20 @@ const HorizontalNavbar = () => {
     setOpen(false);
   };
 
-  const handleHideDropdown = (event: KeyboardEvent) => {
+  const onHideDropdown = (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
       setOpen(false);
     }
   };
 
-  const ref = useClickOutside(onClose, handleHideDropdown);
+  const { ref, buttonRef } = useClickOutside(onClose, onHideDropdown);
 
   return (
     <>
       <nav className='flex items-center justify-between bg-white border-t border-border-divider px-8 py-4 relative'>
         <div>
           <button
+            ref={buttonRef}
             onClick={() => setOpen(!open)}
             className={`flex items-center font-semibold gap-2 px-3 py-1 rounded-full border-2 text-blue-800 ${
               open ? 'border-blue-600' : 'border-transparent'
@@ -56,7 +57,7 @@ const HorizontalNavbar = () => {
         <div>
           {data?.user ? (
             <div className='flex items-center gap-2'>
-              <p className=''>{`${data?.user?.profile?.firstName} ${data?.user?.profile?.lastName} `}</p>
+              <p className='text-lg'>{`${data?.user?.profile?.firstName} ${data?.user?.profile?.lastName} `}</p>
               <Form action='/logout' method='post'>
                 <LinkButton
                   title='Sign out'

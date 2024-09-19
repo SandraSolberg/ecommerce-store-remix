@@ -12,7 +12,7 @@ const ContentMenu = () => {
     : null;
 
   return (
-    <div className='bg-white absolute w-full border border-y-gray-400 flex flex-col items-center py-6'>
+    <div className='bg-white absolute w-full border border-y-gray-400 flex flex-col items-center py-6 z-50'>
       {/* {isLoading && <Spinner/>} */}
       {groups && (
         <div className='md:max-w-[1200px] px-4'>

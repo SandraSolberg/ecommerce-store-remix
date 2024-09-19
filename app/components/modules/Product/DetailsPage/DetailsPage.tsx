@@ -1,7 +1,7 @@
 import { Accordion } from '~/components/atom/Accordion/Accordion';
 import BasicButton from '~/components/atom/BasicButton/BasicButton';
+import CardPageWrapper from '~/components/atom/CardPageWrapper/CardPageWrapper';
 import InfoTable from '~/components/atom/InfoTable/InfoTable';
-import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
 import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
 import { useFoods } from '~/hooks/useFoods';
 import { addItem } from '~/redux/cartSlice';
@@ -62,10 +62,8 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
     { Nutrients: nutrientsJoined },
   ];
 
-  // Related section?
-
   return (
-    <PageWrapper>
+    <CardPageWrapper>
       {product ? (
         <div className='flex gap-5 md:flex flex-col'>
           <div className='md:flex'>
@@ -130,6 +128,6 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
           <h1>No product found</h1>
         </div>
       )}
-    </PageWrapper>
+    </CardPageWrapper>
   );
 };

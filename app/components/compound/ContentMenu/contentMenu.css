@@ -14,7 +14,11 @@
   border-right: 2px solid var(--color-border-divider);
 
   @media screen and (min-width: 48rem) {
-    width: calc(50% - 2rem);
+    width: calc(50% - 1rem);
+  }
+
+  @media screen and (min-width: 64rem) {
+    width: calc(33% - 1rem);
   }
 
   > a {

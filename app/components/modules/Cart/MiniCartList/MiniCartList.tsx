@@ -2,10 +2,10 @@ import { removeItem } from '~/redux/cartSlice';
 import { useAppDispatch } from '~/redux/store';
 import { CartItem } from '~/types/cart';
 import numberToFixedString from '~/utils/numberToFixedString';
-import { Indicator } from '../../atom/Indicator/Indicator';
 import { ModalActionEnum, ModalStateType } from '~/types/types';
 import { setModal } from '~/redux/uiStateSlice';
 import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
+import { Indicator } from '~/components/atom/Indicator/Indicator';
 
 type ItemListProps = {
   items: CartItem[];

@@ -1,5 +1,5 @@
 import { useParams } from '@remix-run/react';
-import { DetailsPage } from '~/components/compound/DetailsPage/DetailsPage';
+import { DetailsPage } from '~/components/modules/Product/DetailsPage/DetailsPage';
 
 const ProductDetails = () => {
   const { productId } = useParams();

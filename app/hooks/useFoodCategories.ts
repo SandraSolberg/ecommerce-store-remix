@@ -6,7 +6,7 @@ import { FoodGroupsType } from '~/types/food';
 export const useFoodsCategories = () => {
   const [groups, setGroups] = useState<FoodGroupsType | null>(null);
 
-  const { data, loading, error } = useGetData(endpoint.FOODGROUPS);
+  const { data, isLoading, error } = useGetData(endpoint.FOODGROUPS);
 
   useEffect(() => {
     if (data) {
@@ -17,9 +17,9 @@ export const useFoodsCategories = () => {
   return useMemo(
     () => ({
       groups,
-      loading,
+      isLoading,
       error,
     }),
-    [groups, loading, error]
+    [groups, isLoading, error]
   );
 };

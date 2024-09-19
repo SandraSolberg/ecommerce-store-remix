@@ -1,11 +1,18 @@
 import React from 'react';
 import '~/styles/layout.css';
 
-const PageWrapper = ({ children }: { children: React.ReactNode }) => {
+const PageWrapper = ({
+  children,
+  title,
+}: {
+  children: React.ReactNode;
+  title: string;
+}) => {
   return (
-    <section className='p-4'>
-      <div className='layout bg-white px-8 py-12 '>{children}</div>
-    </section>
+    <div className='layout p-4'>
+      <h1>{title}</h1>
+      {children}
+    </div>
   );
 };
 

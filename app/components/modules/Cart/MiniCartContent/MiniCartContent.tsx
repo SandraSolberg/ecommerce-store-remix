@@ -1,9 +1,9 @@
 import { Link } from '@remix-run/react';
 import { useAppDispatch, useAppSelector } from '~/redux/store';
 import { toggleSlider } from '~/redux/cartSlice';
-import MiniCartList from '~/components/molecule/MiniCartList/MiniCartList';
-import './miniCartContent.css';
 import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
+import MiniCartList from '../MiniCartList/MiniCartList';
+import './miniCartContent.css';
 
 const MiniCartContent = () => {
   const cart = useAppSelector((state) => state.cart);

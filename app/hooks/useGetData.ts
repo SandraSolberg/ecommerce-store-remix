@@ -30,7 +30,7 @@ export const useGetData = (url: string) => {
   return useMemo(
     () => ({
       data,
-      loading,
+      isLoading: loading,
       error,
     }),
     [data, loading, error]

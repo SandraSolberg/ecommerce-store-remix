@@ -1,10 +1,9 @@
 import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
-import ProductContainer from '~/components/compound/ProductContainer/ProductContainer';
+import ProductContainer from '~/components/modules/Product/ProductContainer/ProductContainer';
 
 const Products = () => {
   return (
-    <PageWrapper>
-      <h1 className='text-3xl'>Products</h1>
+    <PageWrapper title='Products'>
       <ProductContainer />
     </PageWrapper>
   );

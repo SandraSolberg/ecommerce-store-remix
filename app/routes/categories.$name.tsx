@@ -1,5 +1,6 @@
 import { useParams } from '@remix-run/react';
-import ProductContainer from '~/components/compound/ProductContainer/ProductContainer';
+import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
+import ProductContainer from '~/components/modules/Product/ProductContainer/ProductContainer';
 import { useFoodsCategories } from '~/hooks/useFoodCategories';
 
 const CategoryPage = () => {
@@ -13,10 +14,9 @@ const CategoryPage = () => {
   const currentCategoryName = currentCategory?.name ?? 'unknown ';
 
   return (
-    <div className='layout p-4'>
-      <h1>{currentCategoryName}</h1>
+    <PageWrapper title={currentCategoryName}>
       <ProductContainer foodGroupId={currentCategory?.foodGroupId} />
-    </div>
+    </PageWrapper>
   );
 };
 

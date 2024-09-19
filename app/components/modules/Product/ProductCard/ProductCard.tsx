@@ -34,21 +34,28 @@ const ProductCard = ({ item }: ProductCardProps) => {
 
   return (
     <Link to={`/products/${item.foodId}`} className='hover:no-underline'>
-      <article className='w-48 min-h-[23.5rem]  bg-pure-white m-2 p-2 rounded-lg flex flex-col justify-between shadow hover:shadow-md'>
-        <img
-          className='w-full h-40 object-cover rounded-t-lg '
-          alt={item.foodName ?? 'image of item'}
-          src={item.image ?? undefined}
-        />
+      <article className='w-48 min-h-[24.8rem]  bg-pure-white m-2 p-2 rounded-lg flex flex-col justify-between shadow hover:shadow-md'>
+        <div>
+          <img
+            className='w-full h-40 object-cover rounded-t-lg '
+            alt={item.foodName ?? 'image of item'}
+            src={item.image ?? undefined}
+          />
+          <div className='px-2'>
+            <div className='flex items-center mt-2'>
+              <Rating />
+            </div>
+            <p className='font-semibold'>{`${item.price} ${item.currency} `}</p>
+            <h4>{item.foodName}</h4>
+            <p className='text-sm text-secondary'>
+              {item.quantity
+                ? `${item.quantity?.amount} ${item.quantity?.unit}`
+                : ''}
+            </p>
+          </div>
+        </div>
 
         <div className='p-2'>
-          <div className='flex items-center mt-2'>
-            <Rating />
-          </div>
-          <p className='font-semibold'>{`${item.price} ${item.currency} `}</p>
-          <h4>{item.foodName}</h4>
-          <p className='text-sm text-secondary'>{`${item.quantity?.amount} ${item.quantity?.unit}`}</p>
-
           <div
             role='presentation'
             className='mt-4'

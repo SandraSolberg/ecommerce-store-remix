@@ -5,9 +5,9 @@ import {
   redirect,
 } from '@remix-run/node';
 import { getUser, login, register } from '~/auth/auth.server';
-import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
+import CardPageWrapper from '~/components/atom/CardPageWrapper/CardPageWrapper';
 import Welcome from '~/components/atom/Welcome/Welcome';
-import SignInForm from '~/components/compound/SignInForm/SignInForm';
+import SignInForm from '~/components/modules/SignIn/SignInForm/SignInForm';
 import { errorMessage } from '~/utils/errorMessages';
 import {
   validateEmail,
@@ -90,12 +90,12 @@ export const action: ActionFunction = async ({ request }) => {
 
 const Login = () => {
   return (
-    <PageWrapper>
+    <CardPageWrapper>
       <div className='flex flex-row justify-between'>
         <Welcome />
         <SignInForm />
       </div>
-    </PageWrapper>
+    </CardPageWrapper>
   );
 };
 

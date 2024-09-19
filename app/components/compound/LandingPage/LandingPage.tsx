@@ -1,13 +1,13 @@
-import ProductContainer from '../ProductContainer/ProductContainer';
+import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
+import ProductContainer from '../../modules/Product/ProductContainer/ProductContainer';
 import '~/styles/layout.css';
 
 const LandingPage = () => {
   return (
     <main className='font-sans '>
-      <div className='layout p-4'>
-        <h1>Welcome to TacoShop</h1>
+      <PageWrapper title='Welcome to TacoShop'>
         <ProductContainer />
-      </div>
+      </PageWrapper>
     </main>
   );
 };

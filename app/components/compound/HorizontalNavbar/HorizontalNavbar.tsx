@@ -16,7 +16,14 @@ const HorizontalNavbar = () => {
   const onClose = () => {
     setOpen(false);
   };
-  const ref = useClickOutside(onClose);
+
+  const handleHideDropdown = (event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      setOpen(false);
+    }
+  };
+
+  const ref = useClickOutside(onClose, handleHideDropdown);
 
   return (
     <>

@@ -1,6 +1,6 @@
 import { LoaderFunction } from '@remix-run/node';
 import { requireUserId } from '~/auth/auth.server';
-import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
+import CardPageWrapper from '~/components/atom/CardPageWrapper/CardPageWrapper';
 
 export const loader: LoaderFunction = async ({ request }) => {
   await requireUserId(request);
@@ -9,9 +9,9 @@ export const loader: LoaderFunction = async ({ request }) => {
 
 const Cart = () => {
   return (
-    <PageWrapper>
+    <CardPageWrapper>
       <h1>Cart</h1>
-    </PageWrapper>
+    </CardPageWrapper>
   );
 };
 

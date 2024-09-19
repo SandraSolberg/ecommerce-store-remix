@@ -1,6 +1,9 @@
 import { useEffect, useRef } from 'react';
 
-const useClickOutside = (onClose: () => void) => {
+const useClickOutside = (
+  onClose: () => void,
+  handleHideDropdown: (event: KeyboardEvent) => void
+) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -11,11 +14,13 @@ const useClickOutside = (onClose: () => void) => {
     };
 
     document.addEventListener('click', handleClick, true);
+    document.addEventListener('keydown', handleHideDropdown, true);
 
     return () => {
       document.removeEventListener('click', handleClick, true);
+      document.removeEventListener('keydown', handleHideDropdown, true);
     };
-  }, [ref, onClose]);
+  }, [ref, onClose, handleHideDropdown]);
 
   return ref;
 };

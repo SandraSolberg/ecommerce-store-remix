@@ -22,8 +22,9 @@
     },
     {
       "foodGroupId": "5",
-      "name": "Cereals, bread and cakes",
-      "slug": "cereals-bread-cakes"
+      "name": "Bread and Bakery",
+      "slug": "bread-bakery",
+      "description": "Bread, tortillas, pies, muffins, bagels, cookies, etc."
     },
     {
       "foodGroupId": "6",
@@ -32,8 +33,8 @@
     },
     {
       "foodGroupId": "7",
-      "name": "Sugar and sweet products",
-      "slug": "sugar-and-sweet-products"
+      "name": "Snacks",
+      "slug": "snacks"
     },
     {
       "foodGroupId": "8",
@@ -52,8 +53,9 @@
     },
     {
       "foodGroupId": "11",
-      "name": "Infant food",
-      "slug": "infant-food"
+      "name": "Pasta, Rice and Cereal",
+      "slug": "pasta-rice-cereal",
+      "description": "Oats, granola, brown rice, white rice, macaroni, noodles, etc."
     },
     {
       "foodGroupId": "12",
@@ -79,6 +81,11 @@
       "foodGroupId": "16",
       "name": "Herbs and spices",
       "slug": "herbs-and-spices"
+    },
+    {
+      "foodGroupId": "17",
+      "name": "Frozen Foods",
+      "slug": "frozen-foods"
     },
     {
       "foodGroupId": "1.1",
@@ -224,16 +231,6 @@
       "parentId": "5"
     },
     {
-      "foodGroupId": "5.2",
-      "name": "Grain, rice and pasta",
-      "parentId": "5"
-    },
-    {
-      "foodGroupId": "5.3",
-      "name": "Breakfast cereals",
-      "parentId": "5"
-    },
-    {
       "foodGroupId": "5.5",
       "name": "Bread and rolls, home-made",
       "parentId": "5"
@@ -320,12 +317,12 @@
     },
     {
       "foodGroupId": "7.1",
-      "name": "Sugar and honey",
+      "name": "Chocolate and sweets",
       "parentId": "7"
     },
     {
       "foodGroupId": "7.2",
-      "name": "Chocolate and sweets",
+      "name": "Chips and pretzels",
       "parentId": "7"
     },
     {
@@ -432,6 +429,21 @@
       "foodGroupId": "10.11",
       "name": "Dinner products",
       "parentId": "10"
+    },
+    {
+      "foodGroupId": "11.1",
+      "name": "Grain, rice and pasta",
+      "parentId": "11"
+    },
+    {
+      "foodGroupId": "11.2",
+      "name": "Breakfast cereals",
+      "parentId": "11"
+    },
+    {
+      "foodGroupId": "11.3",
+      "name": "Oats and Granola",
+      "parentId": "11"
     },
     {
       "foodGroupId": "13.1",

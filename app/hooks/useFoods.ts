@@ -6,7 +6,7 @@ import endpoint from '~/data/constants/endpoints';
 export const useFoods = () => {
   const [foods, setFoods] = useState<FoodsType | null>(null);
 
-  const { data, loading, error } = useGetData(endpoint.FOODS);
+  const { data, isLoading, error } = useGetData(endpoint.FOODS);
 
   useEffect(() => {
     if (data) {
@@ -17,9 +17,9 @@ export const useFoods = () => {
   return useMemo(
     () => ({
       foods,
-      loading,
+      isLoading,
       error,
     }),
-    [foods, loading, error]
+    [foods, isLoading, error]
   );
 };

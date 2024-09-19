@@ -1,5 +1,7 @@
 import { useFoodsCategories } from '~/hooks/useFoodCategories';
 import { GroupType } from '~/types/food';
+import { Link } from '@remix-run/react';
+import urlConstants from '~/data/constants/urls';
 import './contentMenu.css';
 
 const ContentMenu = () => {
@@ -11,17 +13,24 @@ const ContentMenu = () => {
 
   return (
     <div className='bg-white absolute w-full border border-y-gray-400 flex flex-col py-6 '>
-      <div className='max-w-[1400px] m-auto'>
-        <button className='hover:underline px-2 pb-2 font-semibold'>
+      <div className='md:max-w-[1200px] md:m-auto'>
+        <Link
+          to={urlConstants.PRODUCTS}
+          className='hover:underline pb-2 font-semibold'
+        >
           Show all products
-        </button>
+        </Link>
 
         <ul className='list'>
-          {parentCategories?.map((category) => (
-            <li key={category.foodGroupId}>
-              <button>{category.name}</button>
-            </li>
-          ))}
+          {parentCategories
+            ?.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0))
+            ?.map((category) => (
+              <li key={category.foodGroupId}>
+                <Link to={`${urlConstants.CATEGORY}/${category.slug}`}>
+                  {category.name}
+                </Link>
+              </li>
+            ))}
         </ul>
       </div>
     </div>

@@ -49,6 +49,7 @@ export type FoodsType = {
 export type GroupType = {
   foodGroupId: string;
   name: string;
+  slug?: string;
   parentId?: string;
 };
 

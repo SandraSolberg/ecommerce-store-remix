@@ -1,19 +1,32 @@
 import ProductCard from '~/components/molecule/ProductCard/ProductCard';
 import { useFoods } from '~/hooks/useFoods';
 
-const ProductContainer = () => {
+const ProductContainer = ({ foodGroupId }: { foodGroupId?: string }) => {
   const { foods, loading, error } = useFoods();
+
+  const filteredByGroup = foodGroupId
+    ? foods?.foods.filter(
+        (food) => food.foodGroupId.split('.')[0] === foodGroupId
+      )
+    : undefined;
+
+  const foodsToMap = foodGroupId ? filteredByGroup : foods?.foods;
+  const numberOfItems = foodsToMap ? foodsToMap.length : 0;
+
   return (
-    <div className='flex flex-wrap'>
-      {loading && <p className='text-xl'>...Loading</p>}
-      {error && <h3 className='text-xl'>Not able to display any items</h3>}
-      {foods &&
-        foods.foods.map((item) => (
+    <>
+      <h2>{numberOfItems} items</h2>
+      <div className='flex flex-wrap'>
+        {loading && <p className='text-xl'>...Loading</p>}
+        {error && <h3 className='text-xl'>Not able to display any items</h3>}
+
+        {foodsToMap?.map((item) => (
           <div key={item.foodId}>
             <ProductCard item={item} />
           </div>
         ))}
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -4,6 +4,7 @@ import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
 import ContentMenu from '../ContentMenu/ContentMenu';
 import { User } from '~/types/types';
 import LinkButton from '~/components/atom/LinkButton/LinkButton';
+import useClickOutside from '~/hooks/useClickOutside';
 
 type UserData = {
   user: User | null;
@@ -12,6 +13,10 @@ type UserData = {
 const HorizontalNavbar = () => {
   const data: UserData = useLoaderData();
   const [open, setOpen] = useState(false);
+  const onClose = () => {
+    setOpen(false);
+  };
+  const ref = useClickOutside(onClose);
 
   return (
     <>
@@ -58,7 +63,7 @@ const HorizontalNavbar = () => {
           )}
         </div>
       </nav>
-      {open && <ContentMenu />}
+      <div ref={ref}>{open && <ContentMenu />}</div>
     </>
   );
 };

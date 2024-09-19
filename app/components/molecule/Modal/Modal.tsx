@@ -46,7 +46,7 @@ const Modal = () => {
             />
           </div>
           <div className='px-4 py-8'>
-            <h1>{modal.title}</h1>
+            <h1 className='mb-4'>{modal.title}</h1>
             <p>{modal.details}</p>
             <ApprovalButtonGroup
               className='mt-8'

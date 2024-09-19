@@ -10,8 +10,7 @@ export const loader: LoaderFunction = async ({ request }) => {
 const Cart = () => {
   return (
     <PageWrapper>
-      <h1 className='text-3xl'>Cart</h1>
-      <p>test</p>
+      <h1>Cart</h1>
     </PageWrapper>
   );
 };

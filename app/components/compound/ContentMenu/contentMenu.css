@@ -1,24 +1,30 @@
 .list {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+
+  @media screen and (min-width: 48rem) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
 .list > * {
-  width: calc(50% - 2rem);
-  padding: 0 0.5rem;
+  padding: 0.5rem 0;
+  margin-right: 1rem;
   border-right: 2px solid var(--color-border-divider);
 
-  > button {
-    padding: 1rem 0.5rem;
+  @media screen and (min-width: 48rem) {
+    width: calc(50% - 2rem);
+  }
+
+  > a {
     text-align: left;
-    width: 100%;
-    border-top: 1px solid var(--color-border-divider);
   }
 
   &:hover {
     color: var(--color-blue-600);
 
-    > button {
+    > a {
       text-decoration: underline;
     }
   }

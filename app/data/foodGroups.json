@@ -2,106 +2,130 @@
   "foodGroups": [
     {
       "foodGroupId": "1",
-      "name": "Dairy products"
+      "name": "Dairy products",
+      "slug": "diary-products"
     },
     {
       "foodGroupId": "2",
-      "name": "Egg"
+      "name": "Egg",
+      "slug": "egg"
     },
     {
       "foodGroupId": "3",
-      "name": "Meat and poultry"
+      "name": "Meat and poultry",
+      "slug": "meat-and-poultry"
     },
     {
       "foodGroupId": "4",
-      "name": "Fish and shellfish"
+      "name": "Fish and shellfish",
+      "slug": "fish-and-shellfish"
     },
     {
       "foodGroupId": "5",
-      "name": "Cereals, bread and cakes"
+      "name": "Cereals, bread and cakes",
+      "slug": "cereals-bread-cakes"
     },
     {
       "foodGroupId": "6",
-      "name": "Vegetables"
+      "name": "Vegetables",
+      "slug": "vegetables"
     },
     {
       "foodGroupId": "7",
-      "name": "Sugar and sweet products"
+      "name": "Sugar and sweet products",
+      "slug": "sugar-and-sweet-products"
     },
     {
       "foodGroupId": "8",
-      "name": "Cooking fat"
+      "name": "Cooking fat",
+      "slug": "cooking-fat"
     },
     {
       "foodGroupId": "9",
-      "name": "Beverages"
+      "name": "Beverages",
+      "slug": "beverages"
     },
     {
       "foodGroupId": "10",
-      "name": "Other foods and dishes"
+      "name": "Other foods and dishes",
+      "slug": "other-foods-and-dishes"
     },
     {
       "foodGroupId": "11",
-      "name": "Infant food"
+      "name": "Infant food",
+      "slug": "infant-food"
     },
     {
       "foodGroupId": "12",
-      "name": "Legumes"
+      "name": "Legumes",
+      "slug": "legumes"
     },
     {
       "foodGroupId": "13",
-      "name": "Fruit and berries"
+      "name": "Fruit and berries",
+      "slug": "fruit-and-berries"
     },
     {
       "foodGroupId": "14",
-      "name": "Nuts and seeds"
+      "name": "Nuts and seeds",
+      "slug": "nuts-and-seeds"
     },
     {
       "foodGroupId": "15",
-      "name": "Potatoes"
+      "name": "Potatoes",
+      "slug": "potatoes"
     },
     {
       "foodGroupId": "16",
-      "name": "Herbs and spices"
+      "name": "Herbs and spices",
+      "slug": "herbs-and-spices"
     },
     {
       "foodGroupId": "1.1",
       "name": "Milk",
+      "slug": "milk",
       "parentId": "1"
     },
     {
       "foodGroupId": "1.2",
       "name": "Yoghurt",
+      "slug": "yoghurt",
       "parentId": "1"
     },
     {
       "foodGroupId": "1.3",
       "name": "Cream and sour cream",
+      "slug": "cream-and-sour-cream",
       "parentId": "1"
     },
     {
       "foodGroupId": "1.4",
       "name": "Cheese",
+      "slug": "cheese",
       "parentId": "1"
     },
     {
       "foodGroupId": "1.4.4",
       "name": "Other cheese",
+      "slug": "other-cheese",
       "parentId": "1.4"
     },
     {
       "foodGroupId": "1.4.5",
       "name": "Whey cheese",
+      "slug": "whey-cheese",
       "parentId": "1.4"
     },
     {
       "foodGroupId": "1.4.6",
       "name": "Fresh cheese",
+      "slug": "fresh-cheese",
       "parentId": "1.4"
     },
     {
       "foodGroupId": "1.4.7",
       "name": "Hard cheese",
+      "slug": "hard-cheese",
       "parentId": "1.4"
     },
     {
@@ -336,7 +360,7 @@
     },
     {
       "foodGroupId": "9.1",
-      "name": "Coffe and tea",
+      "name": "Coffee and tea",
       "parentId": "9"
     },
     {

@@ -45,7 +45,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
             <div className='flex items-center mt-2'>
               <Rating />
             </div>
-            <p className='font-semibold'>{`${item.price} ${item.currency} `}</p>
+            <p className='font-semibold text-blue-800'>{`${item.price} ${item.currency} `}</p>
             <h4>{item.foodName}</h4>
             <p className='text-sm text-secondary'>
               {item.quantity

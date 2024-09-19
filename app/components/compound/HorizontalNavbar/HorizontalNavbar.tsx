@@ -67,7 +67,9 @@ const HorizontalNavbar = () => {
               </Form>
             </div>
           ) : (
-            <Link to='/login'>Sign in</Link>
+            <Link to='/login' className='md:text-lg'>
+              Sign in
+            </Link>
           )}
         </div>
       </nav>

@@ -34,7 +34,7 @@ const HorizontalNavbar = () => {
             onClick={() => setOpen(!open)}
             className={`flex items-center font-semibold gap-2 px-3 py-1 rounded-full border-2 text-blue-800 ${
               open ? 'border-blue-600' : 'border-transparent'
-            }  hover:border-blue-600`}
+            }  hover:border-blue-600 hover:bg-blue-100`}
           >
             <SVGIcon
               stroke={'var(--color-blue-800)'}

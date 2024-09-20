@@ -34,7 +34,7 @@ export const Accordion = ({
       }}
     >
       <div className='accordionContainer p-3 flex justify-between items-center'>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <SVGIcon>
           <path d={open ? 'M18 15l-6-6-6 6' : 'M6 9l6 6 6-6'} />
         </SVGIcon>

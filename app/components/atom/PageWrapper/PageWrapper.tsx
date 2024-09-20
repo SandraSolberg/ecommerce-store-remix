@@ -9,8 +9,8 @@ const PageWrapper = ({
   title: string;
 }) => {
   return (
-    <div className='layout p-4'>
-      <h1>{title}</h1>
+    <div className='layout px-6 py-8'>
+      <h1 className='text-center'>{title}</h1>
       {children}
     </div>
   );

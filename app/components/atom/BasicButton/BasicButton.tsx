@@ -20,7 +20,7 @@ const BasicButton = ({
       type={type}
       name={name}
       value={value}
-      className={` w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 ${className}`}
+      className={` w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 ${className}`}
       onClick={onClick}
     >
       {title}

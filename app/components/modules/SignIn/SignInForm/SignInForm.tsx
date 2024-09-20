@@ -38,7 +38,7 @@ const SignInForm = () => {
   return (
     <div className='flex flex-1 flex-col justify-center items-center gap-y-6 rounded bg-blue-100 shadow-xl mx-4 p-6 w-auto'>
       <div className='text-center space-y-1'>
-        <h2 className='text-3xl text-blue-600'>
+        <h2 className='text-blue-600'>
           {action === 'login' ? 'Sign in' : 'Create your account'}
         </h2>
 

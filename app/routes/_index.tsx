@@ -1,5 +1,5 @@
 import type { MetaFunction } from '@remix-run/node';
-import LandingPage from '~/components/compound/LandingPage/LandingPage';
+import Dashboard from '~/components/modules/Dashboard/Dashboard';
 import '../styles/layout.css';
 
 export const meta: MetaFunction = () => {
@@ -10,5 +10,5 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  return <LandingPage />;
+  return <Dashboard />;
 }

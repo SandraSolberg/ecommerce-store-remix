@@ -9,7 +9,7 @@ export default {
         heading: ['Roboto', 'sans-serif'],
       },
       colors: {
-        'pure-white': '#FFFF',
+        'off-white': 'var(--color-off-white)',
         // Customize it on tailwind.css :root
         'border-divider': 'var(--color-border-divider)',
         primary: 'var(--color-primary)',

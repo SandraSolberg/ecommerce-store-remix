@@ -1,6 +1,6 @@
 .accordionContainer {
   &:hover {
-    > h2 {
+    > h3 {
       color: var(--color-blue-600);
     }
 

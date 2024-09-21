@@ -3,7 +3,7 @@ import CloseButton from '../../atom/CloseButton/CloseButton';
 import { onCloseModal } from '~/redux/uiStateSlice';
 import { ModalActionEnum } from '~/types/types';
 import { removeAllItems } from '~/redux/cartSlice';
-import ApprovalButtonGroup from '~/components/atom/ApprovalButtonGroup/ApprovalButtonGroup';
+import ApprovalButtonGroup from '~/components/common/atom/ApprovalButtonGroup/ApprovalButtonGroup';
 import './modal.css';
 
 const Modal = () => {

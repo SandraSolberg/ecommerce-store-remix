@@ -1,5 +1,5 @@
 import { ReactNode, useRef } from 'react';
-import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
+import SVGIcon from '~/components/common/atom/SVGIcon/SVGIcon';
 import './horizontalScrollContainer.css';
 
 const HorizontalScrollContainer = ({ children }: { children: ReactNode }) => {

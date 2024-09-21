@@ -1,8 +1,8 @@
-import { Accordion } from '~/components/atom/Accordion/Accordion';
-import BasicButton from '~/components/atom/BasicButton/BasicButton';
-import CardPageWrapper from '~/components/atom/CardPageWrapper/CardPageWrapper';
-import InfoTable from '~/components/atom/InfoTable/InfoTable';
-import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
+import { Accordion } from '~/components/common/atom/Accordion/Accordion';
+import BasicButton from '~/components/common/atom/BasicButton/BasicButton';
+import CardPageWrapper from '~/components/common/atom/CardPageWrapper/CardPageWrapper';
+import InfoTable from '~/components/common/atom/InfoTable/InfoTable';
+import SVGIcon from '~/components/common/atom/SVGIcon/SVGIcon';
 import { useFoods } from '~/hooks/useFoods';
 import { addItem } from '~/redux/cartSlice';
 import { useAppDispatch } from '~/redux/store';

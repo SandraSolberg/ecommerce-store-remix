@@ -1,7 +1,7 @@
 import { Link } from '@remix-run/react';
-import { CartChip } from '~/components/atom/CartChip/CartChip';
+import { CartChip } from '~/components/common/atom/CartChip/CartChip';
 import MiniCartContent from '~/components/modules/Cart/MiniCartContent/MiniCartContent';
-import Slider from '~/components/molecule/Slider/Slider';
+import Slider from '~/components/common/molecule/Slider/Slider';
 import { useAppSelector } from '~/redux/store';
 
 const Header = () => {

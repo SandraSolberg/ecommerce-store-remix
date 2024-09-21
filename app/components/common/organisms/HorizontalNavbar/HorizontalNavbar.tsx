@@ -1,9 +1,9 @@
 import { Form, Link, useLoaderData } from '@remix-run/react';
 import { useState } from 'react';
-import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
+import SVGIcon from '~/components/common/atom/SVGIcon/SVGIcon';
 import ContentMenu from '../ContentMenu/ContentMenu';
 import { User } from '~/types/types';
-import LinkButton from '~/components/atom/LinkButton/LinkButton';
+import LinkButton from '~/components/common/atom/LinkButton/LinkButton';
 import useClickOutside from '~/hooks/useClickOutside';
 
 type UserData = {

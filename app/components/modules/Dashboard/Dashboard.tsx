@@ -1,40 +1,19 @@
 import { Link } from '@remix-run/react';
-import PageWrapper from '~/components/atom/PageWrapper/PageWrapper';
-import HorizontalScrollContainer from '~/components/molecule/HorizontalScrollContainer/HorizontalScrollContainer';
+import PageWrapper from '~/components/common/atom/PageWrapper/PageWrapper';
+import HorizontalScrollContainer from '~/components/common/molecule/HorizontalScrollContainer/HorizontalScrollContainer';
 import { useFoods } from '~/hooks/useFoods';
 import '~/styles/layout.css';
 import ProductCard from '../Product/ProductCard/ProductCard';
+import sortObjectByDate from '~/utils/sortObjectByDate';
 
 const Dashboard = () => {
   const { foods } = useFoods();
 
-  // get 10 newest items if list is bigger than 10
-  // if list is less than or equal to 10 show every item
-  // if there is no items hide this
-
   const newestFoodItems =
     foods && foods.foods.length >= 10
-      ? foods?.foods
-          .sort((a, b) =>
-            new Date(a.createdAt) < new Date(b.createdAt)
-              ? -1
-              : new Date(a.createdAt) > new Date(b.createdAt)
-              ? 1
-              : 0
-          )
-          .reverse()
-          .slice(0, 10)
+      ? sortObjectByDate(foods.foods).reverse().slice(0, 10)
       : foods && foods.foods.length > 0
-      ? foods?.foods
-          .sort((a, b) =>
-            new Date(a.createdAt) < new Date(b.createdAt)
-              ? -1
-              : new Date(a.createdAt) > new Date(b.createdAt)
-              ? 1
-              : 0
-          )
-          .reverse()
-          .slice(0, foods.foods.length)
+      ? sortObjectByDate(foods.foods).reverse().slice(0, foods.foods.length)
       : null;
 
   return (
@@ -83,7 +62,7 @@ const Dashboard = () => {
             <h2>Discover Our Newest Additions</h2>
             <HorizontalScrollContainer>
               {newestFoodItems?.map((item) => (
-                <div key={item.foodId}>
+                <div key={item.foodId} className='bg-gray-200'>
                   <ProductCard item={item} />
                 </div>
               ))}

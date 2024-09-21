@@ -5,8 +5,8 @@ import {
   redirect,
 } from '@remix-run/node';
 import { getUser, login, register } from '~/auth/auth.server';
-import CardPageWrapper from '~/components/atom/CardPageWrapper/CardPageWrapper';
-import Welcome from '~/components/atom/Welcome/Welcome';
+import CardPageWrapper from '~/components/common/atom/CardPageWrapper/CardPageWrapper';
+import Welcome from '~/components/common/atom/Welcome/Welcome';
 import SignInForm from '~/components/modules/SignIn/SignInForm/SignInForm';
 import { errorMessage } from '~/utils/errorMessages';
 import {

@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Form, useActionData } from '@remix-run/react';
-import BasicButton from '~/components/atom/BasicButton/BasicButton';
-import FormField from '~/components/atom/FormField/FormField';
-import LinkButton from '~/components/atom/LinkButton/LinkButton';
+import BasicButton from '~/components/common/atom/BasicButton/BasicButton';
+import FormField from '~/components/common/atom/FormField/FormField';
+import LinkButton from '~/components/common/atom/LinkButton/LinkButton';
 import { Errors, FormActionType } from '~/types/types';
+import CustomAlert from '~/components/common/atom/CustomAlert/CustomAlert';
 import initForm from '~/utils/initialValues';
-import CustomAlert from '~/components/atom/CustomAlert/CustomAlert';
 
 const SignInForm = () => {
   const actionData = useActionData<FormActionType>();

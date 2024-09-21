@@ -7,10 +7,10 @@ import {
 } from '@remix-run/react';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
-import Header from './components/compound/Header/Header';
-import HorizontalNavbar from './components/compound/HorizontalNavbar/HorizontalNavbar';
+import Header from './components/common/organisms/Header/Header';
+import HorizontalNavbar from './components/common/organisms/HorizontalNavbar/HorizontalNavbar';
 import './tailwind.css';
-import Modal from './components/molecule/Modal/Modal';
+import Modal from './components/common/molecule/Modal/Modal';
 import { json, LoaderFunction } from '@remix-run/node';
 import { getUser } from './auth/auth.server';
 

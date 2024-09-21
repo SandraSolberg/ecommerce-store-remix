@@ -1,7 +1,7 @@
 import { Link } from '@remix-run/react';
 import { useAppDispatch, useAppSelector } from '~/redux/store';
 import { toggleSlider } from '~/redux/cartSlice';
-import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
+import SVGIcon from '~/components/common/atom/SVGIcon/SVGIcon';
 import MiniCartList from '../MiniCartList/MiniCartList';
 import './miniCartContent.css';
 

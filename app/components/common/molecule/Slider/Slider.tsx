@@ -1,7 +1,7 @@
 import { toggleSlider } from '~/redux/cartSlice';
 import { useAppDispatch, useAppSelector } from '~/redux/store';
 import './slider.css';
-import CloseButton from '~/components/atom/CloseButton/CloseButton';
+import CloseButton from '~/components/common/atom/CloseButton/CloseButton';
 
 const Slider = ({ children }: { children: React.ReactNode }) => {
   const isOpen = useAppSelector((state) => state.cart.isOpen);

@@ -4,8 +4,8 @@ import { CartItem } from '~/types/cart';
 import numberToFixedString from '~/utils/numberToFixedString';
 import { ModalActionEnum, ModalStateType } from '~/types/types';
 import { setModal } from '~/redux/uiStateSlice';
-import SVGIcon from '~/components/atom/SVGIcon/SVGIcon';
-import { Indicator } from '~/components/atom/Indicator/Indicator';
+import SVGIcon from '~/components/common/atom/SVGIcon/SVGIcon';
+import { Indicator } from '~/components/common/atom/Indicator/Indicator';
 
 type ItemListProps = {
   items: CartItem[];

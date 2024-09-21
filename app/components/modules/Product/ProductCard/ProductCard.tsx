@@ -1,7 +1,7 @@
 import { Link } from '@remix-run/react';
 import BasicButton from '~/components/atom/BasicButton/BasicButton';
-import QuantityButtonGroup from '~/components/atom/QuantityButtonGroup/QuantityButtonGroup';
 import Rating from '~/components/atom/Rating/Rating';
+import QuantityButtonGroup from '~/components/molecule/QuantityButtonGroup/QuantityButtonGroup';
 import { addItem, changeNumberOfItems, removeByOne } from '~/redux/cartSlice';
 import { useAppDispatch, useAppSelector } from '~/redux/store';
 import { IFoodItem } from '~/types/food';
@@ -34,7 +34,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
 
   return (
     <Link to={`/products/${item.foodId}`} className='hover:no-underline'>
-      <article className='w-48 min-h-[24.8rem]  bg-white m-2 p-2 rounded-lg flex flex-col justify-between shadow hover:shadow-md'>
+      <article className='w-48 min-h-[24.8rem]  bg-white m-2 p-2 rounded-lg flex flex-col justify-between shadow hover:shadow-lg'>
         <div>
           <img
             className='w-full h-40 object-cover rounded-t-lg '

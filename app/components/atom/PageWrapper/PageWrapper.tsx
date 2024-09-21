@@ -6,11 +6,11 @@ const PageWrapper = ({
   title,
 }: {
   children: React.ReactNode;
-  title: string;
+  title?: string;
 }) => {
   return (
     <div className='layout px-6 py-8'>
-      <h1 className='text-center'>{title}</h1>
+      {title && <h1 className='text-center'>{title}</h1>}
       {children}
     </div>
   );

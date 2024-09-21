@@ -40,7 +40,8 @@
       "countryOfProduction": "Norway",
       "supplier": "Tine SA",
       "label": "Tine",
-      "link": "https://www.tinebrunost.com/products#gudbrandsdalen"
+      "link": "https://www.tinebrunost.com/products#gudbrandsdalen",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": [
@@ -81,7 +82,8 @@
       "countryOfProduction": "Norway",
       "supplier": "Tine SA",
       "label": "Tine",
-      "link": "https://www.jarlsberg.com/products#jarlsberg-original"
+      "link": "https://www.jarlsberg.com/products#jarlsberg-original",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": [
@@ -114,7 +116,8 @@
       "origin": "Norway",
       "countryOfProduction": "Norway",
       "supplier": "Fjordland AS",
-      "link": "https://www.fjordland.no/grot/rommegrot-350-g"
+      "link": "https://www.fjordland.no/grot/rommegrot-350-g",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": ["fish", "mackerel", "Lerøy seafood"],
@@ -148,7 +151,8 @@
       "origin": "Norway",
       "countryOfProduction": "Norway",
       "supplier": "Lerøy seafood",
-      "link": null
+      "link": null,
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": [
@@ -185,7 +189,8 @@
       "countryOfProduction": "Norway",
       "label": "Troll",
       "supplier": "Troll salmon as",
-      "link": "https://troll-salmon.com/produkter/rokt-laks/"
+      "link": "https://troll-salmon.com/produkter/rokt-laks/",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": ["crispbread", "whole grain", "wasa", "knekkebrød"],
@@ -215,7 +220,8 @@
       "countryOfProduction": "Finland",
       "label": "WASA",
       "supplier": "Barilla norge as",
-      "link": null
+      "link": null,
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": ["flatbread", "sweet bread", "buer", "lefse"],
@@ -245,7 +251,8 @@
       "countryOfProduction": "Norway",
       "label": "BUER",
       "supplier": "BUER AS",
-      "link": "https://buer-as.no/produkter/"
+      "link": "https://buer-as.no/produkter/",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": [
@@ -286,7 +293,8 @@
       "countryOfProduction": "Norway",
       "label": "Nature's Best",
       "supplier": "Fruitful AS",
-      "link": null
+      "link": null,
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": ["soda", "soft drink", "carbonated", "refreshing"],
@@ -321,7 +329,8 @@
       "countryOfProduction": "Austria",
       "label": "SodaCo",
       "supplier": "Beverage Solutions AS",
-      "link": null
+      "link": null,
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": ["juice", "blackcurrant", "fruit drink", "refreshing"],
@@ -356,7 +365,8 @@
       "countryOfProduction": "Norway",
       "label": "BerryBest",
       "supplier": "Juice Masters AS",
-      "link": "https://www.lerum.no/saft/solbaersirup-stor"
+      "link": "https://www.lerum.no/saft/solbaersirup-stor",
+      "createdAt": "2024-09-21T08:30:00Z"
     },
     {
       "searchKeywords": [
@@ -399,7 +409,8 @@
       "countryOfProduction": "Italy",
       "label": "Mediterranean Delights",
       "supplier": "Italian Foods AS",
-      "link": "https://example.com/bruschetta-tomato-basil"
+      "link": "https://example.com/bruschetta-tomato-basil",
+      "createdAt": "2024-09-14T08:30:00Z"
     },
     {
       "searchKeywords": ["minced meat", "ground beef", "beef", "cooking"],
@@ -435,9 +446,11 @@
       "countryOfProduction": "Norway",
       "label": "MeatMaster",
       "supplier": "Quality Meats AS",
-      "link": "https://example.com/minced-meat"
+      "link": "https://example.com/minced-meat",
+      "createdAt": "2024-09-01T08:30:00Z"
     },
     {
+      "searchKeywords": ["pizza", "frozen", "quick meal", "convenient"],
       "foodName": "Frozen Pizza",
       "tags": {
         "isOrganic": false,
@@ -451,7 +464,6 @@
       "foodId": 13,
       "price": 60,
       "currency": "kr",
-      "searchKeywords": ["pizza", "frozen", "quick meal", "convenient"],
       "quantity": {
         "amount": 400,
         "unit": "g"
@@ -471,7 +483,8 @@
       "countryOfProduction": "Norway",
       "label": "QuickBite",
       "supplier": "Frozen Foods AS",
-      "link": null
+      "link": null,
+      "createdAt": "2024-08-08T08:30:00Z"
     },
     {
       "foodName": "Chips",
@@ -506,9 +519,17 @@
       "countryOfProduction": "Norway",
       "label": "SnackTime",
       "supplier": "Crunchy Snacks AS",
-      "link": null
+      "link": null,
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
+      "searchKeywords": [
+        "vegetarian",
+        "pasta",
+        "primavera",
+        "healthy",
+        "quick meal"
+      ],
       "foodName": "Vegetarian Pasta Primavera",
       "tags": {
         "isOrganic": true,
@@ -521,13 +542,6 @@
       "foodId": 15,
       "price": 70,
       "currency": "kr",
-      "searchKeywords": [
-        "vegetarian",
-        "pasta",
-        "primavera",
-        "healthy",
-        "quick meal"
-      ],
       "quantity": {
         "amount": 450,
         "unit": "g"
@@ -553,7 +567,8 @@
       "countryOfProduction": "Norway",
       "label": "GreenCuisine",
       "supplier": "Veggie Foods AS",
-      "link": null
+      "link": null,
+      "createdAt": "2024-07-20T08:30:00Z"
     },
     {
       "searchKeywords": ["taco sauce", "medium sauce", "Santa Maria", "taco"],
@@ -589,7 +604,8 @@
       "label": "Santa Maria",
       "supplier": "Santa Maria Norge AS",
       "storage": null,
-      "link": "https://www.matvaretabellen.no/en/taco-sauce-medium-santa-maria/"
+      "link": "https://www.matvaretabellen.no/en/taco-sauce-medium-santa-maria/",
+      "createdAt": "2024-06-24T08:30:00Z"
     },
     {
       "searchKeywords": [
@@ -625,7 +641,8 @@
       "label": "Santa Maria",
       "supplier": "Santa Maria Norge AS",
       "storage": null,
-      "link": "https://www.matvaretabellen.no/en/taco-shells-corn-flour-santa-maria/"
+      "link": "https://www.matvaretabellen.no/en/taco-shells-corn-flour-santa-maria/",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": ["taco spice mix", "spice mix", "taco seasoning"],
@@ -661,7 +678,8 @@
       "countryOfProduction": "Sweden",
       "label": "Santa Maria",
       "supplier": "Santa Maria Norge AS",
-      "link": "https://www.matvaretabellen.no/en/taco-spice-mix/"
+      "link": "https://www.matvaretabellen.no/en/taco-spice-mix/",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": ["sweetcorn", "vegetable", "vegetarian", "vegan"],
@@ -695,7 +713,8 @@
       "label": "Corn",
       "supplier": "Corn Supplier AS",
       "storage": "Store at 18 °C to 25 °C ",
-      "link": null
+      "link": null,
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": [
@@ -736,7 +755,8 @@
       "label": "Fresh Salad",
       "supplier": "Fresh Salad Supplier AS",
       "storage": "Must be stored between 4 and 15 °C",
-      "link": null
+      "link": null,
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": ["fruit", "vegetable", "tomato"],
@@ -771,7 +791,8 @@
       "supplier": "Fresh Salad Supplier AS",
       "label": "Fresh Salad",
       "storage": "Must be stored between 4 and 15 °C",
-      "link": null
+      "link": null,
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": ["beans", "legumes", "vegan", "vegetarian", "organic"],
@@ -805,7 +826,8 @@
       "countryOfProduction": "Italy",
       "label": "KOLONIHAGEN",
       "supplier": "REMA 1000 NORGE AS (LEV.)",
-      "link": "https://www.kolonihagen.no/produkt/sorte-bonner"
+      "link": "https://www.kolonihagen.no/produkt/sorte-bonner",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": [
@@ -843,7 +865,9 @@
       "nutrients": ["vitamin K", "vitamin C", "fiber"],
       "allergens": [],
       "label": "Bama",
-      "supplier": "Bama dagligvare as"
+      "supplier": "Bama dagligvare as",
+      "link": "https://www.bama.no/ravarer/",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": [
@@ -884,7 +908,8 @@
       "countryOfProduction": "Norway",
       "label": "Tine",
       "supplier": "Tine SA",
-      "storage": "Store at 0 °C - 4 °C. Best sliced when cool."
+      "storage": "Store at 0 °C - 4 °C. Best sliced when cool.",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": ["fruit", "tropical", "banana", "organic"],
@@ -918,7 +943,9 @@
       "countryOfProduction": "Ecuador",
       "label": "Bama",
       "supplier": "Bama dagligvare as",
-      "storage": "Store at 18 °C to 25 °C "
+      "storage": "Store at 18 °C to 25 °C ",
+      "link": "https://www.bama.no/ravarer/",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": [
@@ -959,7 +986,9 @@
       "countryOfProduction": "Norway",
       "label": "Bama",
       "supplier": "Bama dagligvare as",
-      "storage": "Store at 18 °C to 25 °C "
+      "storage": "Store at 18 °C to 25 °C ",
+      "link": "https://www.bama.no/ravarer/",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": [
@@ -1001,7 +1030,9 @@
       "countryOfProduction": "Norway",
       "label": "Bakehuset",
       "supplier": "Bakehuset direkte",
-      "storage": "Store at 18 °C to 25 °C "
+      "storage": "Store at 18 °C to 25 °C ",
+      "link": "https://www.bakehuset.no/",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": ["protein", "dairy", "eggs", "organic", "prior"],
@@ -1035,7 +1066,9 @@
       "countryOfProduction": "Norway",
       "label": "Prior",
       "supplier": "Nortura SA (Prior)",
-      "storage": "Store at 0 °C - 4 °C."
+      "storage": "Store at 0 °C - 4 °C.",
+      "link": "https://www.nortura.no/en/",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": ["dairy", "cream", "sour", "vegetarian"],
@@ -1068,7 +1101,8 @@
       "origin": "Norway",
       "countryOfProduction": "Norway",
       "label": "Tine",
-      "supplier": "Tine SA"
+      "supplier": "Tine SA",
+      "createdAt": "2024-04-13T08:30:00Z"
     },
     {
       "searchKeywords": ["grain", "cereal", "rice", "Toro", "vegetarian"],
@@ -1102,7 +1136,8 @@
       "origin": "Thailand",
       "countryOfProduction": "Czech Republic",
       "label": "TORO",
-      "supplier": "Orkla Foods Norge AS"
+      "supplier": "Orkla Foods Norge AS",
+      "createdAt": "2024-04-13T08:30:00Z"
     }
   ]
 }

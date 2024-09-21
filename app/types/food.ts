@@ -40,6 +40,7 @@ export interface IFoodItem {
   supplier: string | null;
   storage: string | null;
   link: string | null;
+  createdAt: string;
 }
 
 export type FoodsType = {

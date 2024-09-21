@@ -26,7 +26,7 @@ const MiniCartContent = () => {
           <MiniCartList items={cart.addedItems} total={cart.total} />
 
           <Link
-            className='mt-4 w-full bg-blue-500 text-white text-sm text-center font-semibold py-3 rounded-lg hover:bg-blue-600 '
+            className='mt-4 w-full bg-blue-500 text-white text-base text-center font-medium py-3 rounded-lg hover:bg-blue-600 hover:no-underline'
             to='/cart'
             onClick={() => dispatch(toggleSlider(false))}
           >

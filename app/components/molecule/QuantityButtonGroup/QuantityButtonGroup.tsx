@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import SVGIcon from '../../atom/SVGIcon/SVGIcon';
 import './quantityButtonGroup.css';
-import SVGIcon from '../SVGIcon/SVGIcon';
 
 type QuantityButtonGroupType = {
   small?: boolean;
@@ -44,7 +44,7 @@ const QuantityButtonGroup = ({
   };
 
   return (
-    <div className='flex items-center buttonGroupContainer'>
+    <div className='flex items-center justify-center buttonGroupContainer'>
       <button
         className='bg-gray-200 p-3 rounded-full hover:bg-gray-300'
         onClick={decrementCount}

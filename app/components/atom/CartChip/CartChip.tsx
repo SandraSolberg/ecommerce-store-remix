@@ -18,7 +18,7 @@ export const CartChip = () => {
     <div
       role='button'
       tabIndex={0}
-      className={`flex gap-2 border-solid border rounded-lg p-2 font-medium ${
+      className={`flex items-center gap-2 border-solid border rounded-lg p-2 font-medium ${
         hasItems
           ? 'bg-orange-500 hover:bg-orange-600 text-white'
           : 'border-gray-300 hover:bg-gray-200'

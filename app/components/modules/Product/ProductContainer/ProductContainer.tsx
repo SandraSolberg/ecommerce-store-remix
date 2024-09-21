@@ -19,7 +19,6 @@ const ProductContainer = ({ foodGroupId }: { foodGroupId?: string }) => {
       <h2>{numberOfItems} items</h2>
       {isLoading && <SkeletonContainer />}
       <div className='flex flex-wrap'>
-        {isLoading && <p className='text-xl'>...Loading</p>}
         {error && <h3 className='text-xl'>Not able to display any items</h3>}
         {foodsToMap?.map((item) => (
           <div key={item.foodId}>

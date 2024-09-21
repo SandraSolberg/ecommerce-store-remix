@@ -5,7 +5,7 @@
 :root {
   --color-primary: #061629;
   --color-secondary: #69737e;
-  --color-off-white: #fbf8f3;
+  --color-off-white: #fffef6;
 
   /**=========== blue color =========== **/
   --color-blue-000: #f4f8fb;
@@ -76,6 +76,6 @@
   /**======== Typography =========== */
 
   a {
-    @apply text-blue-600 text-base md:text-lg font-medium hover:underline underline-offset-2;
+    @apply text-blue-600 text-base md:text-lg font-semibold hover:underline underline-offset-2;
   }
 }

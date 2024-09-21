@@ -32,13 +32,11 @@ const HorizontalNavbar = () => {
           <button
             ref={buttonRef}
             onClick={() => setOpen(!open)}
-            className={`flex items-center font-semibold gap-2 px-3 py-1 rounded-full border-2 text-blue-800 ${
-              open ? 'border-blue-600' : 'border-transparent'
-            }  hover:border-blue-600 hover:bg-blue-100`}
+            className={`flex items-center font-semibold gap-2 px-3 py-1 rounded-full border-2 text-blue-600 border-blue-600 hover:border-blue-600 hover:bg-blue-200`}
           >
             <SVGIcon
-              stroke={'var(--color-blue-800)'}
-              fill={open ? 'var(--color-blue-800)' : 'none'}
+              stroke={'var(--color-blue-600)'}
+              fill={open ? 'var(--color-blue-600)' : 'none'}
             >
               <>
                 <rect x='3' y='3' width='7' height='7'></rect>

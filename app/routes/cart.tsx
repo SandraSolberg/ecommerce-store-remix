@@ -48,13 +48,16 @@ const Cart = () => {
                   key={item.foodId}
                   className={`flex gap-8 py-6 ${index > 0 ? 'border-t' : ''}`}
                 >
-                  <div className='w-32 h-32'>
+                  <Link
+                    className='w-32 h-32 hover:no-underline'
+                    to={`/products/${item.foodId}`}
+                  >
                     <img
                       className='w-28 h-28 object-contain '
                       alt={item.foodName ?? 'image of item'}
                       src={item.image ?? undefined}
                     />
-                  </div>
+                  </Link>
 
                   <div className='flex justify-between w-full'>
                     <div className='flex flex-col gap-4'>

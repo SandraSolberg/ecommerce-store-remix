@@ -20,21 +20,27 @@ const OrderSummary = ({
     <div className={` p-4 ${hasContrast ? 'bg-white ' : 'bg-blue-100'}`}>
       <div className='flex flex-col gap-4'>
         <p className='font-semibold text-blue-900'>Summary</p>
-        <div className='flex justify-between'>
+        <div
+          className={`flex justify-between ${
+            hasContrast ? 'text-secondary' : 'text-primary'
+          }`}
+        >
           <p>Products</p>
           <p>{products + ' ' + currency}</p>
         </div>
-        <div className='flex justify-between'>
+        <div
+          className={`flex justify-between ${
+            hasContrast ? 'text-secondary' : 'text-primary'
+          }`}
+        >
           <p>Shipping</p>
           <p>{shipping + ' ' + currency}</p>
         </div>
 
         <hr className=' border border-b border-gray-300' />
         <div className='flex justify-between'>
-          <p className='font-semibold text-blue-900'>Total</p>
-          <p className='font-semibold text-blue-900'>
-            {total + ' ' + currency}
-          </p>
+          <p className='font-semibold'>Total</p>
+          <p className='font-semibold '>{total + ' ' + currency}</p>
         </div>
       </div>
 

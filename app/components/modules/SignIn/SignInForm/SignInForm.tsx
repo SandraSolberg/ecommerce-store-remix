@@ -100,7 +100,7 @@ const SignInForm = () => {
             type='submit'
             name='_action'
             value={action}
-            title={action === 'login' ? 'Sign in' : 'Sign Up'}
+            btnTitle={action === 'login' ? 'Sign in' : 'Sign Up'}
             onClick={handleReset}
             className='mt-2 rounded-full'
           />

@@ -1,20 +1,21 @@
-type BasicButtonType = {
-  title: string | JSX.Element;
+interface IBasicButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  btnTitle: string | JSX.Element;
   type?: 'submit' | 'reset' | 'button';
   name?: string;
   value?: string | number | readonly string[];
   className?: string;
   onClick?: () => void;
-};
+}
 
 const BasicButton = ({
-  title = 'Add',
+  btnTitle = 'Add',
   type = 'button',
   name,
   value,
   className,
   onClick,
-}: BasicButtonType) => {
+  ...rest
+}: IBasicButton) => {
   return (
     <button
       type={type}
@@ -22,8 +23,9 @@ const BasicButton = ({
       value={value}
       className={`w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 ${className}`}
       onClick={onClick}
+      {...rest}
     >
-      {title}
+      {btnTitle}
     </button>
   );
 };

@@ -11,22 +11,13 @@ import { useAppSelector } from '~/redux/store';
 import { CartItem } from '~/types/cart';
 
 const Cart = () => {
-  // må lage en handlekurven er tom. Dersom man ikke er logget inn kan man logge inn eller se produkter.
   const cartItems = useAppSelector((state) => state.cart.addedItems);
   const { foods } = useFoods();
   const { onDecrement, onIncrement, onInputChange } = useQuantity();
-  const { handleRemove } = useCartActions();
+  const { handleRemove, productSum } = useCartActions();
 
-  const productsSum = cartItems.reduce((acc, curr) => acc + curr.price, 0);
-
-  const getExistingFoodItem = (item: CartItem) => {
-    console.log(
-      'foodItem',
-      foods?.foods.find((food) => food.foodId === item.foodId)
-    );
-    return foods?.foods.find((food) => food.foodId === item.foodId);
-  };
-
+  const getExistingFoodItem = (item: CartItem) =>
+    foods?.foods.find((food) => food.foodId === item.foodId);
   return (
     <CardPageWrapper>
       {cartItems.length === 0 ? (
@@ -123,7 +114,7 @@ const Cart = () => {
 
             <div className='flex-1 basis-1/2m'>
               <OrderSummary
-                products={parseFloat(productsSum.toFixed(2))}
+                products={parseFloat(productSum.toFixed(2))}
                 shipping={0}
                 currency='kr'
               />

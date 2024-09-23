@@ -61,7 +61,7 @@ const QuantityButtonGroup = ({
         value={value}
         onChange={handleChange}
         onBlur={(event) => onInputChange(event.target.value)}
-        className={`border border-gray-200 mx-1 rounded-full  text-center ${
+        className={`border border-gray-200 mx-1 rounded-full text-center ${
           small ? 'w-9 h-9' : 'w-11 h-11'
         } no-arrows`}
       />

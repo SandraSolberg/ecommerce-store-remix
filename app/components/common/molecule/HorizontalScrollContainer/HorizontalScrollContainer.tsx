@@ -16,10 +16,6 @@ const HorizontalScrollContainer = ({ children }: { children: ReactNode }) => {
     return null;
   };
 
-  const scrollWidth = scrollRef.current?.scrollWidth;
-
-  console.log('scrollWidth', scrollWidth, window.scrollX);
-
   return (
     <div className='flex items-center justify-center container'>
       <div className='mr-2'>

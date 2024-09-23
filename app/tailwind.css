@@ -27,11 +27,21 @@
   --color-emerald-600: #059669;
   --color-emerald-700: #047857;
 
-  /** =========== yellow colors =========== **/
-  --color-border-divider: #e5e7eb;
+  /** =========== yellow/waring colors =========== **/
+  --color-warning-50: #fdf8ef;
+  --color-warning-100: #fbf2de;
+  --color-warning-200: #f7e4be;
+  --color-warning-300: #f4d79d;
+  --color-warning-400: #f0c97d;
+  --color-warning-500: #eab54c;
+  --color-warning-600: #c48a17;
+  --color-warning-700: #a37313;
+  --color-warning-800: #825c0f;
+  --color-warning-900: #62450b;
 
   /** =========== default color =========== **/
-  --color-yellow-500: #eab308;
+
+  --color-border-divider: #e5e7eb;
 
   /** =========== z-index color =========== **/
   --z--index-dropdown: 900;
@@ -77,5 +87,14 @@
 
   a {
     @apply text-blue-600 text-base md:text-lg font-semibold hover:underline underline-offset-2;
+  }
+
+  select,
+  input {
+    @apply p-2 rounded bg-white border border-gray-300;
+  }
+
+  label {
+    @apply text-blue-600 font-semibold;
   }
 }

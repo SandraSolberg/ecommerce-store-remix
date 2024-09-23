@@ -1,21 +1,20 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 
-type FormFieldProps = {
+interface FormFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
   formId: string;
-  type?: string;
-  label: string;
-  value: string | number | readonly string[] | undefined;
+  label?: string;
+  value?: string | number | readonly string[];
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   error?: string;
-};
+}
 
 const FormField = ({
   label,
   value,
   onChange,
   formId,
-  type,
   error,
+  ...rest
 }: FormFieldProps) => {
   const [errorText, setErrorText] = useState(error);
 
@@ -25,19 +24,17 @@ const FormField = ({
 
   return (
     <div className='flex flex-col'>
-      <label className='text-blue-600 font-semibold'>{label}</label>
+      {label && <label htmlFor={formId}>{label}</label>}
       <input
         onChange={(e) => {
           onChange(e);
           setErrorText('');
         }}
-        type={type}
         id={formId}
         name={formId}
-        className={`min-w-56 p-2 rounded mb-2 bg-white  ${
-          error ? 'border-2 border-red-500' : 'border border-gray-300'
-        }`}
+        className={`min-w-56 mb-2  ${error ? 'border-2 border-red-500' : ''}`}
         value={value}
+        {...rest}
       />
       <span className='max-w-56 text-xs font-semibold tracking-wide text-red-500 w-full'>
         {errorText ?? ''}

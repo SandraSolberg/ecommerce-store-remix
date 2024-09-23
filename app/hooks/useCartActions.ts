@@ -1,10 +1,13 @@
 import { removeItem } from '~/redux/cartSlice';
-import { useAppDispatch } from '~/redux/store';
+import { useAppDispatch, useAppSelector } from '~/redux/store';
 import { setModal } from '~/redux/uiStateSlice';
 import { ModalActionEnum, ModalStateType } from '~/types/types';
 
 const useCartActions = () => {
   const dispatch = useAppDispatch();
+  const cartItems = useAppSelector((state) => state.cart.addedItems);
+
+  const productSum = cartItems.reduce((acc, curr) => acc + curr.price, 0);
 
   const handleRemove = (itemId: number) => {
     dispatch(removeItem({ id: itemId }));
@@ -23,7 +26,7 @@ const useCartActions = () => {
     dispatch(setModal(modal));
   };
 
-  return { handleRemove, handleEmptyCart };
+  return { handleRemove, handleEmptyCart, productSum };
 };
 
 export default useCartActions;

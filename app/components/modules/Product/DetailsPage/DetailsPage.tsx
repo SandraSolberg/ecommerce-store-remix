@@ -88,7 +88,7 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
               </span>
               <BasicButton
                 className='mt-4 py-3 px-5'
-                title='Add to cart'
+                btnTitle='Add to cart'
                 onClick={handleAddProduct}
               />
             </div>

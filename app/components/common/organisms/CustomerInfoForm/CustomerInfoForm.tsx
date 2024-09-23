@@ -12,7 +12,6 @@ enum CountryCodeEnum {
 interface IFormInput {
   firstName: string;
   lastName: string;
-  email: string;
   city: string;
   streetAddress: string;
   apartmentNumber: string;
@@ -49,17 +48,13 @@ const CustomerInfoForm = () => {
               />
             </div>
           </fieldset>
-          <fieldset className='fieldset'>
-            <label htmlFor='email'>Email</label>
-            <input type='email' id='email' {...register('email')} />
-          </fieldset>
 
           <fieldset className='fieldset'>
-            <label htmlFor='billing-address'>Billing Address</label>
+            <label htmlFor='delivery-address'>Delivery Address</label>
             <div className='group'>
               <input
                 type='text'
-                id='billing-address'
+                id='delivery-address'
                 {...register('streetAddress')}
                 placeholder='Street Address'
               />
@@ -72,10 +67,10 @@ const CustomerInfoForm = () => {
           </fieldset>
 
           <fieldset className='fieldset'>
-            <label htmlFor='billing-postcode'>Postcode</label>
+            <label htmlFor='delivery-postcode'>Postcode</label>
             <input
               type='text'
-              id='billing-postcode'
+              id='delivery-postcode'
               {...register('postcode')}
             />
             <div className='group'></div>

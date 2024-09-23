@@ -13,6 +13,7 @@ interface IFormInput {
   firstName: string;
   lastName: string;
   city: string;
+  country: string;
   streetAddress: string;
   apartmentNumber: string;
   postcode: number;
@@ -79,6 +80,11 @@ const CustomerInfoForm = () => {
           <fieldset className='fieldset'>
             <label htmlFor='billing-city'>City</label>
             <input type='text' id='billing-city' {...register('city')} />
+          </fieldset>
+
+          <fieldset className='fieldset'>
+            <label htmlFor='billing-country'>Country</label>
+            <input type='text' id='billing-country' {...register('country')} />
           </fieldset>
 
           <fieldset className='fieldset'>

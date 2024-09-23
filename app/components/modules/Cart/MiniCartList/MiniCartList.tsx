@@ -1,11 +1,8 @@
-import { removeItem } from '~/redux/cartSlice';
-import { useAppDispatch } from '~/redux/store';
 import { CartItem } from '~/types/cart';
 import numberToFixedString from '~/utils/numberToFixedString';
-import { ModalActionEnum, ModalStateType } from '~/types/types';
-import { setModal } from '~/redux/uiStateSlice';
 import SVGIcon from '~/components/common/atom/SVGIcon/SVGIcon';
 import { Indicator } from '~/components/common/atom/Indicator/Indicator';
+import useCartActions from '~/hooks/useCartActions';
 
 type ItemListProps = {
   items: CartItem[];
@@ -13,30 +10,13 @@ type ItemListProps = {
 };
 
 const MiniCartList = ({ items, total }: ItemListProps) => {
-  const dispatch = useAppDispatch();
+  const { handleRemove, handleEmptyCart } = useCartActions();
   const estimatedTotal = numberToFixedString(total);
-
-  const handleRemove = (itemToRemove: CartItem) => {
-    dispatch(removeItem({ id: itemToRemove.foodId }));
-  };
 
   const sumItems = items.reduce(
     (accumulator, currentValue) => accumulator + currentValue.count,
     0
   );
-
-  const handleEmptyCart = () => {
-    const modal: ModalStateType = {
-      title: 'Are you sure you want to remove all items from your cart?',
-      details: 'This action will remove everything from your shopping cart',
-      primaryBtnText: 'Empty cart',
-      secondaryBtnText: 'Cancel',
-      open: true,
-      actionType: ModalActionEnum.EmptyCart,
-    };
-
-    dispatch(setModal(modal));
-  };
 
   return (
     <div>
@@ -59,7 +39,7 @@ const MiniCartList = ({ items, total }: ItemListProps) => {
           </div>
 
           <button
-            onClick={() => handleRemove(object)}
+            onClick={() => handleRemove(object.foodId)}
             className='hover:bg-gray-200 rounded-full'
           >
             <SVGIcon height='20' width='20'>

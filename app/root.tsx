@@ -9,10 +9,10 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import Header from './components/common/organisms/Header/Header';
 import HorizontalNavbar from './components/common/organisms/HorizontalNavbar/HorizontalNavbar';
-import './tailwind.css';
 import Modal from './components/common/molecule/Modal/Modal';
 import { json, LoaderFunction } from '@remix-run/node';
 import { getUser } from './auth/auth.server';
+import './tailwind.css';
 
 export const loader: LoaderFunction = async ({ request }) => {
   const user = await getUser(request);

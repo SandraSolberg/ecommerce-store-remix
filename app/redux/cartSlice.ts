@@ -9,8 +9,6 @@ const initialState: CartType = {
   isOpen: false,
 };
 
-// todo: lage ts fil og legge inn funksjoner der.
-
 export const cartSlice = createSlice({
   name: 'cart',
   initialState,
@@ -65,10 +63,13 @@ export const cartSlice = createSlice({
     },
     removeByOne: (
       state,
-      action: PayloadAction<{ foodItem: IFoodItem; currentNumber: number }>
+      action: PayloadAction<{
+        foodId: number;
+        originalPrice: number;
+        currentNumber: number;
+      }>
     ) => {
-      const { foodItem, currentNumber } = action.payload;
-      const { foodId, price } = foodItem;
+      const { foodId, originalPrice, currentNumber } = action.payload;
 
       const existingItem = state.addedItems.find(
         (item) => item.foodId === foodId
@@ -81,23 +82,27 @@ export const cartSlice = createSlice({
       if (existingItem) {
         if (currentNumber === 0) {
           state.addedItems = updatedItems;
-          state.total = state.total ? state.total - price : 0;
+          state.total = state.total ? state.total - originalPrice : 0;
           return;
         } else {
           existingItem.count -= 1;
-          existingItem.price -= price;
-          state.total -= price;
+          existingItem.price -= originalPrice;
+          state.total -= originalPrice;
           return;
         }
       }
     },
     changeNumberOfItems: (
       state,
-      action: PayloadAction<{ foodItem: IFoodItem; currentCount: number }>
+      action: PayloadAction<{
+        foodId: number;
+        originalPrice: number;
+        currentCount: number;
+      }>
     ) => {
-      const { foodItem, currentCount } = action.payload;
+      const { foodId, originalPrice, currentCount } = action.payload;
       const existingItem = state.addedItems.find(
-        (item) => item.foodId === foodItem.foodId
+        (item) => item.foodId === foodId
       );
 
       const updatedItems: CartItem[] = state.addedItems.filter(
@@ -113,7 +118,7 @@ export const cartSlice = createSlice({
           );
         } else {
           existingItem.count = currentCount;
-          existingItem.price = currentCount * foodItem.price;
+          existingItem.price = currentCount * originalPrice;
           state.total = state.addedItems.reduce(
             (accumulator, currentValue) => accumulator + currentValue.price,
             0

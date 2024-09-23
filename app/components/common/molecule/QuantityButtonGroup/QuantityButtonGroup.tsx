@@ -49,7 +49,7 @@ const QuantityButtonGroup = ({
         className='bg-gray-200 p-3 rounded-full hover:bg-gray-300'
         onClick={decrementCount}
       >
-        <SVGIcon height={small ? '16' : '20'} width={small ? '16' : '20'}>
+        <SVGIcon height={small ? '12' : '20'} width={small ? '12' : '20'}>
           <line x1='5' y1='12' x2='19' y2='12'></line>
         </SVGIcon>
       </button>
@@ -62,7 +62,7 @@ const QuantityButtonGroup = ({
         onChange={handleChange}
         onBlur={(event) => onInputChange(event.target.value)}
         className={`border border-gray-200 mx-1 rounded-full  text-center ${
-          small ? 'w-10 h-10' : 'w-11 h-11'
+          small ? 'w-9 h-9' : 'w-11 h-11'
         } no-arrows`}
       />
 
@@ -70,7 +70,7 @@ const QuantityButtonGroup = ({
         onClick={incrementCount}
         className='bg-gray-200 p-3 rounded-full hover:bg-gray-300'
       >
-        <SVGIcon height={small ? '16' : '20'} width={small ? '16' : '20'}>
+        <SVGIcon height={small ? '12' : '20'} width={small ? '12' : '20'}>
           <>
             <line x1='12' y1='5' x2='12' y2='19'></line>
             <line x1='5' y1='12' x2='19' y2='12'></line>

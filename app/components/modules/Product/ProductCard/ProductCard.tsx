@@ -2,7 +2,8 @@ import { Link } from '@remix-run/react';
 import BasicButton from '~/components/common/atom/BasicButton/BasicButton';
 import Rating from '~/components/common/atom/Rating/Rating';
 import QuantityButtonGroup from '~/components/common/molecule/QuantityButtonGroup/QuantityButtonGroup';
-import { addItem, changeNumberOfItems, removeByOne } from '~/redux/cartSlice';
+import useQuantity from '~/hooks/useQuantity';
+import { addItem } from '~/redux/cartSlice';
 import { useAppDispatch, useAppSelector } from '~/redux/store';
 import { IFoodItem } from '~/types/food';
 
@@ -13,6 +14,7 @@ type ProductCardProps = {
 const ProductCard = ({ item }: ProductCardProps) => {
   const dispatch = useAppDispatch();
   const cartItems = useAppSelector((state) => state.cart.addedItems);
+  const { onIncrement, onDecrement, onInputChange } = useQuantity();
 
   const handleAddProduct = () => {
     dispatch(addItem({ foodItem: item }));
@@ -21,16 +23,6 @@ const ProductCard = ({ item }: ProductCardProps) => {
   const existsInCart = cartItems.find(
     (cartItem) => cartItem.foodId === item.foodId
   );
-
-  const onIncrement = () => {
-    dispatch(addItem({ foodItem: item }));
-  };
-  const onDecrement = (value: string) => {
-    dispatch(removeByOne({ foodItem: item, currentNumber: +value }));
-  };
-  const onInputChange = (value: string) => {
-    dispatch(changeNumberOfItems({ foodItem: item, currentCount: +value }));
-  };
 
   return (
     <Link to={`/products/${item.foodId}`} className='hover:no-underline'>
@@ -45,7 +37,9 @@ const ProductCard = ({ item }: ProductCardProps) => {
             <div className='flex items-center mt-2'>
               <Rating />
             </div>
-            <p className='font-semibold text-blue-800 text-start'>{`${item.price} ${item.currency} `}</p>
+            <p className='font-semibold text-blue-800 text-start'>{`${item.price.toFixed(
+              2
+            )} ${item.currency} `}</p>
             <h4>{item.foodName}</h4>
             <p className='text-sm text-secondary'>
               {item.quantity
@@ -66,9 +60,9 @@ const ProductCard = ({ item }: ProductCardProps) => {
           >
             {existsInCart ? (
               <QuantityButtonGroup
-                onIncrement={onIncrement}
-                onDecrement={onDecrement}
-                onInputChange={onInputChange}
+                onIncrement={() => onIncrement(item)}
+                onDecrement={(value: string) => onDecrement(value, item)}
+                onInputChange={(value: string) => onInputChange(value, item)}
                 initValue={existsInCart.count.toString() ?? '0'}
               />
             ) : (

@@ -54,3 +54,8 @@ export type FormActionType = {
 };
 
 export type Severity = 'success' | 'error' | 'info' | 'warning';
+
+export type Status = {
+  code: number;
+  message: string;
+};

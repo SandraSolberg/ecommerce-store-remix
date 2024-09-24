@@ -13,7 +13,7 @@ const CustomAlert = ({ severity, message, className }: CustomAlertProps) => {
       case 'error':
         return `bg-red-100 border border-red-300 text-red-800`;
       case 'success':
-        return `bg-green-100 border border-green-300 text-emerald-800`;
+        return `bg-green-100 border border-green-300 text-emerald-700`;
       case 'warning':
         return `bg-warning-100 border border-warning-300 text-warning-600`;
       default:
@@ -26,7 +26,7 @@ const CustomAlert = ({ severity, message, className }: CustomAlertProps) => {
       case 'error':
         return `var(--color-red-800)`;
       case 'success':
-        return `var(--color-emerald-800)`;
+        return `var(--color-emerald-700)`;
       case 'warning':
         return `var(--color-warning-600)`;
       default:
@@ -77,7 +77,7 @@ const CustomAlert = ({ severity, message, className }: CustomAlertProps) => {
     <div
       className={`${bgColor} rounded w-full flex flex-row gap-2 items-center p-4 ${className}`}
     >
-      <SVGIcon height='20' width='20' stroke={strokeColor}>
+      <SVGIcon height='24' width='24' stroke={strokeColor}>
         {getIconPath()}
       </SVGIcon>
       {message}

@@ -1,33 +1,21 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import BasicButton from '../../atom/BasicButton/BasicButton';
+import { ICheckoutForm } from '~/types/checkout';
 import './customerInformationForm.css';
-
-enum CountryCodeEnum {
-  NO = 'NO (+47)',
-  SE = 'SE (+46)',
-  DK = 'DK (+45)',
-  GB = 'GB (+44)',
-}
-
-interface IFormInput {
-  firstName: string;
-  lastName: string;
-  city: string;
-  country: string;
-  streetAddress: string;
-  apartmentNumber: string;
-  postcode: number;
-  phoneNumber: number;
-  countryCode: CountryCodeEnum;
-}
+import useSendEmail from '~/hooks/useSendEmail';
+import CustomAlert from '../../atom/CustomAlert/CustomAlert';
 
 const CustomerInfoForm = () => {
-  const { register, handleSubmit } = useForm<IFormInput>();
-  const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
+  const { register, handleSubmit } = useForm<ICheckoutForm>();
+  const { handleSendEmail, isSubmitting, stateMessage } = useSendEmail();
+
+  const onSubmit: SubmitHandler<ICheckoutForm> = (data) =>
+    handleSendEmail(data);
 
   return (
     <div>
       <h2 className='mb-4'>Details</h2>
+
       <form className='space-y-6' onSubmit={handleSubmit(onSubmit)}>
         <h3>Shipping Information</h3>
         <div>
@@ -65,6 +53,11 @@ const CustomerInfoForm = () => {
                 placeholder='Apt #'
               ></input>
             </div>
+          </fieldset>
+
+          <fieldset className='fieldset'>
+            <label htmlFor='email'>Email</label>
+            <input type='email' id='email' {...register('email')} />
           </fieldset>
 
           <fieldset className='fieldset'>
@@ -108,7 +101,18 @@ const CustomerInfoForm = () => {
           </fieldset>
         </div>
 
-        <BasicButton btnTitle='Submit order' type='submit' />
+        {stateMessage?.code === 200 ? (
+          <CustomAlert severity={'success'} message={stateMessage.message} />
+        ) : stateMessage?.code === 500 ? (
+          <CustomAlert severity={'error'} message={stateMessage.message} />
+        ) : null}
+
+        <BasicButton
+          btnTitle='Submit order'
+          type='submit'
+          isLoading={isSubmitting}
+          disabled={isSubmitting || !!stateMessage}
+        />
       </form>
     </div>
   );

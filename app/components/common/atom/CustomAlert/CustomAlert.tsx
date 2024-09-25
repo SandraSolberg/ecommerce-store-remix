@@ -77,11 +77,10 @@ const CustomAlert = ({ severity, message, className }: CustomAlertProps) => {
     <div
       className={`${bgColor} rounded w-full flex flex-row gap-2 items-center p-4 ${className}`}
     >
-      <div className='flex-1 basis-1/6'>
-        <SVGIcon height='24' width='24' stroke={strokeColor}>
-          {getIconPath()}
-        </SVGIcon>
-      </div>
+      <SVGIcon height='24' width='24' stroke={strokeColor}>
+        {getIconPath()}
+      </SVGIcon>
+
       {message}
     </div>
   );

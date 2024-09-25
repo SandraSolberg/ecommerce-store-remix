@@ -16,10 +16,6 @@ const SignInForm = () => {
   const [formData, setFormData] = useState(initForm);
   const [formError, setFormError] = useState('');
 
-  useEffect(() => {
-    if (error) setFormError(error);
-  }, [error]);
-
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement>,
     field: string
@@ -34,6 +30,10 @@ const SignInForm = () => {
   const handleReset = () => {
     setFormError('');
   };
+
+  useEffect(() => {
+    if (error) setFormError(error);
+  }, [error]);
 
   return (
     <div className='flex flex-1 flex-col justify-center items-center gap-y-6 rounded bg-blue-100 shadow-xl mx-4 p-6 w-auto'>
@@ -50,7 +50,10 @@ const SignInForm = () => {
           </p>
           <LinkButton
             title={action === 'login' ? 'Sign up' : 'Login'}
-            onClick={handleActionClick}
+            onClick={() => {
+              handleReset();
+              handleActionClick();
+            }}
             className='text-lg underline underline-offset-2
            hover:decoration-2 '
           />

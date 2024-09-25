@@ -4,9 +4,14 @@ import { ICheckoutForm } from '~/types/checkout';
 import useSendEmail from '~/hooks/useSendEmail';
 import CustomAlert from '../../atom/CustomAlert/CustomAlert';
 import './customerInformationForm.css';
+import CustomInput from '../../atom/CustomInput/CustomInput';
 
 const CustomerInfoForm = () => {
-  const { register, handleSubmit } = useForm<ICheckoutForm>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ICheckoutForm>();
   const { handleSendEmail, isSubmitting, stateMessage } = useSendEmail();
 
   const onSubmit: SubmitHandler<ICheckoutForm> = (data) =>
@@ -14,26 +19,27 @@ const CustomerInfoForm = () => {
 
   return (
     <div>
-      <h2 className='mb-4'>Details</h2>
-
+      <h2 className='mb-4 text-center'>Details</h2>
       <form className='space-y-6' onSubmit={handleSubmit(onSubmit)}>
-        <h3>Shipping Information</h3>
+        <h3 className='text-center'>Shipping Information</h3>
         <div>
           <fieldset className='fieldset'>
             <label htmlFor='firstName'>Name</label>
             <div className='space-y-2 md:flex md:space-x-2 md:space-y-0'>
-              <input
+              <CustomInput
+                formId='firstName'
+                error={errors?.firstName?.message}
                 type='text'
-                id='firstName'
                 placeholder='First Name'
-                {...register('firstName')}
+                {...register('firstName', { required: 'Name is required' })}
               />
 
-              <input
+              <CustomInput
+                formId='firstName'
+                error={errors?.lastName?.message}
                 type='text'
-                id='lastName'
-                placeholder='Last Name'
-                {...register('lastName')}
+                placeholder='First Name'
+                {...register('lastName', { required: 'Name is required' })}
               />
             </div>
           </fieldset>
@@ -41,12 +47,20 @@ const CustomerInfoForm = () => {
           <fieldset className='fieldset'>
             <label htmlFor='delivery-address'>Delivery Address</label>
             <div className='space-y-2 md:flex md:space-x-2 md:space-y-0'>
-              <input
-                type='text'
-                id='delivery-address'
-                {...register('streetAddress')}
-                placeholder='Street Address'
-              />
+              <div>
+                <input
+                  type='text'
+                  id='delivery-address'
+                  {...register('streetAddress', { required: true })}
+                  placeholder='Street Address'
+                />
+                {errors.email && (
+                  <span className='max-w-56 text-xs font-semibold tracking-wide text-red-500 w-full min-h-4'>
+                    {errors.email.message ?? ''}
+                  </span>
+                )}
+              </div>
+
               <input
                 type='text'
                 {...register('apartmentNumber')}
@@ -57,7 +71,11 @@ const CustomerInfoForm = () => {
 
           <fieldset className='fieldset'>
             <label htmlFor='email'>Email</label>
-            <input type='email' id='email' {...register('email')} />
+            <input
+              type='email'
+              id='email'
+              {...register('email', { required: true })}
+            />
           </fieldset>
 
           <fieldset className='fieldset'>
@@ -72,7 +90,11 @@ const CustomerInfoForm = () => {
 
           <fieldset className='fieldset'>
             <label htmlFor='billing-city'>City</label>
-            <input type='text' id='billing-city' {...register('city')} />
+            <input
+              type='text'
+              id='billing-city'
+              {...(register('city'), { required: true })}
+            />
           </fieldset>
 
           <fieldset className='fieldset'>
@@ -81,7 +103,13 @@ const CustomerInfoForm = () => {
           </fieldset>
 
           <fieldset className='fieldset'>
-            <label htmlFor='phoneNumber-country-code'>Phone</label>
+            <label
+              className='flex items-center gap-2'
+              htmlFor='phoneNumber-country-code'
+            >
+              Phone
+              <span className='text-secondary font-normal'>Optional</span>
+            </label>
             <div className='space-y-2 md:flex md:space-x-2 md:space-y-0'>
               <select
                 id='phoneNumber-country-code'

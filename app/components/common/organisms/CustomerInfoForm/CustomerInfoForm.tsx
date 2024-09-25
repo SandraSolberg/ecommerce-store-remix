@@ -4,18 +4,20 @@ import { ICheckoutForm } from '~/types/checkout';
 import useSendEmail from '~/hooks/useSendEmail';
 import CustomAlert from '../../atom/CustomAlert/CustomAlert';
 import './customerInformationForm.css';
-import CustomInput from '../../atom/CustomInput/CustomInput';
 
 const CustomerInfoForm = () => {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm<ICheckoutForm>();
   const { handleSendEmail, isSubmitting, stateMessage } = useSendEmail();
 
   const onSubmit: SubmitHandler<ICheckoutForm> = (data) =>
     handleSendEmail(data);
+
+  console.log('firstname', watch('firstName'));
 
   return (
     <div>
@@ -26,21 +28,34 @@ const CustomerInfoForm = () => {
           <fieldset className='fieldset'>
             <label htmlFor='firstName'>Name</label>
             <div className='space-y-2 md:flex md:space-x-2 md:space-y-0'>
-              <CustomInput
-                formId='firstName'
-                error={errors?.firstName?.message}
-                type='text'
-                placeholder='First Name'
-                {...register('firstName', { required: 'Name is required' })}
-              />
+              <div>
+                <input
+                  className={`${
+                    errors?.firstName ? 'border-2 border-red-500' : ''
+                  }`}
+                  type='text'
+                  id='firstName'
+                  placeholder='First Name'
+                  {...register('firstName', { required: 'Name is required' })}
+                />
+                <p className='max-w-56 text-xs font-semibold tracking-wide text-red-500 w-full min-h-4'>
+                  {errors?.firstName?.message ?? ''}
+                </p>
+              </div>
 
-              <CustomInput
-                formId='firstName'
-                error={errors?.lastName?.message}
-                type='text'
-                placeholder='First Name'
-                {...register('lastName', { required: 'Name is required' })}
-              />
+              <div>
+                <input
+                  type='text'
+                  id='lastName'
+                  placeholder='Last Name'
+                  {...register('lastName', { required: true })}
+                />
+                {errors.lastName && (
+                  <span className='max-w-56 text-xs font-semibold tracking-wide text-red-500 w-full'>
+                    {errors.lastName.message ?? ''}
+                  </span>
+                )}
+              </div>
             </div>
           </fieldset>
 

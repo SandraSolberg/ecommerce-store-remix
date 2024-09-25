@@ -1,5 +1,4 @@
 import { ChangeEvent, useEffect, useState } from 'react';
-import CustomInput from '../CustomInput/CustomInput';
 
 interface FormFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
   formId: string;
@@ -26,18 +25,20 @@ const FormField = ({
   return (
     <div className='flex flex-col'>
       {label && <label htmlFor={formId}>{label}</label>}
-      <CustomInput
-        formId='formId'
-        error={errorText}
+      <input
         onChange={(e) => {
           onChange(e);
           setErrorText('');
         }}
+        id={formId}
         name={formId}
-        className='min-w-56 mb-2'
+        className={`min-w-56 mb-2  ${error ? 'border-2 border-red-500' : ''}`}
         value={value}
         {...rest}
       />
+      <p className='max-w-56 text-xs font-semibold tracking-wide text-red-500 w-full min-h-'>
+        {errorText ?? ''}
+      </p>
     </div>
   );
 };

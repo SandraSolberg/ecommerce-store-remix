@@ -2,8 +2,4 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-  .group {
-    display: flex;
-    gap: 0.5rem;
-  }
 }

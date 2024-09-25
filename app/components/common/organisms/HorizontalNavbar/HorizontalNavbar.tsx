@@ -28,7 +28,7 @@ const HorizontalNavbar = () => {
   return (
     <>
       <nav className='flex items-center justify-between bg-white border-t border-border-divider px-8 py-4 relative'>
-        <div>
+        <div className='flex items-center gap-2'>
           <button
             ref={buttonRef}
             onClick={() => setOpen(!open)}
@@ -50,6 +50,7 @@ const HorizontalNavbar = () => {
               {open ? <path d='M18 15l-6-6-6 6' /> : <path d='M6 9l6 6 6-6' />}
             </SVGIcon>
           </button>
+          <Link to='/recipes'>Recipes</Link>
         </div>
 
         <div>

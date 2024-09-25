@@ -16,17 +16,15 @@ const Checkout = () => {
   return (
     <PageWrapper title='Checkout'>
       <div className='md:grid md:grid-cols-12 md:gap-4'>
-        <section className='bg-white p-10 md:col-start-1 md:col-end-8'>
-          <h2 className='mb-4'>Delivery</h2>
+        <section className=' flex flex-col items-center gap-4 bg-white p-10 md:col-start-1 md:col-end-8'>
+          <div className='w-full max-w-[28.5rem]'>
+            <CustomerInfoForm />
+          </div>
           <CustomAlert
             message='This is not a real order. This site is made for educational purposes only '
             severity='warning'
-            className='max-w-fit'
+            className='max-w-[28.5rem] '
           />
-        </section>
-
-        <section className='flex justify-center mt-4 bg-white p-10 md:col-start-1 md:col-end-8'>
-          <CustomerInfoForm />
         </section>
 
         <section className='md:col-start-8 md:col-end-13 md:row-start-1'>

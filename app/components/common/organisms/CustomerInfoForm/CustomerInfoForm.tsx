@@ -1,9 +1,9 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import BasicButton from '../../atom/BasicButton/BasicButton';
 import { ICheckoutForm } from '~/types/checkout';
-import './customerInformationForm.css';
 import useSendEmail from '~/hooks/useSendEmail';
 import CustomAlert from '../../atom/CustomAlert/CustomAlert';
+import './customerInformationForm.css';
 
 const CustomerInfoForm = () => {
   const { register, handleSubmit } = useForm<ICheckoutForm>();
@@ -21,7 +21,7 @@ const CustomerInfoForm = () => {
         <div>
           <fieldset className='fieldset'>
             <label htmlFor='firstName'>Name</label>
-            <div className='group'>
+            <div className='space-y-2 md:flex md:space-x-2 md:space-y-0'>
               <input
                 type='text'
                 id='firstName'
@@ -40,7 +40,7 @@ const CustomerInfoForm = () => {
 
           <fieldset className='fieldset'>
             <label htmlFor='delivery-address'>Delivery Address</label>
-            <div className='group'>
+            <div className='space-y-2 md:flex md:space-x-2 md:space-y-0'>
               <input
                 type='text'
                 id='delivery-address'
@@ -67,7 +67,7 @@ const CustomerInfoForm = () => {
               id='delivery-postcode'
               {...register('postcode')}
             />
-            <div className='group'></div>
+            <div className='space-y-2 md:flex md:space-x-2 md:space-y-0'></div>
           </fieldset>
 
           <fieldset className='fieldset'>
@@ -82,7 +82,7 @@ const CustomerInfoForm = () => {
 
           <fieldset className='fieldset'>
             <label htmlFor='phoneNumber-country-code'>Phone</label>
-            <div className='group'>
+            <div className='space-y-2 md:flex md:space-x-2 md:space-y-0'>
               <select
                 id='phoneNumber-country-code'
                 {...register('countryCode')}

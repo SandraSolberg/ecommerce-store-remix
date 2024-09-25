@@ -29,7 +29,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
       <article className='w-48 min-h-[24.8rem]  bg-white m-2 p-2 rounded-lg flex flex-col justify-between shadow hover:shadow-lg'>
         <div>
           <img
-            className='w-full h-40 object-cover rounded-t-lg '
+            className='w-full h-40 object-contain rounded-t-lg '
             alt={item.foodName ?? 'image of item'}
             src={item.image ?? undefined}
           />

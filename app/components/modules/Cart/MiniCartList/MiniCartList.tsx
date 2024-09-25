@@ -26,7 +26,11 @@ const MiniCartList = ({ items, total }: ItemListProps) => {
           className='border-b m-h-28 py-2 flex flex-row justify-between items-start'
         >
           <div className='flex content-center gap-4'>
-            <img className='w-14 h-20' alt='' src={object.image ?? undefined} />
+            <img
+              className='w-14 h-20 object-contain'
+              alt=''
+              src={object.image ?? undefined}
+            />
             <div>
               <p className='font-semibold'>{object.foodName}</p>
               <p>{`${object.quantity?.amount}${object.quantity?.unit}`}</p>

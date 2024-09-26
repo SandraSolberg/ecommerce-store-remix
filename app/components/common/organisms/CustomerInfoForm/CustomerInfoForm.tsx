@@ -18,6 +18,15 @@ const CustomerInfoForm = () => {
   const onSubmit: SubmitHandler<ICheckoutForm> = (data) =>
     handleSendEmail(data);
 
+  const canSubmit =
+    !errors.city &&
+    !errors.country &&
+    !errors.email &&
+    !errors.firstName &&
+    !errors.lastName &&
+    !errors.postcode &&
+    !errors.streetAddress;
+
   return (
     <div>
       <h2 className='mb-4 text-center'>Details</h2>
@@ -25,14 +34,14 @@ const CustomerInfoForm = () => {
         <h3 className='text-center'>Shipping Information</h3>
         <div>
           <fieldset className='fieldset'>
-            <div className='space-y-2 md:flex md:items-end md:space-x-2 md:space-y-0'>
+            <label htmlFor='firstName'>Name</label>
+            <div className='space-y-2 md:flex md:space-x-2 md:space-y-0'>
               <Controller
                 control={control}
                 name='firstName'
                 rules={{ required: errorMessage.required }}
                 render={({ field: { onChange, value } }) => (
                   <TextField
-                    label='Name'
                     formId='firstName'
                     onChange={onChange}
                     value={value}
@@ -107,7 +116,8 @@ const CustomerInfoForm = () => {
           </fieldset>
 
           <fieldset className='fieldset'>
-            <div className='space-y-2 md:flex md:items-end md:space-x-2 md:space-y-0'>
+            <label htmlFor='postcode'>Post code</label>
+            <div className='space-y-2 md:flex md:space-x-2 md:space-y-0'>
               <Controller
                 control={control}
                 name='postcode'
@@ -115,7 +125,6 @@ const CustomerInfoForm = () => {
                 render={({ field: { onChange, value } }) => (
                   <TextField
                     formId='postcode'
-                    label='Post code'
                     onChange={onChange}
                     value={value ?? ''}
                     error={errors.postcode?.message}
@@ -198,7 +207,7 @@ const CustomerInfoForm = () => {
           btnTitle='Submit order'
           type='submit'
           isLoading={isSubmitting}
-          disabled={isSubmitting || !!stateMessage}
+          disabled={isSubmitting || !!stateMessage || !canSubmit}
         />
       </form>
     </div>

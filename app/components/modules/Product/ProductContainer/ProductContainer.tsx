@@ -1,9 +1,15 @@
 import ProductCard from '~/components/modules/Product/ProductCard/ProductCard';
-import { useFoods } from '~/hooks/useFoods';
 import SkeletonContainer from './SkeletonContainer';
+import { useGetData } from '~/hooks/useGetData';
+import { FoodsType } from '~/types/food';
+import endpoint from '~/data/constants/endpoints';
 
 const ProductContainer = ({ foodGroupId }: { foodGroupId?: string }) => {
-  const { foods, isLoading, error } = useFoods();
+  const {
+    data: foods,
+    isLoading,
+    error,
+  } = useGetData<FoodsType | null>(endpoint.FOODS);
 
   const filteredByGroup = foodGroupId
     ? foods?.foods.filter(

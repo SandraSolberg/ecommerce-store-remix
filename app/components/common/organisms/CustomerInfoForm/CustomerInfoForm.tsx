@@ -47,40 +47,34 @@ const CustomerInfoForm = () => {
                 <input
                   type='text'
                   id='lastName'
+                  className={`${
+                    errors?.firstName ? 'border-2 border-red-500' : ''
+                  }`}
                   placeholder='Last Name'
                   {...register('lastName', { required: true })}
                 />
-                {errors.lastName && (
-                  <span className='max-w-56 text-xs font-semibold tracking-wide text-red-500 w-full'>
-                    {errors.lastName.message ?? ''}
-                  </span>
-                )}
+
+                <p className='max-w-56 text-xs font-semibold tracking-wide text-red-500 w-full min-h-4'>
+                  {errors?.firstName?.message ?? ''}
+                </p>
               </div>
             </div>
           </fieldset>
 
           <fieldset className='fieldset'>
             <label htmlFor='delivery-address'>Delivery Address</label>
-            <div className='space-y-2 md:flex md:space-x-2 md:space-y-0'>
-              <div>
-                <input
-                  type='text'
-                  id='delivery-address'
-                  {...register('streetAddress', { required: true })}
-                  placeholder='Street Address'
-                />
-                {errors.email && (
-                  <span className='max-w-56 text-xs font-semibold tracking-wide text-red-500 w-full min-h-4'>
-                    {errors.email.message ?? ''}
-                  </span>
-                )}
-              </div>
-
+            <div>
               <input
                 type='text'
-                {...register('apartmentNumber')}
-                placeholder='Apt #'
-              ></input>
+                id='delivery-address'
+                {...register('streetAddress', { required: true })}
+                placeholder='Street Address'
+              />
+              {errors.email && (
+                <span className='max-w-56 text-xs font-semibold tracking-wide text-red-500 w-full min-h-4'>
+                  {errors.email.message ?? ''}
+                </span>
+              )}
             </div>
           </fieldset>
 

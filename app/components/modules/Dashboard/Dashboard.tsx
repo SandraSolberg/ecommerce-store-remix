@@ -1,13 +1,16 @@
 import { Link } from '@remix-run/react';
 import PageWrapper from '~/components/common/atom/PageWrapper/PageWrapper';
 import HorizontalScrollContainer from '~/components/common/molecule/HorizontalScrollContainer/HorizontalScrollContainer';
-import { useFoods } from '~/hooks/useFoods';
-import '~/styles/layout.css';
 import ProductCard from '../Product/ProductCard/ProductCard';
 import sortObjectByDate from '~/utils/sortObjectByDate';
+import endpoint from '~/data/constants/endpoints';
+import { useGetData } from '~/hooks/useGetData';
+import { FoodsType } from '~/types/food';
+import '~/styles/layout.css';
 
 const Dashboard = () => {
-  const { foods } = useFoods();
+  const { data: foods } = useGetData<FoodsType | null>(endpoint.FOODS);
+  // const { foods } = useFoods();
 
   const newestFoodItems =
     foods && foods.foods.length >= 10

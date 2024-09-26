@@ -32,7 +32,9 @@ const FormField = ({
         }}
         id={formId}
         name={formId}
-        className={`min-w-56 mb-2  ${error ? 'border-2 border-red-500' : ''}`}
+        className={`min-w-56 mb-2  ${
+          errorText ? 'border-2 border-red-500' : ''
+        }`}
         value={value}
         {...rest}
       />

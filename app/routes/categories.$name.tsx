@@ -1,11 +1,13 @@
 import { useParams } from '@remix-run/react';
 import PageWrapper from '~/components/common/atom/PageWrapper/PageWrapper';
 import ProductContainer from '~/components/modules/Product/ProductContainer/ProductContainer';
-import { useFoodsCategories } from '~/hooks/useFoodCategories';
+import endpoint from '~/data/constants/endpoints';
+import { useGetData } from '~/hooks/useGetData';
+import { FoodGroupsType } from '~/types/food';
 
 const CategoryPage = () => {
   const { name } = useParams();
-  const { groups } = useFoodsCategories();
+  const { data: groups } = useGetData<FoodGroupsType>(endpoint.FOODGROUPS);
 
   const currentCategory = groups?.foodGroups?.find(
     (group) => group.slug === name

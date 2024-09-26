@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { defaultApiCallError } from '~/utils/defaultValues';
 
-export const useGetData = (url: string) => {
-  const [data, setData] = useState(null);
+export const useGetData = <T>(url: string) => {
+  const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 

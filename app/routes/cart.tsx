@@ -4,15 +4,18 @@ import NoContent from '~/components/common/atom/NoContent/NoContent';
 import SVGIcon from '~/components/common/atom/SVGIcon/SVGIcon';
 import OrderSummary from '~/components/common/molecule/OrderSummary/OrderSummary';
 import QuantityButtonGroup from '~/components/common/molecule/QuantityButtonGroup/QuantityButtonGroup';
+import endpoint from '~/data/constants/endpoints';
 import useCartActions from '~/hooks/useCartActions';
-import { useFoods } from '~/hooks/useFoods';
+import { useGetData } from '~/hooks/useGetData';
 import useQuantity from '~/hooks/useQuantity';
 import { useAppSelector } from '~/redux/store';
 import { CartItem } from '~/types/cart';
+import { FoodsType } from '~/types/food';
 
 const Cart = () => {
   const cartItems = useAppSelector((state) => state.cart.addedItems);
-  const { foods } = useFoods();
+  const { data: foods } = useGetData<FoodsType | null>(endpoint.FOODS);
+  // const { foods } = useFoods();
   const { onDecrement, onIncrement, onInputChange } = useQuantity();
   const { handleRemove, productSum } = useCartActions();
 

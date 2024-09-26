@@ -1,11 +1,12 @@
-import { useFoodsCategories } from '~/hooks/useFoodCategories';
-import { GroupType } from '~/types/food';
+import { FoodGroupsType, GroupType } from '~/types/food';
 import { Link } from '@remix-run/react';
 import urlConstants from '~/data/constants/urls';
+import { useGetData } from '~/hooks/useGetData';
 import './contentMenu.css';
+import endpoint from '~/data/constants/endpoints';
 
 const ContentMenu = () => {
-  const { groups } = useFoodsCategories();
+  const { data: groups } = useGetData<FoodGroupsType>(endpoint.FOODGROUPS);
 
   const parentCategories: GroupType[] | null = groups?.foodGroups
     ? groups?.foodGroups.filter((obj) => !obj.parentId)

@@ -1,12 +1,13 @@
 import { addItem, changeNumberOfItems, removeByOne } from '~/redux/cartSlice';
 import { useAppDispatch } from '~/redux/store';
-import { IFoodItem } from '~/types/food';
-import { useFoods } from './useFoods';
+import { FoodsType, IFoodItem } from '~/types/food';
 import { CartItem } from '~/types/cart';
+import { useGetData } from './useGetData';
+import endpoint from '~/data/constants/endpoints';
 
 const useQuantity = () => {
   const dispatch = useAppDispatch();
-  const { foods } = useFoods();
+  const { data: foods } = useGetData<FoodsType | null>(endpoint.FOODS);
 
   const getExistingFoodItem = (item: CartItem) =>
     foods?.foods.find((food) => food.foodId === item.foodId);

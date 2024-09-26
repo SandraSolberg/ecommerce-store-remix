@@ -3,15 +3,17 @@ import BasicButton from '~/components/common/atom/BasicButton/BasicButton';
 import CardPageWrapper from '~/components/common/atom/CardPageWrapper/CardPageWrapper';
 import InfoTable from '~/components/common/atom/InfoTable/InfoTable';
 import SVGIcon from '~/components/common/atom/SVGIcon/SVGIcon';
-import { useFoods } from '~/hooks/useFoods';
+import endpoint from '~/data/constants/endpoints';
+import { useGetData } from '~/hooks/useGetData';
 import { addItem } from '~/redux/cartSlice';
 import { useAppDispatch } from '~/redux/store';
+import { FoodsType } from '~/types/food';
 import { KeyValuePair } from '~/types/types';
 import arrayToJoinedString from '~/utils/arrayToJoinedString';
 import numberToFixedString from '~/utils/numberToFixedString';
 
 export const DetailsPage = ({ productId }: { productId: number | null }) => {
-  const { foods } = useFoods();
+  const { data: foods } = useGetData<FoodsType | null>(endpoint.FOODS);
   const dispatch = useAppDispatch();
 
   const product = foods?.foods.find((item) => item.foodId === productId);

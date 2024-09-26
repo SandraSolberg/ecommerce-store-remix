@@ -39,16 +39,17 @@ export type User = {
   profile: Profile;
 };
 
-export interface Errors {
+export interface UserErrors {
   email: string;
   password: string;
+  confirmPassword: string;
   firstName?: string;
   lastName?: string;
 }
 
 export type FormActionType = {
   error?: string;
-  errors?: Errors;
+  errors?: UserErrors;
   fields?: RegisterForm;
   form?: string;
 };
@@ -58,4 +59,13 @@ export type Severity = 'success' | 'error' | 'info' | 'warning';
 export type Status = {
   code: number;
   message: string;
+};
+
+export type CountriesType = {
+  code: string;
+  name: string;
+};
+
+export type CountriesResponseType = {
+  countries: CountriesType[];
 };

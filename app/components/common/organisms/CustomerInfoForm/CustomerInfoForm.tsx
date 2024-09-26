@@ -1,23 +1,22 @@
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import BasicButton from '../../atom/BasicButton/BasicButton';
 import { ICheckoutForm } from '~/types/checkout';
 import useSendEmail from '~/hooks/useSendEmail';
 import CustomAlert from '../../atom/CustomAlert/CustomAlert';
+import { errorMessage } from '~/utils/errorMessages';
+import TextField from '../../atom/TextField/TextField';
 import './customerInformationForm.css';
 
 const CustomerInfoForm = () => {
   const {
-    register,
     handleSubmit,
-    watch,
     formState: { errors },
+    control,
   } = useForm<ICheckoutForm>();
   const { handleSendEmail, isSubmitting, stateMessage } = useSendEmail();
 
   const onSubmit: SubmitHandler<ICheckoutForm> = (data) =>
     handleSendEmail(data);
-
-  console.log('firstname', watch('firstName'));
 
   return (
     <div>
@@ -26,92 +25,143 @@ const CustomerInfoForm = () => {
         <h3 className='text-center'>Shipping Information</h3>
         <div>
           <fieldset className='fieldset'>
-            <label htmlFor='firstName'>Name</label>
-            <div className='space-y-2 md:flex md:space-x-2 md:space-y-0'>
-              <div>
-                <input
-                  className={`${
-                    errors?.firstName ? 'border-2 border-red-500' : ''
-                  }`}
-                  type='text'
-                  id='firstName'
-                  placeholder='First Name'
-                  {...register('firstName', { required: 'Name is required' })}
-                />
-                <p className='max-w-56 text-xs font-semibold tracking-wide text-red-500 w-full min-h-4'>
-                  {errors?.firstName?.message ?? ''}
-                </p>
-              </div>
+            <div className='space-y-2 md:flex md:items-end md:space-x-2 md:space-y-0'>
+              <Controller
+                control={control}
+                name='firstName'
+                rules={{ required: errorMessage.required }}
+                render={({ field: { onChange, value } }) => (
+                  <TextField
+                    label='Name'
+                    formId='firstName'
+                    onChange={onChange}
+                    value={value}
+                    error={errors.firstName?.message}
+                    hasError={!!errors.firstName}
+                    placeholder='First name'
+                  />
+                )}
+              />
 
-              <div>
-                <input
-                  type='text'
-                  id='lastName'
-                  className={`${
-                    errors?.firstName ? 'border-2 border-red-500' : ''
-                  }`}
-                  placeholder='Last Name'
-                  {...register('lastName', { required: true })}
-                />
-
-                <p className='max-w-56 text-xs font-semibold tracking-wide text-red-500 w-full min-h-4'>
-                  {errors?.firstName?.message ?? ''}
-                </p>
-              </div>
+              <Controller
+                control={control}
+                name='lastName'
+                rules={{ required: errorMessage.required }}
+                render={({ field: { onChange, value } }) => (
+                  <TextField
+                    formId='lastName'
+                    onChange={onChange}
+                    value={value}
+                    error={errors.lastName?.message}
+                    hasError={!!errors.lastName}
+                    placeholder='Last name'
+                  />
+                )}
+              />
             </div>
           </fieldset>
 
           <fieldset className='fieldset'>
-            <label htmlFor='delivery-address'>Delivery Address</label>
-            <div>
-              <input
-                type='text'
-                id='delivery-address'
-                {...register('streetAddress', { required: true })}
-                placeholder='Street Address'
-              />
-              {errors.email && (
-                <span className='max-w-56 text-xs font-semibold tracking-wide text-red-500 w-full min-h-4'>
-                  {errors.email.message ?? ''}
-                </span>
+            <label htmlFor='streetAddress'>Delivery Address</label>
+            <Controller
+              control={control}
+              name='streetAddress'
+              rules={{
+                required: errorMessage.required,
+                minLength: { value: 2, message: errorMessage.deliveryAddress },
+              }}
+              render={({ field: { onChange, value } }) => (
+                <TextField
+                  formId='streetAddress'
+                  onChange={onChange}
+                  value={value}
+                  error={errors.streetAddress?.message}
+                  hasError={!!errors.streetAddress}
+                />
               )}
-            </div>
+            />
           </fieldset>
 
           <fieldset className='fieldset'>
             <label htmlFor='email'>Email</label>
-            <input
-              type='email'
-              id='email'
-              {...register('email', { required: true })}
+            <Controller
+              control={control}
+              name='email'
+              rules={{
+                required: errorMessage.required,
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,}$/i,
+                  message: errorMessage.invalidEmailPattern,
+                },
+              }}
+              render={({ field: { onChange, value } }) => (
+                <TextField
+                  formId='email'
+                  onChange={onChange}
+                  value={value}
+                  error={errors.email?.message}
+                  hasError={!!errors.email}
+                />
+              )}
             />
           </fieldset>
 
           <fieldset className='fieldset'>
-            <label htmlFor='delivery-postcode'>Postcode</label>
-            <input
-              type='text'
-              id='delivery-postcode'
-              {...register('postcode')}
+            <div className='space-y-2 md:flex md:items-end md:space-x-2 md:space-y-0'>
+              <Controller
+                control={control}
+                name='postcode'
+                rules={{ required: errorMessage.required }}
+                render={({ field: { onChange, value } }) => (
+                  <TextField
+                    formId='postcode'
+                    label='Post code'
+                    onChange={onChange}
+                    value={value ?? ''}
+                    error={errors.postcode?.message}
+                    hasError={!!errors.postcode}
+                    placeholder='Zip'
+                    type='number'
+                  />
+                )}
+              />
+              <Controller
+                control={control}
+                name='city'
+                rules={{ required: errorMessage.required }}
+                render={({ field: { onChange, value } }) => (
+                  <TextField
+                    formId='city'
+                    onChange={onChange}
+                    value={value ?? ''}
+                    error={errors.city?.message}
+                    hasError={!!errors.city}
+                    placeholder='City'
+                  />
+                )}
+              />
+            </div>
+          </fieldset>
+
+          <fieldset className='fieldset'>
+            <Controller
+              control={control}
+              name='country'
+              rules={{ required: errorMessage.required }}
+              render={({ field: { onChange, value } }) => (
+                <TextField
+                  label='Country'
+                  formId='country'
+                  onChange={onChange}
+                  value={value ?? ''}
+                  error={errors.country?.message}
+                  hasError={!!errors.country}
+                />
+              )}
             />
-            <div className='space-y-2 md:flex md:space-x-2 md:space-y-0'></div>
           </fieldset>
 
-          <fieldset className='fieldset'>
-            <label htmlFor='billing-city'>City</label>
-            <input
-              type='text'
-              id='billing-city'
-              {...(register('city'), { required: true })}
-            />
-          </fieldset>
-
-          <fieldset className='fieldset'>
-            <label htmlFor='billing-country'>Country</label>
-            <input type='text' id='billing-country' {...register('country')} />
-          </fieldset>
-
-          <fieldset className='fieldset'>
+          {/*           <fieldset className='fieldset'>
             <label
               className='flex items-center gap-2'
               htmlFor='phoneNumber-country-code'
@@ -130,12 +180,12 @@ const CustomerInfoForm = () => {
                 <option value='GB'>GB (+44)</option>
               </select>
               <input
-                type='text'
+                type='number'
                 id='phoneNumber'
                 {...register('phoneNumber')}
               />
             </div>
-          </fieldset>
+          </fieldset> */}
         </div>
 
         {stateMessage?.code === 200 ? (

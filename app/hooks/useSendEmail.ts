@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { send } from '@emailjs/browser';
 import { ICheckoutForm, OrderSummary } from '~/types/checkout';
-import { useAppSelector } from '~/redux/store';
+import { useAppDispatch, useAppSelector } from '~/redux/store';
 import { defaultApiCallError } from '~/utils/defaultValues';
 import { Status } from '~/types/types';
+import { setShowConfirmation } from '~/redux/uiStateSlice';
 
 const useSendEmail = () => {
+  const dispatch = useAppDispatch();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState<Status | null>(null);
   const cartItems = useAppSelector((state) => state.cart.addedItems);
@@ -31,17 +33,18 @@ const useSendEmail = () => {
         from_name: 'TacoShop',
         date: currentDate,
         to_fullname: `${data.firstName} ${data.lastName}`,
-        to_address: `${data.streetAddress} ${data.apartmentNumber}, ${data.postcode}, ${data.city}, ${data.country}`,
+        to_address: `${data.streetAddress}, ${data.postcode}, ${data.city}, ${data.country}`,
         to_email: data.email,
         order_summary: JSON.stringify(orderSummaryMessage),
       },
       { publicKey: process.env.EMAILJS_PUBLIC_KEY ?? '' }
     ).then(
       () => {
-        setStateMessage({ code: 200, message: 'Order sent!' });
+        setStateMessage({ code: 200, message: 'Order sendt' });
         setIsSubmitting(false);
         setTimeout(() => {
           setStateMessage(null);
+          dispatch(setShowConfirmation(true));
         }, 5000);
       },
       (error) => {

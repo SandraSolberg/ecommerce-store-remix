@@ -1,5 +1,7 @@
 export const errorMessage = {
-  invalidEmail: 'Please enter a valid email address',
+  invalidEmail: `The email address should contain an '@' symbol`,
+  invalidEmailPattern:
+    'Please enter a valid email. Example: example@email.com ',
   invalidName: 'Name should not contain special characters or numbers',
   passwordLowercase:
     'Please enter a password that has at least one lowercase letter',
@@ -16,4 +18,6 @@ export const errorMessage = {
   invalidForm: 'Invalid form inputs',
   generic: 'Unexpected error',
   required: 'This field is required.',
+  confirmPassword: 'Password do not match.',
+  deliveryAddress: 'Delivery address is too short',
 };

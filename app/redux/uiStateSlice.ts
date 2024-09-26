@@ -4,10 +4,12 @@ import { ModalStateType } from '~/types/types';
 
 type uiStateType = {
   modal: ModalStateType | null;
+  showConfirmation: boolean;
 };
 
 const initialState: uiStateType = {
   modal: null,
+  showConfirmation: false,
 };
 
 export const uiStateSlice = createSlice({
@@ -21,9 +23,14 @@ export const uiStateSlice = createSlice({
     onCloseModal: (state) => {
       state.modal = null;
     },
+
+    setShowConfirmation: (state, action: PayloadAction<boolean>) => {
+      state.showConfirmation = action.payload;
+    },
   },
 });
 
-export const { setModal, onCloseModal } = uiStateSlice.actions;
+export const { setModal, onCloseModal, setShowConfirmation } =
+  uiStateSlice.actions;
 
 export default uiStateSlice.reducer;

@@ -1,8 +1,14 @@
 import { errorMessage } from './errorMessages';
 
 export const validateEmail = (email: string): string | undefined => {
+  const hasCorrectPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+    email
+  );
   if (email.length === 0 || !email.includes('@')) {
     return errorMessage.invalidEmail;
+  }
+  if (!hasCorrectPattern) {
+    return errorMessage.invalidEmailPattern;
   }
 };
 
@@ -37,6 +43,15 @@ export const validatePassword = (password: string): string | undefined => {
 
   if (!hasNumber) {
     return errorMessage.passwordNoNumber;
+  }
+};
+
+export const validateConfirmPassword = (
+  password: string,
+  confirmPassword: string
+) => {
+  if (password !== confirmPassword) {
+    return errorMessage.confirmPassword;
   }
 };
 

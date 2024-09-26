@@ -214,12 +214,12 @@
         "unit": "kJ"
       },
       "nutrients": ["whole grain rye flour", "rye sourdough", "rye bran."],
-      "allergens": ["fish"],
+      "allergens": ["gluten"],
       "storage": "Store at 20 °C to 25 °C ",
       "origin": "Finland",
       "countryOfProduction": "Finland",
       "label": "WASA",
-      "supplier": "Barilla norge as",
+      "supplier": "WASA",
       "link": null,
       "createdAt": "2024-04-13T08:30:00Z"
     },

@@ -1,26 +1,43 @@
 import { useEffect, useState } from 'react';
 import { Form, useActionData } from '@remix-run/react';
 import BasicButton from '~/components/common/atom/BasicButton/BasicButton';
-import FormField from '~/components/common/atom/FormField/FormField';
 import LinkButton from '~/components/common/atom/LinkButton/LinkButton';
-import { Errors, FormActionType } from '~/types/types';
+import { FormActionType, UserErrors } from '~/types/types';
 import CustomAlert from '~/components/common/atom/CustomAlert/CustomAlert';
 import initForm from '~/utils/initialValues';
+import TextField from '~/components/common/atom/TextField/TextField';
+
+const initFormElementError = {
+  email: '',
+  password: '',
+  confirmPassword: '',
+  firstName: '',
+  lastName: '',
+};
 
 const SignInForm = () => {
   const actionData = useActionData<FormActionType>();
-  const errors: Errors | undefined = actionData?.errors;
+  const errors: UserErrors | undefined = actionData?.errors;
   const error: string | undefined = actionData?.error;
 
   const [action, setAction] = useState('login');
   const [formData, setFormData] = useState(initForm);
   const [formError, setFormError] = useState('');
+  const [formElementError, setFormElementError] =
+    useState<UserErrors>(initFormElementError);
 
-  const handleInputChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-    field: string
-  ) => {
-    setFormData((form) => ({ ...form, [field]: event.target.value }));
+  const {
+    email: errorEmail,
+    password: errorPassword,
+    confirmPassword: errorConfirmPassword,
+    lastName: errorLastName,
+    firstName: errorFirstName,
+  } = formElementError;
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setFormData((form) => ({ ...form, [name]: value }));
+    setFormElementError((form) => ({ ...form, [name]: '' }));
   };
 
   const handleActionClick = () => {
@@ -29,11 +46,27 @@ const SignInForm = () => {
 
   const handleReset = () => {
     setFormError('');
+    setFormElementError(initFormElementError);
   };
 
   useEffect(() => {
     if (error) setFormError(error);
   }, [error]);
+
+  useEffect(() => {
+    if (errors) setFormElementError(errors);
+  }, [errors]);
+
+  const canSubmit =
+    action === 'login'
+      ? !errorEmail && !errorPassword
+      : action === 'register'
+      ? !errorEmail &&
+        !errorPassword &&
+        !errorConfirmPassword &&
+        !errorFirstName &&
+        !errorLastName
+      : true;
 
   return (
     <div className='flex flex-1 flex-col justify-center items-center gap-y-6 rounded bg-blue-100 shadow-xl mx-4 p-6 w-auto'>
@@ -65,41 +98,58 @@ const SignInForm = () => {
       <Form method='post' className='w-full'>
         {action === 'register' && (
           <>
-            <FormField
+            <TextField
               formId='firstName'
+              name='firstName'
               label='First Name'
-              error={errors?.firstName}
+              error={formElementError?.firstName}
               value={formData.firstName}
-              onChange={(e) => handleInputChange(e, 'firstName')}
+              onChange={handleInputChange}
             />
-            <FormField
+            <TextField
               formId='lastName'
+              name='lastName'
               label='Last Name'
-              error={errors?.lastName}
+              error={formElementError?.lastName}
               value={formData.lastName}
-              onChange={(e) => handleInputChange(e, 'lastName')}
+              onChange={handleInputChange}
             />
           </>
         )}
 
-        <FormField
+        <TextField
           formId='email'
+          name='email'
           label='Email'
           value={formData.email}
-          error={errors?.email}
-          onChange={(e) => handleInputChange(e, 'email')}
+          error={formElementError?.email}
+          onChange={handleInputChange}
         />
-        <FormField
+        <TextField
           type='password'
+          name='password'
           formId='password'
           label='Password'
-          error={errors?.password}
+          error={formElementError?.password}
           value={formData.password}
-          onChange={(e) => handleInputChange(e, 'password')}
+          onChange={handleInputChange}
         />
+
+        {action === 'register' && (
+          <TextField
+            type='password'
+            formId='confirmPassword'
+            name='confirmPassword'
+            label='Confirm password'
+            error={formElementError?.confirmPassword}
+            value={formData.confirmPassword}
+            onChange={handleInputChange}
+          />
+        )}
 
         <div className='w-full text-center py-2'>
           <BasicButton
+            disabled={!canSubmit}
             type='submit'
             name='_action'
             value={action}

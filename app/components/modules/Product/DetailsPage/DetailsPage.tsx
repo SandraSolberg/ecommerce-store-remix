@@ -80,14 +80,28 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
             <div className='flex-1'>
               <div className='pb-8'>
                 <h1 className='pb-2'>{foodName}</h1>
-                <p className='flex flex-row text-secondary text-xl md:text-2xl'>
+                <p className='flex flex-row text-secondary text-lg md:text-xl'>
                   {quantity?.amount} {quantity?.unit}, {supplier}
                 </p>
               </div>
 
-              <span className='text-3xl md:text-4xl font-bold'>
+              {allergens && allergens?.length > 0 && (
+                <div className='flex gap-2 pb-4 text-lg md:text-xl'>
+                  <p className='text-fuchsia-900 font-semibold'>Allergens </p>
+                  <div className='flex flex-wrap gap-1 '>
+                    {allergens?.map((allergen, index) => (
+                      <p key={allergen}>
+                        {allergen}
+                        {index < allergens.length - 1 ? ',' : ''}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <p className='text-3xl md:text-4xl font-bold text-blue-900'>
                 {displayPrice}
-              </span>
+              </p>
               <BasicButton
                 className='mt-4 py-3 px-5'
                 btnTitle='Add to cart'

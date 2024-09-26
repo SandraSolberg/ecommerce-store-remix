@@ -10,6 +10,7 @@ import Welcome from '~/components/common/atom/Welcome/Welcome';
 import SignInForm from '~/components/modules/SignIn/SignInForm/SignInForm';
 import { errorMessage } from '~/utils/errorMessages';
 import {
+  validateConfirmPassword,
   validateEmail,
   validateName,
   validatePassword,
@@ -28,6 +29,7 @@ export const action: ActionFunction = async ({ request }) => {
   const password = form.get('password');
   const firstName = form.get('firstName') as string;
   const lastName = form.get('lastName') as string;
+  const confirmPassword = form.get('confirmPassword') as string;
 
   if (
     typeof action !== 'string' ||
@@ -42,7 +44,9 @@ export const action: ActionFunction = async ({ request }) => {
 
   if (
     action === 'register' &&
-    (typeof firstName !== 'string' || typeof lastName !== 'string')
+    (typeof firstName !== 'string' ||
+      typeof lastName !== 'string' ||
+      typeof confirmPassword !== 'string')
   ) {
     return json(
       { error: errorMessage.invalidForm, form: action },
@@ -60,6 +64,7 @@ export const action: ActionFunction = async ({ request }) => {
     ...(action === 'register' && {
       firstName: validateName((firstName as string) || '') ?? '',
       lastName: validateName((lastName as string) || '') ?? '',
+      confirmPassword: validateConfirmPassword(password, confirmPassword) ?? '',
     }),
   };
 

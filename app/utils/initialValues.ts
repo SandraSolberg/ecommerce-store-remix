@@ -1,6 +1,7 @@
 const initForm = {
   email: '',
   password: '',
+  confirmPassword: '',
   firstName: '',
   lastName: '',
 };

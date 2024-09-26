@@ -12,10 +12,9 @@ export interface ICheckoutForm {
   city: string;
   country: string;
   streetAddress: string;
-  apartmentNumber: string;
-  postcode: number;
-  phoneNumber: number;
-  countryCode: CountryCodeEnum;
+  postcode: number | null;
+  phoneNumber: number | null;
+  countryCode: CountryCodeEnum | null;
 }
 
 export interface OrderSummary {

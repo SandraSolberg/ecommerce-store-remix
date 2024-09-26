@@ -4,10 +4,20 @@ import { toggleSlider } from '~/redux/cartSlice';
 import NoContent from '~/components/common/atom/NoContent/NoContent';
 import MiniCartList from '../MiniCartList/MiniCartList';
 import './miniCartContent.css';
+import { setShowConfirmation } from '~/redux/uiStateSlice';
 
 const MiniCartContent = () => {
-  const cart = useAppSelector((state) => state.cart);
+  const { cart, uiState } = useAppSelector((state) => state);
+  const { showConfirmation } = uiState;
   const dispatch = useAppDispatch();
+
+  const handleClick = () => {
+    if (showConfirmation) {
+      dispatch(setShowConfirmation(false));
+    }
+
+    dispatch(toggleSlider(false));
+  };
 
   return (
     <>
@@ -20,7 +30,7 @@ const MiniCartContent = () => {
           <Link
             className='mt-4 w-full bg-blue-500 text-white text-base text-center font-medium py-3 rounded-lg hover:bg-blue-600 hover:no-underline sticky bottom-0'
             to='/cart'
-            onClick={() => dispatch(toggleSlider(false))}
+            onClick={handleClick}
           >
             Proceed to checkout
           </Link>

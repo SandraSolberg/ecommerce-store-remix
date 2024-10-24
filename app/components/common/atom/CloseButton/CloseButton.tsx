@@ -11,7 +11,7 @@ const CloseButton = ({ onClick, onHandleKeyDown }: CloseButtonType) => {
       tabIndex={0}
       onClick={onClick}
       onKeyDown={onHandleKeyDown}
-      className='hover:hover:bg-gray-200 rounded-lg h-6 flex items-center gap-1'
+      className='hover:bg-gray-200 rounded-lg h-6 flex items-center gap-1'
     >
       Close
       <SVGIcon>

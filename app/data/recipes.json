@@ -1,0 +1,34 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Classic Norwegian Taco",
+      "prepTimeMinutes": 20,
+      "ingredients": [],
+      "instructions": [],
+      "imageUrl": "/images/fredagstaco.jpg",
+      "difficulty": "Easy",
+      "slug": "classic-norwegian-taco"
+    },
+    {
+      "id": 2,
+      "name": "Fish Taco Wraps",
+      "prepTimeMinutes": 25,
+      "ingredients": [],
+      "instructions": [],
+      "imageUrl": "/images/fiskeTaco.jpg",
+      "difficulty": "Medium",
+      "slug": "fish-taco-wraps"
+    },
+    {
+      "id": 3,
+      "name": "Vegetarian Taco",
+      "prepTimeMinutes": 30,
+      "ingredients": [],
+      "instructions": [],
+      "imageUrl": "/images/vegetarTaco.jpg",
+      "difficulty": "Easy",
+      "slug": "vegetarian-taco"
+    }
+  ]
+}

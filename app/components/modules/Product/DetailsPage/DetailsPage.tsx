@@ -2,6 +2,7 @@ import { Accordion } from '~/components/common/atom/Accordion/Accordion';
 import BasicButton from '~/components/common/atom/BasicButton/BasicButton';
 import CardPageWrapper from '~/components/common/atom/CardPageWrapper/CardPageWrapper';
 import InfoTable from '~/components/common/atom/InfoTable/InfoTable';
+import NotFound from '~/components/common/atom/NotFound/NotFound';
 import SVGIcon from '~/components/common/atom/SVGIcon/SVGIcon';
 import endpoint from '~/data/constants/endpoints';
 import { useGetData } from '~/hooks/useGetData';
@@ -103,7 +104,7 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
                 {displayPrice}
               </p>
               <BasicButton
-                className='mt-4 py-3 px-5'
+                className='mt-4 p-3'
                 btnTitle='Add to cart'
                 onClick={handleAddProduct}
               />
@@ -140,9 +141,7 @@ export const DetailsPage = ({ productId }: { productId: number | null }) => {
           </div>
         </div>
       ) : (
-        <div>
-          <h1>No product found</h1>
-        </div>
+        <NotFound />
       )}
     </CardPageWrapper>
   );

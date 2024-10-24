@@ -5,7 +5,7 @@ import '~/styles/layout.css';
 const CardPageWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <PageWrapper>
-      <section className=' bg-white p-10 '>{children}</section>
+      <section className=' bg-white p-10 min-h-48'>{children}</section>
     </PageWrapper>
   );
 };

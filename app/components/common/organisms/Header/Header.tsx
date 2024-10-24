@@ -3,6 +3,7 @@ import { CartChip } from '~/components/common/atom/CartChip/CartChip';
 import MiniCartContent from '~/components/modules/Cart/MiniCartContent/MiniCartContent';
 import Slider from '~/components/common/molecule/Slider/Slider';
 import { useAppSelector } from '~/redux/store';
+import HeartButton from '../../atom/HeartButton/HeartButton';
 
 const Header = () => {
   const isOpen = useAppSelector((state) => state.cart.isOpen);
@@ -18,7 +19,11 @@ const Header = () => {
           <img src='/images/taco.svg' alt='Go to dashboard' />
         </Link>
 
-        <CartChip />
+        <div className='flex gap-4'>
+          <HeartButton size={24} onClick={() => {}} />
+
+          <CartChip />
+        </div>
       </div>
     </header>
   );

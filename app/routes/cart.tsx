@@ -1,5 +1,6 @@
 import { Link } from '@remix-run/react';
 import CardPageWrapper from '~/components/common/atom/CardPageWrapper/CardPageWrapper';
+import HeartButton from '~/components/common/atom/HeartButton/HeartButton';
 import NoContent from '~/components/common/atom/NoContent/NoContent';
 import SVGIcon from '~/components/common/atom/SVGIcon/SVGIcon';
 import OrderSummary from '~/components/common/molecule/OrderSummary/OrderSummary';
@@ -100,14 +101,7 @@ const Cart = () => {
                           </SVGIcon>
                         </button>
 
-                        <button
-                          className='p-2 hover:bg-red-200 rounded-full'
-                          onClick={() => {}}
-                        >
-                          <SVGIcon stroke='#991b1b' width='20' height='20'>
-                            <path d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'></path>
-                          </SVGIcon>
-                        </button>
+                        <HeartButton isRed onClick={() => {}} />
                       </div>
                     </div>
                     <p className='font-semibold'>{`${item.price.toFixed(2)} ${

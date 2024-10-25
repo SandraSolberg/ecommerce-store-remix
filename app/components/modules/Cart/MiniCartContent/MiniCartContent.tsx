@@ -3,11 +3,12 @@ import { useAppDispatch, useAppSelector } from '~/redux/store';
 import { toggleSlider } from '~/redux/cartSlice';
 import NoContent from '~/components/common/atom/NoContent/NoContent';
 import MiniCartList from '../MiniCartList/MiniCartList';
-import './miniCartContent.css';
 import { setShowConfirmation } from '~/redux/uiStateSlice';
+import './miniCartContent.css';
 
 const MiniCartContent = () => {
-  const { cart, uiState } = useAppSelector((state) => state);
+  const cart = useAppSelector((state) => state.cart);
+  const uiState = useAppSelector((state) => state.uiState);
   const { showConfirmation } = uiState;
   const dispatch = useAppDispatch();
 

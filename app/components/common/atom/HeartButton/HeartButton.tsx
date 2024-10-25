@@ -1,25 +1,34 @@
+import { useState } from 'react';
 import SVGIcon from '../SVGIcon/SVGIcon';
 
 type HeartButtonProps = {
   size?: number;
-  onClick: () => void;
+  filled?: boolean;
+  onFill: (fill: boolean) => void;
   isRed?: boolean;
 };
 
 const HeartButton = ({
   size = 20,
-  onClick,
+  filled = false,
+  onFill,
   isRed = false,
 }: HeartButtonProps) => {
+  const [hasLiked, setHasLiked] = useState(filled ?? false);
+
   return (
     <div>
       <button
         className={`p-2 rounded-full ${
           isRed ? 'hover:bg-red-200' : 'hover:bg-gray-200 '
         }`}
-        onClick={onClick}
+        onClick={() => {
+          onFill(!hasLiked);
+          setHasLiked(!hasLiked);
+        }}
       >
         <SVGIcon
+          fill={hasLiked ? (isRed ? '#991b1b' : '#061629') : 'none'}
           stroke={isRed ? '#991b1b' : '#061629'}
           width={size}
           height={size}

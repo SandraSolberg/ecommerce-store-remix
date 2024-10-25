@@ -69,3 +69,8 @@ export type CountriesType = {
 export type CountriesResponseType = {
   countries: CountriesType[];
 };
+
+export type FavoriteType = {
+  id: string;
+  name: string | null;
+};

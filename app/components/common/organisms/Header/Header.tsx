@@ -7,6 +7,7 @@ import HeartButton from '../../atom/HeartButton/HeartButton';
 
 const Header = () => {
   const isOpen = useAppSelector((state) => state.cart.isOpen);
+
   return (
     <header className='bg-white'>
       {isOpen ? (
@@ -20,7 +21,7 @@ const Header = () => {
         </Link>
 
         <div className='flex gap-4'>
-          <HeartButton size={24} onClick={() => {}} />
+          <HeartButton size={24} onFill={() => {}} />
 
           <CartChip />
         </div>

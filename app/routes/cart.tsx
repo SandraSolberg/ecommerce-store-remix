@@ -9,19 +9,35 @@ import endpoint from '~/data/constants/endpoints';
 import useCartActions from '~/hooks/useCartActions';
 import { useGetData } from '~/hooks/useGetData';
 import useQuantity from '~/hooks/useQuantity';
-import { useAppSelector } from '~/redux/store';
+import { useAppDispatch, useAppSelector } from '~/redux/store';
+import { addToFavorites, removeFromFavorites } from '~/redux/uiStateSlice';
 import { CartItem } from '~/types/cart';
 import { FoodsType } from '~/types/food';
 
 const Cart = () => {
   const cartItems = useAppSelector((state) => state.cart.addedItems);
+  const favorites = useAppSelector((state) => state.uiState.favorites);
   const { data: foods } = useGetData<FoodsType | null>(endpoint.FOODS);
-  // const { foods } = useFoods();
   const { onDecrement, onIncrement, onInputChange } = useQuantity();
   const { handleRemove, productSum } = useCartActions();
+  const dispatch = useAppDispatch();
+
+  const handleFavorite = (fav: boolean, id: string, name: string | null) => {
+    fav
+      ? dispatch(addToFavorites({ id, name }))
+      : dispatch(removeFromFavorites({ id }));
+  };
+
+  console.log('favorites', favorites);
 
   const getExistingFoodItem = (item: CartItem) =>
     foods?.foods.find((food) => food.foodId === item.foodId);
+
+  const getFavoriteItem = (id: number) => {
+    const existingItem = favorites.find((fav) => fav.id === id.toString());
+    const doesExist = !!existingItem;
+    return doesExist ?? false;
+  };
   return (
     <CardPageWrapper>
       {cartItems.length === 0 ? (
@@ -50,7 +66,9 @@ const Cart = () => {
               {cartItems.map((item, index) => (
                 <article
                   key={item.foodId}
-                  className={`flex gap-8 py-6 ${index > 0 ? 'border-t' : ''}`}
+                  className={`md:flex md:gap-8 py-6 ${
+                    index > 0 ? 'border-t' : ''
+                  }`}
                 >
                   <Link
                     className='w-32 h-32 hover:no-underline'
@@ -101,7 +119,17 @@ const Cart = () => {
                           </SVGIcon>
                         </button>
 
-                        <HeartButton isRed onClick={() => {}} />
+                        <HeartButton
+                          isRed
+                          filled={getFavoriteItem(item.foodId)}
+                          onFill={(favorite) =>
+                            handleFavorite(
+                              favorite,
+                              item.foodId.toString(),
+                              item?.foodName ?? null
+                            )
+                          }
+                        />
                       </div>
                     </div>
                     <p className='font-semibold'>{`${item.price.toFixed(2)} ${
